@@ -1,0 +1,6124 @@
+[
+  {
+    "id": "gaiji-uplus",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+546D］",
+    "options": {},
+    "expected": {
+      "return": [
+        "呭",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "呭",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-plane1",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃第3水準1-84-77、2-3］",
+    "options": {},
+    "expected": {
+      "return": [
+        "挘",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "挘",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-plane2",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃第4水準2-12-11］",
+    "options": {},
+    "expected": {
+      "return": [
+        "𢌞",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "𢌞",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-bare",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃1-13-21］",
+    "options": {},
+    "expected": {
+      "return": [
+        "Ⅰ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "Ⅰ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-fullwidth",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃第３水準１－８４－７７］",
+    "options": {},
+    "expected": {
+      "return": [
+        "挘",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "挘",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-supplementary",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃u+20000］",
+    "options": {},
+    "expected": {
+      "return": [
+        "𠀀",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "𠀀",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-unknown",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃未知の字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃未知の字］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃未知の字］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-invalid-preferred-fallback",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+0000、第3水準1-84-77］",
+    "options": {},
+    "expected": {
+      "return": [
+        "挘",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "挘",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-invalid-specific-no-bare-retry",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃第3水準3-1-1、1-13-21］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃第3水準3-1-1、1-13-21］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃第3水準3-1-1、1-13-21］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-first-uplus-only",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+0000 U+0041］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+0000 U+0041］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+0000 U+0041］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-hex-boundary",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+1234567］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+1234567］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+1234567］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-date-boundary",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃2026-09-17］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃2026-09-17］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃2026-09-17］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-substitute",
+    "function": "convert_aozora_gaiji",
+    "input": "１［＃「１」はローマ数字、1-13-21］",
+    "options": {},
+    "expected": {
+      "return": [
+        "Ⅰ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "Ⅰ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-substitute-mismatch",
+    "function": "convert_aozora_gaiji",
+    "input": "２［＃「１」はローマ数字、1-13-21］",
+    "options": {},
+    "expected": {
+      "return": [
+        "２［＃「１」はローマ数字、1-13-21］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "２［＃「１」はローマ数字、1-13-21］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-substitute-no-code",
+    "function": "convert_aozora_gaiji",
+    "input": "１［＃「１」はローマ数字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "１［＃「１」はローマ数字］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "１［＃「１」はローマ数字］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-substitute-segment",
+    "function": "convert_aozora_gaiji",
+    "input": "A［＃「A」はU+0042］B［＃「AB」はU+0043］",
+    "options": {},
+    "expected": {
+      "return": [
+        "BB［＃「AB」はU+0043］",
+        1,
+        1
+      ],
+      "warnings": [],
+      "output": "BB［＃「AB」はU+0043］",
+      "stats": {
+        "converted": 1,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-fence",
+    "function": "convert_aozora_gaiji",
+    "input": "```\n※［＃U+0041］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\nA\n```",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "```\nA\n```",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-two-codepoints",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃1-4-87］",
+    "options": {},
+    "expected": {
+      "return": [
+        "か゚",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "か゚",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-jis0212-fallback",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃2-2-15］",
+    "options": {},
+    "expected": {
+      "return": [
+        "˘",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "˘",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-nested-note-newline",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃説明\nU+0041］",
+    "options": {},
+    "expected": {
+      "return": [
+        "A",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "A",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-001F",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+001F］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+001F］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+001F］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-0020",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+0020］",
+    "options": {},
+    "expected": {
+      "return": [
+        " ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": " ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-007F",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+007F］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+007F］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+007F］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-0080",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+0080］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+0080］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+0080］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-009F",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+009F］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+009F］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+009F］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-00A0",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+00A0］",
+    "options": {},
+    "expected": {
+      "return": [
+        " ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": " ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-D800",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+D800］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+D800］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+D800］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-DFFF",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+DFFF］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+DFFF］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+DFFF］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-FDD0",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+FDD0］",
+    "options": {},
+    "expected": {
+      "return": [
+        "﷐",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "﷐",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-FFFF",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+FFFF］",
+    "options": {},
+    "expected": {
+      "return": [
+        "￿",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "￿",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-10FFFF",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+10FFFF］",
+    "options": {},
+    "expected": {
+      "return": [
+        "􏿿",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "􏿿",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "gaiji-codepoint-110000",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+110000］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃U+110000］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃U+110000］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "jis-bounds-0-1-1",
+    "function": "jis0213_to_unicode",
+    "input": 0,
+    "options": {
+      "row": 1,
+      "cell": 1
+    },
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "jis-bounds-3-1-1",
+    "function": "jis0213_to_unicode",
+    "input": 3,
+    "options": {
+      "row": 1,
+      "cell": 1
+    },
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "jis-bounds-1-0-1",
+    "function": "jis0213_to_unicode",
+    "input": 1,
+    "options": {
+      "row": 0,
+      "cell": 1
+    },
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "jis-bounds-1-95-1",
+    "function": "jis0213_to_unicode",
+    "input": 1,
+    "options": {
+      "row": 95,
+      "cell": 1
+    },
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "jis-bounds-1-1-0",
+    "function": "jis0213_to_unicode",
+    "input": 1,
+    "options": {
+      "row": 1,
+      "cell": 0
+    },
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "jis-bounds-1-1-95",
+    "function": "jis0213_to_unicode",
+    "input": 1,
+    "options": {
+      "row": 1,
+      "cell": 95
+    },
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "jis-bounds-1-1-32",
+    "function": "jis0213_to_unicode",
+    "input": 1,
+    "options": {
+      "row": 1,
+      "cell": 32
+    },
+    "expected": {
+      "return": "＼",
+      "warnings": []
+    }
+  },
+  {
+    "id": "jis-bounds-1-2-18",
+    "function": "jis0213_to_unicode",
+    "input": 1,
+    "options": {
+      "row": 2,
+      "cell": 18
+    },
+    "expected": {
+      "return": "～",
+      "warnings": []
+    }
+  },
+  {
+    "id": "emphasis-bold",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青空［＃「青空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-italic",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青空［＃「青空」は斜体字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-both",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青空［＃「青空」は太字］［＃「青空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "***青空***",
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "***青空***",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-both-unsafe-count",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "別［＃「青空」は太字］［＃「青空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "別［＃「青空」は太字］［＃「青空」は斜体］",
+        0,
+        0,
+        0,
+        3
+      ],
+      "warnings": [],
+      "output": "別［＃「青空」は太字］［＃「青空」は斜体］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 3
+      }
+    }
+  },
+  {
+    "id": "emphasis-same-kind-adjacent",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青空［＃「青空」は太字］［＃「青空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青空**［＃「青空」は太字］",
+        1,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "**青空**［＃「青空」は太字］",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "emphasis-range",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-nested",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］［＃斜体］青空［＃斜体終わり］［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "***青空***",
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "***青空***",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-same-kind-nested",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］［＃太字］青空［＃太字終わり］［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃太字］［＃太字］青空［＃太字終わり］［＃太字終わり］",
+        0,
+        0,
+        0,
+        2
+      ],
+      "warnings": [],
+      "output": "［＃太字］［＃太字］青空［＃太字終わり］［＃太字終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 2
+      }
+    }
+  },
+  {
+    "id": "emphasis-asterisk",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "a*b［＃「a*b」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "a*b［＃「a*b」は太字］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "a*b［＃「a*b」は太字］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "emphasis-empty-range",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃太字］［＃太字終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃太字］［＃太字終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "emphasis-multiline-range",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青\n空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃太字］青\n空［＃太字終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃太字］青\n空［＃太字終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "emphasis-block",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n青\n\n 空 \n［＃ここで太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青**\n\n** 空 **",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青**\n\n** 空 **",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-block-unsafe",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n青［＃不明］\n［＃ここで太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから太字］\n青［＃不明］\n［＃ここで太字終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから太字］\n青［＃不明］\n［＃ここで太字終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "emphasis-block-missing-end",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n青［＃「青」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから太字］\n*青*",
+        0,
+        1,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから太字］\n*青*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "emphasis-block-empty",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n［＃ここで太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-backtick",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "```\n青［＃「青」は太字］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n青［＃「青」は太字］\n```",
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n青［＃「青」は太字］\n```",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-tilde",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "~~~\n青［＃「青」は太字］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n**青**\n~~~",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n**青**\n~~~",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-inline-code",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "`青［＃「青」は太字］`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`**青**`",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "`**青**`",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "emphasis-cr-nested",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］［＃斜体］青\r空［＃斜体終わり］［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "***青\r空***",
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "***青\r空***",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-傍線-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に傍線］",
+    "options": {
+      "approximate_other_styles": false
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-傍線-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に傍線］",
+    "options": {
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-二重傍線-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に二重傍線］",
+    "options": {
+      "approximate_other_styles": false
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」に二重傍線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」に二重傍線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-二重傍線-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に二重傍線］",
+    "options": {
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-鎖線-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に鎖線］",
+    "options": {
+      "approximate_other_styles": false
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」に鎖線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」に鎖線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-鎖線-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に鎖線］",
+    "options": {
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-破線-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に破線］",
+    "options": {
+      "approximate_other_styles": false
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」に破線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」に破線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-破線-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に破線］",
+    "options": {
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-波線-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に波線］",
+    "options": {
+      "approximate_other_styles": false
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」に波線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」に波線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-波線-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に波線］",
+    "options": {
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-left-special-False-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」の左に二重傍線］",
+    "options": {
+      "approximate_left": false,
+      "approximate_other_styles": false
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」の左に二重傍線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」の左に二重傍線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-left-special-False-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」の左に二重傍線］",
+    "options": {
+      "approximate_left": false,
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」の左に二重傍線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」の左に二重傍線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-left-special-True-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」の左に二重傍線］",
+    "options": {
+      "approximate_left": true,
+      "approximate_other_styles": false
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」の左に二重傍線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」の左に二重傍線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-left-special-True-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」の左に二重傍線］",
+    "options": {
+      "approximate_left": true,
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-range",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青［＃傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "||青||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-block",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n青\n\n 空 \n［＃ここで傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "||青||\n\n|| 空 ||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||\n\n|| 空 ||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-block-unsafe",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n青［＃不明］\n［＃ここで傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから傍線］\n青［＃不明］\n［＃ここで傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから傍線］\n青［＃不明］\n［＃ここで傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-existing-inner",
+    "function": "convert_aozora_underline",
+    "input": "||青［＃「青」に傍線］||",
+    "options": {},
+    "expected": {
+      "return": [
+        "||青［＃「青」に傍線］||",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "||青［＃「青」に傍線］||",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-existing-outer",
+    "function": "convert_aozora_underline",
+    "input": "||青||［＃「青」に傍線］",
+    "options": {},
+    "expected": {
+      "return": [
+        "||青||［＃「青」に傍線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "||青||［＃「青」に傍線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-existing-range",
+    "function": "convert_aozora_underline",
+    "input": "<U>［＃傍線］青［＃傍線終わり］</U>",
+    "options": {},
+    "expected": {
+      "return": [
+        "<U>［＃傍線］青［＃傍線終わり］</U>",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "<U>［＃傍線］青［＃傍線終わり］</U>",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-cross-format-body",
+    "function": "convert_aozora_underline",
+    "input": "<u>青</u>［＃「<u>青</u>」に傍線］",
+    "options": {},
+    "expected": {
+      "return": [
+        "||<u>青</u>||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||<u>青</u>||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-mismatch",
+    "function": "convert_aozora_underline",
+    "input": "空［＃「青」に傍線］",
+    "options": {},
+    "expected": {
+      "return": [
+        "空［＃「青」に傍線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "空［＃「青」に傍線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-unmatched-end",
+    "function": "convert_aozora_underline",
+    "input": "青［＃傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "青［＃傍線終わり］",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "青［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-multiline",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青\n空［＃傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃傍線］青\n空［＃傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍線］青\n空［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-unsafe-body",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青［＃不明］［＃傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃傍線］青［＃不明］［＃傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍線］青［＃不明］［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "underline-html",
+    "function": "convert_aozora_underline",
+    "input": "a&b［＃「a&b」に傍線］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>a&b</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>a&b</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "underline-invalid-format",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」に傍線］",
+    "options": {
+      "output_format": "invalid"
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-白ゴマ傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に白ゴマ傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-白丸傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に白丸傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-黒三角傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に黒三角傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-白三角傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に白三角傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-二重丸傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に二重丸傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-蛇の目傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に蛇の目傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-ばつ傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」にばつ傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-丸傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に丸傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-傍点",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-supplementary",
+    "function": "convert_aozora_bouten",
+    "input": "𠀀［＃「𠀀」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜𠀀《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜𠀀《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-combining",
+    "function": "convert_aozora_bouten",
+    "input": "が［＃「が」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜か《﹅》｜゙《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜か《﹅》｜゙《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-space",
+    "function": "convert_aozora_bouten",
+    "input": "［＃傍点］青 \t　空［＃傍点終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 \t　｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 \t　｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-only-space-range",
+    "function": "convert_aozora_bouten",
+    "input": "［＃傍点］ \t［＃傍点終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃傍点］ \t［＃傍点終わり］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍点］ \t［＃傍点終わり］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "bouten-only-space-forward",
+    "function": "convert_aozora_bouten",
+    "input": " ［＃「 」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        " ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": " ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-ruby",
+    "function": "convert_aozora_bouten",
+    "input": "｜青《あお》［＃「｜青《あお》」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《あお》［＃「｜青《あお》」に傍点］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "｜青《あお》［＃「｜青《あお》」に傍点］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "bouten-ruby-context",
+    "function": "convert_aozora_bouten",
+    "input": "｜青［＃「青」に傍点］《あお》",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜｜青《﹅》《あお》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜｜青《﹅》《あお》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-left",
+    "function": "convert_aozora_bouten",
+    "input": "青［＃「青」の左に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "青［＃「青」の左に傍点］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」の左に傍点］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "bouten-multiline",
+    "function": "convert_aozora_bouten",
+    "input": "［＃傍点］青\n空［＃傍点終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃傍点］青\n空［＃傍点終わり］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍点］青\n空［＃傍点終わり］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "bouten-unmatched",
+    "function": "convert_aozora_bouten",
+    "input": "［＃傍点］青",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃傍点］青",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃傍点］青",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-block-unsupported",
+    "function": "convert_aozora_bouten",
+    "input": "［＃ここから傍点］\n青\n［＃ここで傍点終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから傍点］\n青\n［＃ここで傍点終わり］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから傍点］\n青\n［＃ここで傍点終わり］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-fence",
+    "function": "convert_aozora_bouten",
+    "input": "```\n青［＃「青」に傍点］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n｜青《﹅》\n```",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n｜青《﹅》\n```",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-python-whitespace",
+    "function": "convert_aozora_bouten",
+    "input": "［＃傍点］\u001c﻿［＃傍点終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "\u001c｜﻿《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "\u001c｜﻿《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-mark-'•'",
+    "function": "convert_aozora_bouten",
+    "input": "青［＃「青」に傍点］",
+    "options": {
+      "bouten_char": "•"
+    },
+    "expected": {
+      "return": [
+        "｜青《•》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《•》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-mark-'𠀀X'",
+    "function": "convert_aozora_bouten",
+    "input": "青［＃「青」に傍点］",
+    "options": {
+      "bouten_char": "𠀀X"
+    },
+    "expected": {
+      "return": [
+        "｜青《𠀀》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《𠀀》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-mark-''",
+    "function": "convert_aozora_bouten",
+    "input": "青［＃「青」に傍点］",
+    "options": {
+      "bouten_char": ""
+    },
+    "expected": {
+      "return": [
+        "｜青《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "bouten-mark-'ab'",
+    "function": "convert_aozora_bouten",
+    "input": "青［＃「青」に傍点］",
+    "options": {
+      "bouten_char": "ab"
+    },
+    "expected": {
+      "return": [
+        "｜青《a》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《a》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "heading-大",
+    "function": "convert_aozora_headings",
+    "input": "章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-中",
+    "function": "convert_aozora_headings",
+    "input": "章［＃「章」は中見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-小",
+    "function": "convert_aozora_headings",
+    "input": "章［＃「章」は小見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "#### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "#### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-quote-not-checked",
+    "function": "convert_aozora_headings",
+    "input": "本文［＃「不一致」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 本文",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 本文",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-ruby",
+    "function": "convert_aozora_headings",
+    "input": "｜章《しょう》［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## ｜章《しょう》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## ｜章《しょう》",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-multiline",
+    "function": "convert_aozora_headings",
+    "input": "［＃ここから中見出し］\n 一 \n\n 二\n［＃ここで中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 一 二",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 一 二",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-indent",
+    "function": "convert_aozora_headings",
+    "input": "［＃３字下げ］章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 　　　章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 　　　章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-indent-clamp",
+    "function": "convert_aozora_headings",
+    "input": "［＃99字下げ］章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-unsupported",
+    "function": "convert_aozora_headings",
+    "input": "章［＃「章」は窓大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "章［＃「章」は窓大見出し］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "章［＃「章」は窓大見出し］",
+      "stats": {
+        "converted": 0,
+        "unsupported": 1
+      }
+    }
+  },
+  {
+    "id": "heading-empty",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃大見出し］［＃大見出し終わり］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃大見出し］［＃大見出し終わり］",
+      "stats": {
+        "converted": 0,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-not-whole-line",
+    "function": "convert_aozora_headings",
+    "input": "前［＃大見出し］章［＃大見出し終わり］後",
+    "options": {},
+    "expected": {
+      "return": [
+        "前［＃大見出し］章［＃大見出し終わり］後",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前［＃大見出し］章［＃大見出し終わり］後",
+      "stats": {
+        "converted": 0,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-fence",
+    "function": "convert_aozora_headings",
+    "input": "```\n章［＃「章」は大見出し］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n## 章\n```",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n## 章\n```",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "heading-unicode-splitlines",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］一 二［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 一 二",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 一 二",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "indent-level-0",
+    "function": "convert_aozora_indent",
+    "input": "［＃0字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃0字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃0字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "indent-level-1",
+    "function": "convert_aozora_indent",
+    "input": "［＃1字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-1\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-1\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-level-2",
+    "function": "convert_aozora_indent",
+    "input": "［＃2字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-level-3",
+    "function": "convert_aozora_indent",
+    "input": "［＃3字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-3\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-3\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-level-4",
+    "function": "convert_aozora_indent",
+    "input": "［＃4字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-4\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-4\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-level-5",
+    "function": "convert_aozora_indent",
+    "input": "［＃5字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-5\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-5\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-level-6",
+    "function": "convert_aozora_indent",
+    "input": "［＃6字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-6\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-6\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-level-7",
+    "function": "convert_aozora_indent",
+    "input": "［＃7字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃7字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃7字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "indent-level-40",
+    "function": "convert_aozora_indent",
+    "input": "［＃40字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃40字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃40字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "indent-one-False",
+    "function": "convert_aozora_indent",
+    "input": "  ［＃３字下げ］本文",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-3\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-3\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-one-True",
+    "function": "convert_aozora_indent",
+    "input": "  ［＃３字下げ］本文",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "  ［＃３字下げ］\n:::indent-3\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "  ［＃３字下げ］\n:::indent-3\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-empty-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃３字下げ］",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        "［＃３字下げ］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃３字下げ］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-empty-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃３字下げ］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃３字下げ］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃３字下げ］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-block-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n本文\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n本文\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-block-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n本文\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n:::indent-2\n本文\n:::\n［＃ここで字下げ終わり］",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n:::indent-2\n本文\n:::\n［＃ここで字下げ終わり］",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-switch-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n甲\n［＃ここから３字下げ］\n乙\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n甲\n:::\n:::indent-3\n乙\n:::",
+        2,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n甲\n:::\n:::indent-3\n乙\n:::",
+      "stats": {
+        "converted": 2,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-switch-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n甲\n［＃ここから３字下げ］\n乙\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから３字下げ］\n:::indent-3\n乙\n:::\n［＃ここで字下げ終わり］",
+        2,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから３字下げ］\n:::indent-3\n乙\n:::\n［＃ここで字下げ終わり］",
+      "stats": {
+        "converted": 2,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-inline-inside-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n［＃３字下げ］甲\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n［＃３字下げ］甲\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n［＃３字下げ］甲\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-inline-inside-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n［＃３字下げ］甲\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n:::indent-2\n［＃３字下げ］甲\n:::\n［＃ここで字下げ終わり］",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n:::indent-2\n［＃３字下げ］甲\n:::\n［＃ここで字下げ終わり］",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-invalid-switch-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n甲\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n甲\n:::\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+        1,
+        1
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n甲\n:::\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+      "stats": {
+        "converted": 1,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "indent-invalid-switch-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n甲\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+        1,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+      "stats": {
+        "converted": 1,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "indent-eof-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n本文\n",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n本文\n\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n本文\n\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-eof-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n本文\n",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n:::indent-2\n本文\n\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n:::indent-2\n本文\n\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-existing-False",
+    "function": "convert_aozora_indent",
+    "input": ":::indent-2\n［＃３字下げ］本文\n:::",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n［＃３字下げ］本文\n:::",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n［＃３字下げ］本文\n:::",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-existing-True",
+    "function": "convert_aozora_indent",
+    "input": ":::indent-2\n［＃３字下げ］本文\n:::",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n［＃３字下げ］本文\n:::",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n［＃３字下げ］本文\n:::",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-already-following-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n\n:::indent-2\n本文\n:::",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n\n:::indent-2\n本文\n:::",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n\n:::indent-2\n本文\n:::",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-already-following-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n\n:::indent-2\n本文\n:::",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n\n:::indent-2\n本文\n:::",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n\n:::indent-2\n本文\n:::",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-modified-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ、折り返して１字下げ］本文",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        "［＃２字下げ、折り返して１字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃２字下げ、折り返して１字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "indent-modified-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ、折り返して１字下げ］本文",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃２字下げ、折り返して１字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃２字下げ、折り返して１字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "indent-stray-end-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        "［＃ここで字下げ終わり］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここで字下げ終わり］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-stray-end-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここで字下げ終わり］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここで字下げ終わり］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここで字下げ終わり］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-fence-close-False",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n甲\n```\n乙\n```\n丙",
+    "options": {
+      "preserve_notes": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n甲\n:::\n```\n乙\n```\n丙",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n甲\n:::\n```\n乙\n```\n丙",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "indent-fence-close-True",
+    "function": "convert_aozora_indent",
+    "input": "［＃ここから２字下げ］\n甲\n```\n乙\n```\n丙",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n```\n乙\n```\n丙",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n```\n乙\n```\n丙",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-one-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地付き］署名",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-one-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地付き］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-mid-False",
+    "function": "convert_aozora_align_end",
+    "input": "本文  ［＃地付き］署名",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        "本文\n:::align-end\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "本文\n:::align-end\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-mid-True",
+    "function": "convert_aozora_align_end",
+    "input": "本文  ［＃地付き］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        "本文\n:::align-end\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "本文\n:::align-end\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-empty-False",
+    "function": "convert_aozora_align_end",
+    "input": "本文［＃地付き］",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        "本文［＃地付き］",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "本文［＃地付き］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-empty-True",
+    "function": "convert_aozora_align_end",
+    "input": "本文［＃地付き］",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        "本文［＃地付き］",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "本文［＃地付き］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-block-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n署名\n［＃ここで地付き終わり］",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-block-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n署名\n［＃ここで地付き終わり］",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-eof-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n署名\n",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-eof-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n署名\n",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-jiage-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から３字上げ］署名",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        "［＃地から３字上げ］署名",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地から３字上げ］署名",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "align-jiage-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から３字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-jiage-zero-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から０字上げ］署名",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        "［＃地から０字上げ］署名",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地から０字上げ］署名",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "align-jiage-zero-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から０字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        "［＃地から０字上げ］署名",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地から０字上げ］署名",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "align-jiage-huge-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から9999字上げ］署名",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        "［＃地から9999字上げ］署名",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地から9999字上げ］署名",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "align-jiage-huge-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から9999字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-passthrough-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地から３字上げ］\n［＃地付き］署名\n［＃ここで字上げ終わり］",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        "［＃ここから地から３字上げ］\n［＃地付き］署名\n［＃ここで字上げ終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから地から３字上げ］\n［＃地付き］署名\n［＃ここで字上げ終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "align-passthrough-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地から３字上げ］\n［＃地付き］署名\n［＃ここで字上げ終わり］",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n［＃地付き］署名\n:::",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n［＃地付き］署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-multiple-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地付き］甲［＃地から２字上げ］乙",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        "［＃地付き］甲［＃地から２字上げ］乙",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地付き］甲［＃地から２字上げ］乙",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "align-multiple-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地付き］甲［＃地から２字上げ］乙",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        "［＃地付き］甲［＃地から２字上げ］乙",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地付き］甲［＃地から２字上げ］乙",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "align-existing-False",
+    "function": "convert_aozora_align_end",
+    "input": ":::indent-2\n［＃地付き］署名\n:::",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n［＃地付き］署名\n:::",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n［＃地付き］署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-existing-True",
+    "function": "convert_aozora_align_end",
+    "input": ":::indent-2\n［＃地付き］署名\n:::",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::indent-2\n［＃地付き］署名\n:::",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n［＃地付き］署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-mismatched-end-False",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n署名\n［＃ここで字上げ終わり］",
+    "options": {
+      "approximate_jiage": false
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n［＃ここで字上げ終わり］\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n［＃ここで字上げ終わり］\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-mismatched-end-True",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n署名\n［＃ここで字上げ終わり］",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n［＃ここで字上げ終わり］\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n［＃ここで字上げ終わり］\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-preserve-mid",
+    "function": "convert_aozora_align_end",
+    "input": "本文  ［＃地付き］署名",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "本文\n［＃地付き］\n:::align-end\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "本文\n［＃地付き］\n:::align-end\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "align-preserve-block",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n署名\n［＃ここで地付き終わり］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃ここから地付き］\n:::align-end\n署名\n:::\n［＃ここで地付き終わり］",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから地付き］\n:::align-end\n署名\n:::\n［＃ここで地付き終わり］",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-one-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        ":::page-break\n:::",
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::page-break\n:::",
+      "stats": {
+        "pageBreaks": 1,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-one-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::page-break\n:::",
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::page-break\n:::",
+      "stats": {
+        "pageBreaks": 1,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-blank-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        ":::blank-page\n:::",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::blank-page\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 1,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-blank-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::blank-page\n:::",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::blank-page\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 1,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-adjacent-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        ":::page-break\n:::\n:::page-break\n:::",
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::page-break\n:::\n:::page-break\n:::",
+      "stats": {
+        "pageBreaks": 2,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-adjacent-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::page-break\n:::\n:::page-break\n:::",
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::page-break\n:::\n:::page-break\n:::",
+      "stats": {
+        "pageBreaks": 2,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-triple-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n［＃改ページ］\n\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        ":::blank-page\n:::\n\n:::page-break\n:::",
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::blank-page\n:::\n\n:::page-break\n:::",
+      "stats": {
+        "pageBreaks": 1,
+        "blankPages": 1,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-triple-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n［＃改ページ］\n\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::blank-page\n:::\n\n:::page-break\n:::",
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::blank-page\n:::\n\n:::page-break\n:::",
+      "stats": {
+        "pageBreaks": 1,
+        "blankPages": 1,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-space-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n \t　\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        ":::blank-page\n:::",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::blank-page\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 1,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-space-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n \t　\n［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::blank-page\n:::",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::blank-page\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 1,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-inline-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "前［＃改ページ］後",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        "前［＃改ページ］後",
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "前［＃改ページ］後",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 1,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-inline-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "前［＃改ページ］後",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        "前［＃改ページ］後",
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "前［＃改ページ］後",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 1,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-kaicho-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改丁］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        "［＃改丁］",
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改丁］",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 1,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-kaicho-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改丁］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::page-break\n:::",
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::page-break\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 1,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-kaihiraki-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改見開き］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        "［＃改見開き］",
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改見開き］",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 1,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-kaihiraki-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改見開き］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::page-break\n:::",
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::page-break\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 1,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-kaidan-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改段］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        "［＃改段］",
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃改段］",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 1
+      }
+    }
+  },
+  {
+    "id": "page-kaidan-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改段］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        "［＃改段］",
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃改段］",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 1
+      }
+    }
+  },
+  {
+    "id": "page-mixed-hint-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改段］［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        "［＃改段］［＃改ページ］",
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃改段］［＃改ページ］",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 1
+      }
+    }
+  },
+  {
+    "id": "page-mixed-hint-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改段］［＃改ページ］",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        "［＃改段］［＃改ページ］",
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃改段］［＃改ページ］",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 1
+      }
+    }
+  },
+  {
+    "id": "page-existing-False",
+    "function": "convert_aozora_page_breaks",
+    "input": ":::align-end\n［＃改ページ］\n:::",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n［＃改ページ］\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n［＃改ページ］\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-existing-True",
+    "function": "convert_aozora_page_breaks",
+    "input": ":::align-end\n［＃改ページ］\n:::",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n［＃改ページ］\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n［＃改ページ］\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-already-following-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n:::page-break\n:::",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        "［＃改ページ］\n\n:::page-break\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改ページ］\n\n:::page-break\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-already-following-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n:::page-break\n:::",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        "［＃改ページ］\n\n:::page-break\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改ページ］\n\n:::page-break\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-blank-existing-False",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n［＃改ページ］\n:::blank-page-2\n:::",
+    "options": {
+      "approximate_spread_breaks": false
+    },
+    "expected": {
+      "return": [
+        "［＃改ページ］\n\n［＃改ページ］\n:::blank-page-2\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改ページ］\n\n［＃改ページ］\n:::blank-page-2\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-blank-existing-True",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n［＃改ページ］\n:::blank-page-2\n:::",
+    "options": {
+      "approximate_spread_breaks": true
+    },
+    "expected": {
+      "return": [
+        "［＃改ページ］\n\n［＃改ページ］\n:::blank-page-2\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改ページ］\n\n［＃改ページ］\n:::blank-page-2\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "page-preserve-blank",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n\n［＃改ページ］",
+    "options": {
+      "preserve_notes": true
+    },
+    "expected": {
+      "return": [
+        "［＃改ページ］\n\n［＃改ページ］\n:::blank-page\n:::",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改ページ］\n\n［＃改ページ］\n:::blank-page\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 1,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "footer-safe",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n\n底本：資料\n入力：人\n青空文庫作成ファイル：\n末尾",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n",
+        true
+      ],
+      "warnings": [],
+      "output": "本文\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-no-creation",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本：資料\n入力：人",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n底本：資料\n入力：人",
+        false
+      ],
+      "warnings": [],
+      "output": "本文\n底本：資料\n入力：人",
+      "stats": {
+        "removed": false
+      }
+    }
+  },
+  {
+    "id": "footer-no-personnel-date",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本：資料\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n底本：資料\n青空文庫作成ファイル：",
+        false
+      ],
+      "warnings": [],
+      "output": "本文\n底本：資料\n青空文庫作成ファイル：",
+      "stats": {
+        "removed": false
+      }
+    }
+  },
+  {
+    "id": "footer-parent-only",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本の親本：資料\n入力：人\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n底本の親本：資料\n入力：人\n青空文庫作成ファイル：",
+        false
+      ],
+      "warnings": [],
+      "output": "本文\n底本の親本：資料\n入力：人\n青空文庫作成ファイル：",
+      "stats": {
+        "removed": false
+      }
+    }
+  },
+  {
+    "id": "footer-date",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本:資料\n青空文庫作成ファイル:\n２０２６年９月２２日 修正",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n",
+        true
+      ],
+      "warnings": [],
+      "output": "本文\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-date-not-validated",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本:資料\n青空文庫作成ファイル:\n2026年99月99日作成",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n",
+        true
+      ],
+      "warnings": [],
+      "output": "本文\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-inline-base",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文に底本：がある\n入力：人\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文に底本：がある\n入力：人\n青空文庫作成ファイル：",
+        false
+      ],
+      "warnings": [],
+      "output": "本文に底本：がある\n入力：人\n青空文庫作成ファイル：",
+      "stats": {
+        "removed": false
+      }
+    }
+  },
+  {
+    "id": "footer-honbun",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n［＃本文終わり］\n入力：人\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n",
+        true
+      ],
+      "warnings": [],
+      "output": "本文\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-teihon-priority",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n［＃本文終わり］\n底本：資料\n入力：人\n青空文庫作成ファイル：\n末尾",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n［＃本文終わり］\n",
+        true
+      ],
+      "warnings": [],
+      "output": "本文\n［＃本文終わり］\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-last-base",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本：初期\n底本：資料\n入力：人\n青空文庫作成ファイル：\n末尾",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n底本：初期\n",
+        true
+      ],
+      "warnings": [],
+      "output": "本文\n底本：初期\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-in-code",
+    "function": "remove_aozora_footer_metadata",
+    "input": "```\n底本：資料\n入力：人\n青空文庫作成ファイル：\n末尾\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n",
+        true
+      ],
+      "warnings": [],
+      "output": "```\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-window-in",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本：資料\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n入力：人\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n",
+        true
+      ],
+      "warnings": [],
+      "output": "本文\n",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "footer-window-out",
+    "function": "remove_aozora_footer_metadata",
+    "input": "本文\n底本：資料\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n入力：人\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "本文\n底本：資料\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n入力：人\n青空文庫作成ファイル：",
+        false
+      ],
+      "warnings": [],
+      "output": "本文\n底本：資料\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n行\n入力：人\n青空文庫作成ファイル：",
+      "stats": {
+        "removed": false
+      }
+    }
+  },
+  {
+    "id": "annotation-normal",
+    "function": "remove_aozora_annotations",
+    "input": "前\n-----\n注釈\n-----\n後",
+    "options": {},
+    "expected": {
+      "return": "前\n後",
+      "warnings": []
+    }
+  },
+  {
+    "id": "annotation-unclosed",
+    "function": "remove_aozora_annotations",
+    "input": "前\n-----\n後",
+    "options": {},
+    "expected": {
+      "return": "前",
+      "warnings": []
+    }
+  },
+  {
+    "id": "annotation-suffix",
+    "function": "remove_aozora_annotations",
+    "input": "前\n-----abc\n本文\n-----xyz\n後",
+    "options": {},
+    "expected": {
+      "return": "前\n後",
+      "warnings": []
+    }
+  },
+  {
+    "id": "annotation-code",
+    "function": "remove_aozora_annotations",
+    "input": "```\n-----\nコード\n-----\n```",
+    "options": {},
+    "expected": {
+      "return": "```\n```",
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-basic",
+    "function": "scan_remaining_aozora_notes",
+    "input": "［＃不明］ ※［＃外字］\n［＃不明］",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "line": 1,
+          "text": "［＃不明］"
+        },
+        {
+          "line": 1,
+          "text": "※［＃外字］"
+        },
+        {
+          "line": 2,
+          "text": "［＃不明］"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-multiline",
+    "function": "scan_remaining_aozora_notes",
+    "input": "［＃改\nページ］",
+    "options": {},
+    "expected": {
+      "return": [],
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-fences",
+    "function": "scan_remaining_aozora_notes",
+    "input": "````info\n［＃内］\n```\n［＃まだ内］\n````\n［＃外］\n~~~\n［＃内］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "line": 6,
+          "text": "［＃外］"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-inline",
+    "function": "scan_remaining_aozora_notes",
+    "input": "`［＃内］` ［＃外］",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "line": 1,
+          "text": "［＃外］"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-double-backtick",
+    "function": "scan_remaining_aozora_notes",
+    "input": "``［＃内］`` ［＃外］",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "line": 1,
+          "text": "［＃外］"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-bad-close",
+    "function": "scan_remaining_aozora_notes",
+    "input": "```\n［＃内］\n```suffix\n［＃まだ内］",
+    "options": {},
+    "expected": {
+      "return": [],
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-preserved",
+    "function": "scan_remaining_aozora_notes",
+    "input": "［＃改ページ］\n［＃改ページ］",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "line": 2,
+          "text": "［＃改ページ］"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "strip-preserved",
+    "function": "strip_preserved_aozora_note_markers",
+    "input": "［＃改ページ］\n［＃改ページ］",
+    "options": {},
+    "expected": {
+      "return": "［＃改ページ］\n［＃改ページ］",
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-partial-marker",
+    "function": "scan_remaining_aozora_notes",
+    "input": "［＃改ページ］x",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "line": 1,
+          "text": "［＃改ページ］"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "strip-partial-marker",
+    "function": "strip_preserved_aozora_note_markers",
+    "input": "［＃改ページ］x",
+    "options": {},
+    "expected": {
+      "return": "［＃改ページ］x",
+      "warnings": []
+    }
+  },
+  {
+    "id": "scan-isolated-pua",
+    "function": "scan_remaining_aozora_notes",
+    "input": "甲乙［＃不明］",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "line": 1,
+          "text": "［＃不明］"
+        }
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "strip-isolated-pua",
+    "function": "strip_preserved_aozora_note_markers",
+    "input": "甲乙［＃不明］",
+    "options": {},
+    "expected": {
+      "return": "甲乙［＃不明］",
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-two",
+    "function": "parse_aozora_header",
+    "input": "題\n著者\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "author": "著者"
+        },
+        "本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-no-blank",
+    "function": "parse_aozora_header",
+    "input": "題\n著者",
+    "options": {},
+    "expected": {
+      "return": [
+        {},
+        "題\n著者"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-blank-first",
+    "function": "parse_aozora_header",
+    "input": "\n題\n著者\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {},
+        "\n題\n著者\n\n本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-three",
+    "function": "parse_aozora_header",
+    "input": "題\n副題\n著者\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "raw_header": "副題",
+          "author": "著者"
+        },
+        "本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-multi-author",
+    "function": "parse_aozora_header",
+    "input": "題\n副題\n甲\n乙\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "raw_header": "副題",
+          "authors": [
+            "甲",
+            "乙"
+          ]
+        },
+        "本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-translation",
+    "function": "parse_aozora_header",
+    "input": "題\n副題\n著者\n甲訳\n乙訳\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "translators": [
+            "甲訳",
+            "乙訳"
+          ],
+          "author": "著者",
+          "raw_header": "副題"
+        },
+        "本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-translation-second",
+    "function": "parse_aozora_header",
+    "input": "題\n甲訳\n失われる行\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "translator": "甲訳",
+          "author": "題"
+        },
+        "本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-space-separator",
+    "function": "parse_aozora_header",
+    "input": "題\n著者\n　\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "author": "著者"
+        },
+        "　\n本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "frontmatter-quoted",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\ntitle: \"題\"\nauthor: 人 #注\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "\"題\"",
+        "author": "人 #注"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "metadata-quoted",
+    "function": "get_metadata_from_text",
+    "input": "---\ntitle: \"題\"\nauthor: 人 #注\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "\"題\"",
+        "author": "人 #注"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "frontmatter-raw-block",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\ntitle: 題\nraw_header: |\n  副題\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "題",
+        "raw_header": "|"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "metadata-raw-block",
+    "function": "get_metadata_from_text",
+    "input": "---\ntitle: 題\nraw_header: |\n  副題\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "題"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "frontmatter-array",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\nauthors:\n  - 甲\n  - 乙\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "authors": [
+          "甲",
+          "乙"
+        ]
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "metadata-array",
+    "function": "get_metadata_from_text",
+    "input": "---\nauthors:\n  - 甲\n  - 乙\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "authors": [
+          "甲",
+          "乙"
+        ],
+        "author": "甲"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "frontmatter-empty",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "metadata-empty",
+    "function": "get_metadata_from_text",
+    "input": "---\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {},
+      "warnings": []
+    }
+  },
+  {
+    "id": "frontmatter-empty-array",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\ntitle: 題\nauthors:\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "題",
+        "authors": []
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "metadata-empty-array",
+    "function": "get_metadata_from_text",
+    "input": "---\ntitle: 題\nauthors:\n---\n本文",
+    "options": {},
+    "expected": {
+      "exception": "IndexError",
+      "message": "list index out of range"
+    }
+  },
+  {
+    "id": "frontmatter-indented-key",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\n title: 題\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "metadata-indented-key",
+    "function": "get_metadata_from_text",
+    "input": "---\n title: 題\n---\n本文",
+    "options": {},
+    "expected": {
+      "return": {},
+      "warnings": []
+    }
+  },
+  {
+    "id": "yaml-unescaped",
+    "function": "create_frontmatter",
+    "input": {
+      "title": "a: b # c",
+      "author": "[人]",
+      "authors": [
+        "甲",
+        "乙"
+      ],
+      "raw_header": "副題\n別名"
+    },
+    "options": {},
+    "expected": {
+      "return": "---\ntitle: a: b # c\nauthor: [人]\nauthors:\n  - 甲\n  - 乙\nraw_header: |\n  副題\n  別名\n---",
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-reconstruct-order",
+    "function": "reconstruct_header_from_metadata",
+    "input": {
+      "title": "題",
+      "raw_header": "副題",
+      "author": "丙",
+      "authors": [
+        "甲",
+        "乙"
+      ],
+      "translator": "丁訳"
+    },
+    "options": {},
+    "expected": {
+      "return": "題\n副題\n甲\n乙\n丁訳\n\n",
+      "warnings": []
+    }
+  },
+  {
+    "id": "filename-invalid",
+    "function": "sanitize_filename",
+    "input": " a/b:c*?\"<>|\\. ",
+    "options": {},
+    "expected": {
+      "return": "a_b_c_______",
+      "warnings": []
+    }
+  },
+  {
+    "id": "filename-reserved",
+    "function": "sanitize_filename",
+    "input": "CON",
+    "options": {},
+    "expected": {
+      "return": "CON",
+      "warnings": []
+    }
+  },
+  {
+    "id": "filename-unicode-length",
+    "function": "sanitize_filename",
+    "input": "𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀",
+    "options": {},
+    "expected": {
+      "return": "𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀",
+      "warnings": []
+    }
+  },
+  {
+    "id": "filename-dot-space",
+    "function": "sanitize_filename",
+    "input": ". .",
+    "options": {},
+    "expected": {
+      "return": " ",
+      "warnings": []
+    }
+  },
+  {
+    "id": "filename-control",
+    "function": "sanitize_filename",
+    "input": "a\u0000b",
+    "options": {},
+    "expected": {
+      "return": "ab",
+      "warnings": []
+    }
+  },
+  {
+    "id": "protection-convert_aozora_gaiji-backtick",
+    "function": "convert_aozora_gaiji",
+    "input": "```\n※［＃U+0041］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\nA\n```",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "```\nA\n```",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_gaiji-tilde",
+    "function": "convert_aozora_gaiji",
+    "input": "~~~\n※［＃U+0041］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\nA\n~~~",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\nA\n~~~",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_gaiji-inline-code",
+    "function": "convert_aozora_gaiji",
+    "input": "`※［＃U+0041］`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`A`",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "`A`",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_gaiji-directive",
+    "function": "convert_aozora_gaiji",
+    "input": ":::custom\n※［＃U+0041］\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\nA\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\nA\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_gaiji-mismatched-fence",
+    "function": "convert_aozora_gaiji",
+    "input": "````\n※［＃U+0041］\n```suffix\n※［＃U+0041］\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\nA\n```suffix\nA\n````",
+        2,
+        0
+      ],
+      "warnings": [],
+      "output": "````\nA\n```suffix\nA\n````",
+      "stats": {
+        "converted": 2,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_markdown_emphasis-backtick",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "```\n青［＃「青」は太字］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n青［＃「青」は太字］\n```",
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n青［＃「青」は太字］\n```",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_markdown_emphasis-tilde",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "~~~\n青［＃「青」は太字］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n**青**\n~~~",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n**青**\n~~~",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_markdown_emphasis-inline-code",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "`青［＃「青」は太字］`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`**青**`",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "`**青**`",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_markdown_emphasis-directive",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": ":::custom\n青［＃「青」は太字］\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\n**青**\n:::",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\n**青**\n:::",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_markdown_emphasis-mismatched-fence",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "````\n青［＃「青」は太字］\n```suffix\n青［＃「青」は太字］\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\n青［＃「青」は太字］\n```suffix\n**青**\n````",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "````\n青［＃「青」は太字］\n```suffix\n**青**\n````",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_underline-backtick",
+    "function": "convert_aozora_underline",
+    "input": "```\n青［＃「青」に傍線］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n青［＃「青」に傍線］\n```",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n青［＃「青」に傍線］\n```",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_underline-tilde",
+    "function": "convert_aozora_underline",
+    "input": "~~~\n青［＃「青」に傍線］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n||青||\n~~~",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n||青||\n~~~",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_underline-inline-code",
+    "function": "convert_aozora_underline",
+    "input": "`青［＃「青」に傍線］`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`||青||`",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "`||青||`",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_underline-directive",
+    "function": "convert_aozora_underline",
+    "input": ":::custom\n青［＃「青」に傍線］\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\n||青||\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\n||青||\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_underline-mismatched-fence",
+    "function": "convert_aozora_underline",
+    "input": "````\n青［＃「青」に傍線］\n```suffix\n青［＃「青」に傍線］\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\n青［＃「青」に傍線］\n```suffix\n||青||\n````",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "````\n青［＃「青」に傍線］\n```suffix\n||青||\n````",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_bouten-backtick",
+    "function": "convert_aozora_bouten",
+    "input": "```\n青［＃「青」に傍点］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n｜青《﹅》\n```",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n｜青《﹅》\n```",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_bouten-tilde",
+    "function": "convert_aozora_bouten",
+    "input": "~~~\n青［＃「青」に傍点］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n｜青《﹅》\n~~~",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n｜青《﹅》\n~~~",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_bouten-inline-code",
+    "function": "convert_aozora_bouten",
+    "input": "`青［＃「青」に傍点］`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`｜青《﹅》`",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "`｜青《﹅》`",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_bouten-directive",
+    "function": "convert_aozora_bouten",
+    "input": ":::custom\n青［＃「青」に傍点］\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\n｜青《﹅》\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\n｜青《﹅》\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_bouten-mismatched-fence",
+    "function": "convert_aozora_bouten",
+    "input": "````\n青［＃「青」に傍点］\n```suffix\n青［＃「青」に傍点］\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\n｜青《﹅》\n```suffix\n｜青《﹅》\n````",
+        2,
+        0
+      ],
+      "warnings": [],
+      "output": "````\n｜青《﹅》\n```suffix\n｜青《﹅》\n````",
+      "stats": {
+        "converted": 2,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_headings-backtick",
+    "function": "convert_aozora_headings",
+    "input": "```\n章［＃「章」は大見出し］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n## 章\n```",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n## 章\n```",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_headings-tilde",
+    "function": "convert_aozora_headings",
+    "input": "~~~\n章［＃「章」は大見出し］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n## 章\n~~~",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n## 章\n~~~",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_headings-inline-code",
+    "function": "convert_aozora_headings",
+    "input": "`章［＃「章」は大見出し］`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`章［＃「章」は大見出し］`",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "`章［＃「章」は大見出し］`",
+      "stats": {
+        "converted": 0,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_headings-directive",
+    "function": "convert_aozora_headings",
+    "input": ":::custom\n章［＃「章」は大見出し］\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\n## 章\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\n## 章\n:::",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_headings-mismatched-fence",
+    "function": "convert_aozora_headings",
+    "input": "````\n章［＃「章」は大見出し］\n```suffix\n章［＃「章」は大見出し］\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\n## 章\n```suffix\n## 章\n````",
+        2,
+        0
+      ],
+      "warnings": [],
+      "output": "````\n## 章\n```suffix\n## 章\n````",
+      "stats": {
+        "converted": 2,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_indent-backtick",
+    "function": "convert_aozora_indent",
+    "input": "```\n［＃２字下げ］青\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n［＃２字下げ］青\n```",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n［＃２字下げ］青\n```",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_indent-tilde",
+    "function": "convert_aozora_indent",
+    "input": "~~~\n［＃２字下げ］青\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n:::indent-2\n青\n:::\n~~~",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n:::indent-2\n青\n:::\n~~~",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_indent-inline-code",
+    "function": "convert_aozora_indent",
+    "input": "`［＃２字下げ］青`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`［＃２字下げ］青`",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "`［＃２字下げ］青`",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_indent-directive",
+    "function": "convert_aozora_indent",
+    "input": ":::custom\n［＃２字下げ］青\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\n:::indent-2\n青\n:::\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\n:::indent-2\n青\n:::\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_indent-mismatched-fence",
+    "function": "convert_aozora_indent",
+    "input": "````\n［＃２字下げ］青\n```suffix\n［＃２字下げ］青\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\n［＃２字下げ］青\n```suffix\n:::indent-2\n青\n:::\n````",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "````\n［＃２字下げ］青\n```suffix\n:::indent-2\n青\n:::\n````",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_align_end-backtick",
+    "function": "convert_aozora_align_end",
+    "input": "```\n［＃地付き］青\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n［＃地付き］青\n```",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n［＃地付き］青\n```",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_align_end-tilde",
+    "function": "convert_aozora_align_end",
+    "input": "~~~\n［＃地付き］青\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n:::align-end\n青\n:::\n~~~",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n:::align-end\n青\n:::\n~~~",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_align_end-inline-code",
+    "function": "convert_aozora_align_end",
+    "input": "`［＃地付き］青`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`\n:::align-end\n青`\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "`\n:::align-end\n青`\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_align_end-directive",
+    "function": "convert_aozora_align_end",
+    "input": ":::custom\n［＃地付き］青\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\n［＃地付き］青\n:::",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\n［＃地付き］青\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_align_end-mismatched-fence",
+    "function": "convert_aozora_align_end",
+    "input": "````\n［＃地付き］青\n```suffix\n［＃地付き］青\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\n［＃地付き］青\n```suffix\n:::align-end\n青\n:::\n````",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "````\n［＃地付き］青\n```suffix\n:::align-end\n青\n:::\n````",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_page_breaks-backtick",
+    "function": "convert_aozora_page_breaks",
+    "input": "```\n［＃改ページ］\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "```\n［＃改ページ］\n```",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "```\n［＃改ページ］\n```",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_page_breaks-tilde",
+    "function": "convert_aozora_page_breaks",
+    "input": "~~~\n［＃改ページ］\n~~~",
+    "options": {},
+    "expected": {
+      "return": [
+        "~~~\n:::page-break\n:::\n~~~",
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "~~~\n:::page-break\n:::\n~~~",
+      "stats": {
+        "pageBreaks": 1,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_page_breaks-inline-code",
+    "function": "convert_aozora_page_breaks",
+    "input": "`［＃改ページ］`",
+    "options": {},
+    "expected": {
+      "return": [
+        "`［＃改ページ］`",
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "`［＃改ページ］`",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 1,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_page_breaks-directive",
+    "function": "convert_aozora_page_breaks",
+    "input": ":::custom\n［＃改ページ］\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::custom\n［＃改ページ］\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::custom\n［＃改ページ］\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "protection-convert_aozora_page_breaks-mismatched-fence",
+    "function": "convert_aozora_page_breaks",
+    "input": "````\n［＃改ページ］\n```suffix\n［＃改ページ］\n````",
+    "options": {},
+    "expected": {
+      "return": [
+        "````\n［＃改ページ］\n```suffix\n:::page-break\n:::\n````",
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "````\n［＃改ページ］\n```suffix\n:::page-break\n:::\n````",
+      "stats": {
+        "pageBreaks": 1,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  }
+]

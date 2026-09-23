@@ -1,0 +1,5854 @@
+[
+  {
+    "id": "python-dot-emphasis-0-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-0-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青［＃「青」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-0-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］青［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-0-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青［＃「青」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-0-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-0-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>青</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>青</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-0",
+    "function": "convert_aozora_bouten",
+    "input": "青［＃「青」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-0",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］青［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 青",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 青",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-0",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］青",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n青\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n青\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-0",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］青",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n青\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n青\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-1-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］𠀀［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**𠀀**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**𠀀**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-1-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "𠀀［＃「𠀀」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**𠀀**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**𠀀**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-1-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］𠀀［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*𠀀*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*𠀀*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-1-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "𠀀［＃「𠀀」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*𠀀*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*𠀀*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-1-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］𠀀［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||𠀀||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||𠀀||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-1-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］𠀀［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>𠀀</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>𠀀</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-1",
+    "function": "convert_aozora_bouten",
+    "input": "𠀀［＃「𠀀」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜𠀀《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜𠀀《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-1",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］𠀀［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 𠀀",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 𠀀",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-1",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］𠀀",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n𠀀\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n𠀀\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-1",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］𠀀",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n𠀀\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n𠀀\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-2-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］が［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**が**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**が**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-2-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "が［＃「が」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**が**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**が**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-2-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］が［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*が*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*が*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-2-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "が［＃「が」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*が*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*が*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-2-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］が［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||が||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||が||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-2-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］が［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>が</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>が</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-2",
+    "function": "convert_aozora_bouten",
+    "input": "が［＃「が」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜か《﹅》｜゙《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜か《﹅》｜゙《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-2",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］が［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## が",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## が",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-2",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］が",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\nが\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\nが\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-2",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］が",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\nが\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\nが\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-3-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］$&$1［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**$&$1**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**$&$1**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-3-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "$&$1［＃「$&$1」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**$&$1**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**$&$1**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-3-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］$&$1［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*$&$1*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*$&$1*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-3-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "$&$1［＃「$&$1」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*$&$1*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*$&$1*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-3-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］$&$1［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||$&$1||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||$&$1||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-3-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］$&$1［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>$&$1</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>$&$1</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-3",
+    "function": "convert_aozora_bouten",
+    "input": "$&$1［＃「$&$1」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜$《﹅》｜&《﹅》｜$《﹅》｜1《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜$《﹅》｜&《﹅》｜$《﹅》｜1《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-3",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］$&$1［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## $&$1",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## $&$1",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-3",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］$&$1",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n$&$1\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n$&$1\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-3",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］$&$1",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n$&$1\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n$&$1\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-4-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］A\\B［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**A\\B**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**A\\B**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-4-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "A\\B［＃「A\\B」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**A\\B**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**A\\B**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-4-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］A\\B［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*A\\B*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*A\\B*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-4-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "A\\B［＃「A\\B」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*A\\B*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*A\\B*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-4-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］A\\B［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||A\\B||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||A\\B||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-4-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］A\\B［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>A\\B</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>A\\B</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-4",
+    "function": "convert_aozora_bouten",
+    "input": "A\\B［＃「A\\B」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜A《﹅》｜\\《﹅》｜B《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜A《﹅》｜\\《﹅》｜B《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-4",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］A\\B［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## A\\B",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## A\\B",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-4",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］A\\B",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\nA\\B\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\nA\\B\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-4",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］A\\B",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\nA\\B\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\nA\\B\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-5-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青\r空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃太字］青\r空［＃太字終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃太字］青\r空［＃太字終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-5-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青\r空［＃「青\r空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青\r空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青\r空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-5-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］青\r空［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃斜体］青\r空［＃斜体終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃斜体］青\r空［＃斜体終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-5-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青\r空［＃「青\r空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青\r空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青\r空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-5-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青\r空［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "［＃傍線］青\r空［＃傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍線］青\r空［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-underline-5-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青\r空［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "［＃傍線］青\r空［＃傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍線］青\r空［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-bouten-5",
+    "function": "convert_aozora_bouten",
+    "input": "青\r空［＃「青\r空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\r｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\r｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-5",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］青\r空［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 青 空",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 青 空",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-5",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］青\r空",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n青\r空\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n青\r空\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-5",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］青\r空",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n青\r空\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n青\r空\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-6-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青 空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青 空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青 空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-6-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青 空［＃「青 空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青 空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青 空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-6-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］青 空［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青 空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青 空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-6-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青 空［＃「青 空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青 空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青 空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-6-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青 空［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||青 空||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青 空||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-6-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青 空［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>青 空</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>青 空</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-6",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-6",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］青 空［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 青 空",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 青 空",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-6",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］青 空",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n青 空\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n青 空\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-6",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］青 空",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n青 空\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n青 空\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-7-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青 空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青 空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青 空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-7-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青 空［＃「青 空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青 空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青 空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-7-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］青 空［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青 空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青 空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-7-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青 空［＃「青 空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青 空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青 空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-7-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青 空［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||青 空||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青 空||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-7-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青 空［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>青 空</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>青 空</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-7",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-7",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］青 空［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 青 空",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 青 空",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-7",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］青 空",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n青 空\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n青 空\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-7",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］青 空",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n青 空\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n青 空\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-8-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-8-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青空［＃「青空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-8-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］青空［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-8-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青空［＃「青空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-8-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青空［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||青空||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青空||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-8-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青空［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>青空</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>青空</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-8",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-8",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］青空［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 青 空",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 青 空",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-8",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］青空",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n青空\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n青空\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-8",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］青空",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n青空\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n青空\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-9-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青﻿空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青﻿空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青﻿空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-9-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青﻿空［＃「青﻿空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青﻿空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青﻿空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-9-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］青﻿空［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青﻿空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青﻿空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-9-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青﻿空［＃「青﻿空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青﻿空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青﻿空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-9-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青﻿空［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||青﻿空||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青﻿空||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-9-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青﻿空［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>青﻿空</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>青﻿空</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-9",
+    "function": "convert_aozora_bouten",
+    "input": "青﻿空［＃「青﻿空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜﻿《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜﻿《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-9",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］青﻿空［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 青﻿空",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 青﻿空",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-9",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］青﻿空",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n青﻿空\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n青﻿空\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-9",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］青﻿空",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n青﻿空\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n青﻿空\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-10-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］青\u001c空［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青\u001c空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青\u001c空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-10-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青\u001c空［＃「青\u001c空」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**青\u001c空**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**青\u001c空**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-10-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］青\u001c空［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青\u001c空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青\u001c空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-10-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "青\u001c空［＃「青\u001c空」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*青\u001c空*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*青\u001c空*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-10-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青\u001c空［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||青\u001c空||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||青\u001c空||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-10-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］青\u001c空［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>青\u001c空</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>青\u001c空</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-10",
+    "function": "convert_aozora_bouten",
+    "input": "青\u001c空［＃「青\u001c空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\u001c｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\u001c｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-10",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］青\u001c空［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 青 空",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 青 空",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-10",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］青\u001c空",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n青\u001c空\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n青\u001c空\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-10",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］青\u001c空",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n青\u001c空\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n青\u001c空\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-11-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］a_b［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**a_b**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**a_b**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-11-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "a_b［＃「a_b」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**a_b**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**a_b**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-11-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］a_b［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*a_b*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*a_b*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-11-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "a_b［＃「a_b」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*a_b*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*a_b*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-11-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］a_b［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||a_b||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||a_b||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-11-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］a_b［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>a_b</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>a_b</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-11",
+    "function": "convert_aozora_bouten",
+    "input": "a_b［＃「a_b」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜a《﹅》｜_《﹅》｜b《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜a《﹅》｜_《﹅》｜b《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-11",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］a_b［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## a_b",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## a_b",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-11",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］a_b",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\na_b\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\na_b\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-11",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］a_b",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\na_b\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\na_b\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-12-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］a*b［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃太字］a*b［＃太字終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃太字］a*b［＃太字終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-12-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "a*b［＃「a*b」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "a*b［＃「a*b」は太字］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "a*b［＃「a*b」は太字］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-12-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］a*b［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃斜体］a*b［＃斜体終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃斜体］a*b［＃斜体終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-12-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "a*b［＃「a*b」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "a*b［＃「a*b」は斜体］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "a*b［＃「a*b」は斜体］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-underline-12-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］a*b［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||a*b||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||a*b||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-12-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］a*b［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u>a*b</u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u>a*b</u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-12",
+    "function": "convert_aozora_bouten",
+    "input": "a*b［＃「a*b」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜a《﹅》｜*《﹅》｜b《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜a《﹅》｜*《﹅》｜b《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-12",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］a*b［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## a*b",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## a*b",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-12",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］a*b",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\na*b\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\na*b\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-12",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］a*b",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\na*b\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\na*b\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-13-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］<tag>青</tag>［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**<tag>青</tag>**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**<tag>青</tag>**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-13-太字",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "<tag>青</tag>［＃「<tag>青</tag>」は太字］",
+    "options": {},
+    "expected": {
+      "return": [
+        "**<tag>青</tag>**",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "**<tag>青</tag>**",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-dot-emphasis-13-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃斜体］<tag>青</tag>［＃斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*<tag>青</tag>*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*<tag>青</tag>*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-forward-emphasis-13-斜体",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "<tag>青</tag>［＃「<tag>青</tag>」は斜体］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*<tag>青</tag>*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*<tag>青</tag>*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-13-nyoze",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］<tag>青</tag>［＃傍線終わり］",
+    "options": {
+      "output_format": "nyoze"
+    },
+    "expected": {
+      "return": [
+        "||<tag>青</tag>||",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "||<tag>青</tag>||",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-underline-13-html",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］<tag>青</tag>［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "<u><tag>青</tag></u>",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "<u><tag>青</tag></u>",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-bouten-13",
+    "function": "convert_aozora_bouten",
+    "input": "<tag>青</tag>［＃「<tag>青</tag>」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜<《﹅》｜t《﹅》｜a《﹅》｜g《﹅》｜>《﹅》｜青《﹅》｜<《﹅》｜/《﹅》｜t《﹅》｜a《﹅》｜g《﹅》｜>《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜<《﹅》｜t《﹅》｜a《﹅》｜g《﹅》｜>《﹅》｜青《﹅》｜<《﹅》｜/《﹅》｜t《﹅》｜a《﹅》｜g《﹅》｜>《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-splitlines-13",
+    "function": "convert_aozora_headings",
+    "input": "［＃大見出し］<tag>青</tag>［＃大見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## <tag>青</tag>",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## <tag>青</tag>",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-body-13",
+    "function": "convert_aozora_indent",
+    "input": "［＃２字下げ］<tag>青</tag>",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::indent-2\n<tag>青</tag>\n:::",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::indent-2\n<tag>青</tag>\n:::",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-align-body-13",
+    "function": "convert_aozora_align_end",
+    "input": "前［＃地付き］<tag>青</tag>",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n:::align-end\n<tag>青</tag>\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n:::align-end\n<tag>青</tag>\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-0",
+    "function": "convert_aozora_bouten",
+    "input": "青\t空［＃「青\t空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\t｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\t｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-0",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\t章\t［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-1",
+    "function": "convert_aozora_bouten",
+    "input": "青\n空［＃「青\n空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\n｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\n｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-1",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\n章\n［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-2",
+    "function": "convert_aozora_bouten",
+    "input": "青\u000b空［＃「青\u000b空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\u000b｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\u000b｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-2",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\u000b章\u000b［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-3",
+    "function": "convert_aozora_bouten",
+    "input": "青\f空［＃「青\f空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\f｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\f｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-3",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\f章\f［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-4",
+    "function": "convert_aozora_bouten",
+    "input": "青\r空［＃「青\r空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\r｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\r｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-4",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\r章\r［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-5",
+    "function": "convert_aozora_bouten",
+    "input": "青\u001c空［＃「青\u001c空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\u001c｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\u001c｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-5",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\u001c章\u001c［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-6",
+    "function": "convert_aozora_bouten",
+    "input": "青\u001d空［＃「青\u001d空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\u001d｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\u001d｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-6",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\u001d章\u001d［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-7",
+    "function": "convert_aozora_bouten",
+    "input": "青\u001e空［＃「青\u001e空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\u001e｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\u001e｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-7",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\u001e章\u001e［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-8",
+    "function": "convert_aozora_bouten",
+    "input": "青\u001f空［＃「青\u001f空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》\u001f｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》\u001f｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-8",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］\u001f章\u001f［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-9",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-9",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-10",
+    "function": "convert_aozora_bouten",
+    "input": "青空［＃「青空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-10",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］章［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-11",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-11",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-12",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-12",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-13",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-13",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-14",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-14",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-15",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-15",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-16",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-16",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-17",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-17",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-18",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-18",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-19",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-19",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-20",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-20",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-21",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-21",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-22",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-22",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-23",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-23",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-24",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-24",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-25",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-25",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-26",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-26",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-27",
+    "function": "convert_aozora_bouten",
+    "input": "青 空［＃「青 空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》 ｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》 ｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-27",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］ 章 ［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-28",
+    "function": "convert_aozora_bouten",
+    "input": "青　空［＃「青　空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》　｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》　｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-28",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］　章　［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-bouten-29",
+    "function": "convert_aozora_bouten",
+    "input": "青﻿空［＃「青﻿空」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "｜青《﹅》｜﻿《﹅》｜空《﹅》",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "｜青《﹅》｜﻿《﹅》｜空《﹅》",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-whitespace-heading-29",
+    "function": "convert_aozora_headings",
+    "input": "［＃中見出し］﻿章﻿［＃中見出し終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "### ﻿章﻿",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "### ﻿章﻿",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-unicode-Nd-0",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃١-١٣-٢١］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃١-١٣-٢١］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃١-١٣-٢١］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-unicode-Nd-1",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃第3水準١-١٣-٢١］",
+    "options": {},
+    "expected": {
+      "return": [
+        "Ⅰ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "Ⅰ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-unicode-Nd-2",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃1-١٣-٢١］",
+    "options": {},
+    "expected": {
+      "return": [
+        "Ⅰ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "Ⅰ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-unicode-Nd-3",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃1-𝟙𝟛-𝟚𝟙］",
+    "options": {},
+    "expected": {
+      "return": [
+        "Ⅰ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "Ⅰ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-unicode-Nd-4",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃1-13-21］",
+    "options": {},
+    "expected": {
+      "return": [
+        "Ⅰ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "Ⅰ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-unicode-Nd-5",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃第3水準3-1-1、1-13-21］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃第3水準3-1-1、1-13-21］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃第3水準3-1-1、1-13-21］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-unicode-Nd-6",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃U+0000 1-13-21］",
+    "options": {},
+    "expected": {
+      "return": [
+        "Ⅰ",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "Ⅰ",
+      "stats": {
+        "converted": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-number-1-0",
+    "function": "convert_aozora_headings",
+    "input": "［＃0字下げ］章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-number-1-0",
+    "function": "convert_aozora_indent",
+    "input": "［＃0字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃0字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃0字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-jiage-number-1-0",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から0字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        "［＃地から0字上げ］署名",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地から0字上げ］署名",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-heading-number-1-7",
+    "function": "convert_aozora_headings",
+    "input": "［＃7字下げ］章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 　　　　　　　章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 　　　　　　　章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-number-1-7",
+    "function": "convert_aozora_indent",
+    "input": "［＃7字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃7字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃7字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-jiage-number-1-7",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から7字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-number-27-9999",
+    "function": "convert_aozora_headings",
+    "input": "［＃999999999999999999999999999字下げ］章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-number-27-9999",
+    "function": "convert_aozora_indent",
+    "input": "［＃999999999999999999999999999字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃999999999999999999999999999字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃999999999999999999999999999字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-jiage-number-27-9999",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から999999999999999999999999999字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        ":::align-end\n署名\n:::",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-heading-number-4301-9999",
+    "function": "convert_aozora_headings",
+    "input": "［＃99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999字下げ］章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-number-4301-9999",
+    "function": "convert_aozora_indent",
+    "input": "［＃99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-jiage-number-4301-9999",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        "［＃地から99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999字上げ］署名",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地から99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999字上げ］署名",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-heading-number-4301-0000",
+    "function": "convert_aozora_headings",
+    "input": "［＃00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000字下げ］章［＃「章」は大見出し］",
+    "options": {},
+    "expected": {
+      "return": [
+        "## 章",
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "## 章",
+      "stats": {
+        "converted": 1,
+        "unsupported": 0
+      }
+    }
+  },
+  {
+    "id": "python-indent-number-4301-0000",
+    "function": "convert_aozora_indent",
+    "input": "［＃00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000字下げ］本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000字下げ］本文",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000字下げ］本文",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-jiage-number-4301-0000",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地から00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000字上げ］署名",
+    "options": {
+      "approximate_jiage": true
+    },
+    "expected": {
+      "return": [
+        "［＃地から00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000字上げ］署名",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地から00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000字上げ］署名",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "python-empty-emphasis-block-0",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n［＃ここで太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-underline-block-0",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n［＃ここで傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-emphasis-block-1",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "前\n［＃ここから太字］\n［＃ここで太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "前",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-underline-block-1",
+    "function": "convert_aozora_underline",
+    "input": "前\n［＃ここから傍線］\n［＃ここで傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "前",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-emphasis-block-2",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n［＃ここで太字終わり］\n後",
+    "options": {},
+    "expected": {
+      "return": [
+        "後",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "後",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-underline-block-2",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n［＃ここで傍線終わり］\n後",
+    "options": {},
+    "expected": {
+      "return": [
+        "後",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "後",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-emphasis-block-3",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "前\n［＃ここから太字］\n［＃ここで太字終わり］\n後",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n後",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n後",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-underline-block-3",
+    "function": "convert_aozora_underline",
+    "input": "前\n［＃ここから傍線］\n［＃ここで傍線終わり］\n後",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n後",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n後",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-emphasis-block-4",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "前\n［＃ここから太字］\n［＃ここで太字終わり］\n",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n",
+        1,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n",
+      "stats": {
+        "bold": 1,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "python-empty-underline-block-4",
+    "function": "convert_aozora_underline",
+    "input": "前\n［＃ここから傍線］\n［＃ここで傍線終わり］\n",
+    "options": {},
+    "expected": {
+      "return": [
+        "前\n",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "前\n",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_gaiji-0",
+    "function": "convert_aozora_gaiji",
+    "input": "※［＃］",
+    "options": {},
+    "expected": {
+      "return": [
+        "※［＃］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "※［＃］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_gaiji-1",
+    "function": "convert_aozora_gaiji",
+    "input": "A［＃「A」は］",
+    "options": {},
+    "expected": {
+      "return": [
+        "A［＃「A」は］",
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "A［＃「A」は］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_markdown_emphasis-0",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃太字］［＃斜体］a*b［＃斜体終わり］［＃太字終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃太字］［＃斜体］a*b［＃斜体終わり］［＃太字終わり］",
+        0,
+        0,
+        0,
+        2
+      ],
+      "warnings": [],
+      "output": "［＃太字］［＃斜体］a*b［＃斜体終わり］［＃太字終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 2
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_markdown_emphasis-1",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから斜体］\n本文\n［＃ここで斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "*本文*",
+        0,
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "*本文*",
+      "stats": {
+        "bold": 0,
+        "italic": 1,
+        "both": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_markdown_emphasis-2",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n```\n例\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから太字］\n```\n例\n```",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから太字］\n```\n例\n```",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_markdown_emphasis-3",
+    "function": "convert_aozora_markdown_emphasis",
+    "input": "［＃ここから太字］\n本文\n［＃ここで斜体終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから太字］\n本文\n［＃ここで斜体終わり］",
+        0,
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから太字］\n本文\n［＃ここで斜体終わり］",
+      "stats": {
+        "bold": 0,
+        "italic": 0,
+        "both": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_underline-0",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］［＃傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃傍線］［＃傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍線］［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_underline-1",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］a||b［＃傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃傍線］a||b［＃傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍線］a||b［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_underline-2",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから傍線］\n本文",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから傍線］\n本文",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_underline-3",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\na||b\n［＃ここで傍線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから傍線］\na||b\n［＃ここで傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから傍線］\na||b\n［＃ここで傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_underline-4",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n```\n例\n```",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから傍線］\n```\n例\n```",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから傍線］\n```\n例\n```",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_underline-5",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n本文\n［＃ここで波線終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから傍線］\n本文\n［＃ここで波線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから傍線］\n本文\n［＃ここで波線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_bouten-0",
+    "function": "convert_aozora_bouten",
+    "input": "別［＃「青」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "別［＃「青」に傍点］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "別［＃「青」に傍点］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_bouten-1",
+    "function": "convert_aozora_bouten",
+    "input": "青［＃「」に傍点］",
+    "options": {},
+    "expected": {
+      "return": [
+        "青［＃「」に傍点］",
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「」に傍点］",
+      "stats": {
+        "converted": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-0",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n:::align-end\n署名\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから地付き］\n:::align-end\n署名\n:::",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから地付き］\n:::align-end\n署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-1",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n［＃ここから地付き］\n署名\n［＃ここで地付き終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::align-end\n［＃ここから地付き］\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n［＃ここから地付き］\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-2",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここで地付き終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここで地付き終わり］",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここで地付き終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-3",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地から３字上げ］\n:::align-end\n署名\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃ここから地から３字上げ］\n:::align-end\n署名\n:::",
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃ここから地から３字上げ］\n:::align-end\n署名\n:::",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-4",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n［＃ここから地から３字上げ］\n本文\n［＃ここで地付き終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::align-end\n［＃ここから地から３字上げ］\n本文\n:::",
+        1,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": ":::align-end\n［＃ここから地から３字上げ］\n本文\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-5",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n前［＃地から３字上げ、修飾］後\n［＃ここで地付き終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::align-end\n前［＃地から３字上げ、修飾］後\n:::",
+        1,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": ":::align-end\n前［＃地から３字上げ、修飾］後\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-6",
+    "function": "convert_aozora_align_end",
+    "input": "［＃地付き］［＃地から３字上げ］",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃地付き］［＃地から３字上げ］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃地付き］［＃地から３字上げ］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_align_end-7",
+    "function": "convert_aozora_align_end",
+    "input": "［＃ここから地付き］\n\n署名\n［＃ここで地付き終わり］",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::align-end\n\n署名\n:::",
+        1,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::align-end\n\n署名\n:::",
+      "stats": {
+        "converted": 1,
+        "approximated": 0,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_page_breaks-0",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改丁］\n:::page-break\n:::",
+    "options": {},
+    "expected": {
+      "return": [
+        "［＃改丁］\n:::page-break\n:::",
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": "［＃改丁］\n:::page-break\n:::",
+      "stats": {
+        "pageBreaks": 0,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-convert_aozora_page_breaks-1",
+    "function": "convert_aozora_page_breaks",
+    "input": "［＃改ページ］\n  \n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        ":::page-break\n:::\n  \n本文",
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [],
+      "output": ":::page-break\n:::\n  \n本文",
+      "stats": {
+        "pageBreaks": 1,
+        "blankPages": 0,
+        "spreadApproximated": 0,
+        "unconverted": 0,
+        "kaidanUnconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-parse_aozora_header-0",
+    "function": "parse_aozora_header",
+    "input": "題\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題"
+        },
+        "本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-parse_aozora_header-1",
+    "function": "parse_aozora_header",
+    "input": "\n",
+    "options": {},
+    "expected": {
+      "return": [
+        {},
+        "\n"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-parse_aozora_header-2",
+    "function": "parse_aozora_header",
+    "input": "題\n著者\n",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "author": "著者"
+        },
+        ""
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-parse_aozora_header-3",
+    "function": "parse_aozora_header",
+    "input": "題\n著者\n甲訳\n\n本文",
+    "options": {},
+    "expected": {
+      "return": [
+        {
+          "title": "題",
+          "translator": "甲訳",
+          "author": "著者"
+        },
+        "本文"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-remove_aozora_footer_metadata-0",
+    "function": "remove_aozora_footer_metadata",
+    "input": "",
+    "options": {},
+    "expected": {
+      "return": [
+        "",
+        false
+      ],
+      "warnings": [],
+      "output": "",
+      "stats": {
+        "removed": false
+      }
+    }
+  },
+  {
+    "id": "branch-remove_aozora_footer_metadata-1",
+    "function": "remove_aozora_footer_metadata",
+    "input": "底本：資料\n入力：人\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "",
+        true
+      ],
+      "warnings": [],
+      "output": "",
+      "stats": {
+        "removed": true
+      }
+    }
+  },
+  {
+    "id": "branch-remove_aozora_footer_metadata-2",
+    "function": "remove_aozora_footer_metadata",
+    "input": "底本：資料\n行\n青空文庫作成ファイル：",
+    "options": {},
+    "expected": {
+      "return": [
+        "底本：資料\n行\n青空文庫作成ファイル：",
+        false
+      ],
+      "warnings": [],
+      "output": "底本：資料\n行\n青空文庫作成ファイル：",
+      "stats": {
+        "removed": false
+      }
+    }
+  },
+  {
+    "id": "branch-extract_frontmatter_metadata-0",
+    "function": "extract_frontmatter_metadata",
+    "input": "本文",
+    "options": {},
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-extract_frontmatter_metadata-1",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\n閉じなし",
+    "options": {},
+    "expected": {
+      "return": null,
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-extract_frontmatter_metadata-2",
+    "function": "extract_frontmatter_metadata",
+    "input": "---\ntitle: 題\nother:\nauthors:\n  - 甲\nnext: 値\n---",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "題",
+        "authors": [
+          "甲"
+        ],
+        "next": "値"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-reconstruct_header_from_metadata-0",
+    "function": "reconstruct_header_from_metadata",
+    "input": {},
+    "options": {},
+    "expected": {
+      "return": "",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-reconstruct_header_from_metadata-1",
+    "function": "reconstruct_header_from_metadata",
+    "input": {
+      "title": "題"
+    },
+    "options": {},
+    "expected": {
+      "return": "題\n\n",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-reconstruct_header_from_metadata-2",
+    "function": "reconstruct_header_from_metadata",
+    "input": {
+      "author": "人"
+    },
+    "options": {},
+    "expected": {
+      "return": "人\n\n",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-reconstruct_header_from_metadata-3",
+    "function": "reconstruct_header_from_metadata",
+    "input": {
+      "translators": [
+        "甲訳",
+        "乙訳"
+      ]
+    },
+    "options": {},
+    "expected": {
+      "return": "甲訳\n乙訳\n\n",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-get_metadata_from_text-0",
+    "function": "get_metadata_from_text",
+    "input": "本文",
+    "options": {},
+    "expected": {
+      "return": {},
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-get_metadata_from_text-1",
+    "function": "get_metadata_from_text",
+    "input": "題\n著者\n\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "題",
+        "author": "著者"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-get_metadata_from_text-2",
+    "function": "get_metadata_from_text",
+    "input": "題\n副題\n甲\n乙\n\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "題",
+        "authors": [
+          "甲",
+          "乙"
+        ],
+        "author": "甲"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-get_metadata_from_text-3",
+    "function": "get_metadata_from_text",
+    "input": "題\n\n本文",
+    "options": {},
+    "expected": {
+      "return": {
+        "title": "題"
+      },
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-create_frontmatter-0",
+    "function": "create_frontmatter",
+    "input": {},
+    "options": {},
+    "expected": {
+      "return": "",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-create_frontmatter-1",
+    "function": "create_frontmatter",
+    "input": {
+      "title": "題"
+    },
+    "options": {},
+    "expected": {
+      "return": "---\ntitle: 題\n---",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-create_frontmatter-2",
+    "function": "create_frontmatter",
+    "input": {
+      "author": "人"
+    },
+    "options": {},
+    "expected": {
+      "return": "---\nauthor: 人\n---",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-create_frontmatter-3",
+    "function": "create_frontmatter",
+    "input": {
+      "translator": "人訳"
+    },
+    "options": {},
+    "expected": {
+      "return": "---\ntranslator: 人訳\n---",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-create_frontmatter-4",
+    "function": "create_frontmatter",
+    "input": {
+      "translators": [
+        "甲訳",
+        "乙訳"
+      ]
+    },
+    "options": {},
+    "expected": {
+      "return": "---\ntranslators:\n  - 甲訳\n  - 乙訳\n---",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-sanitize_filename-0",
+    "function": "sanitize_filename",
+    "input": "",
+    "options": {},
+    "expected": {
+      "return": "untitled",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-sanitize_filename-1",
+    "function": "sanitize_filename",
+    "input": "通常題名",
+    "options": {},
+    "expected": {
+      "return": "通常題名",
+      "warnings": []
+    }
+  },
+  {
+    "id": "branch-underline-left-False",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」の左に傍線］",
+    "options": {
+      "approximate_left": false
+    },
+    "expected": {
+      "return": [
+        "青［＃「青」の左に傍線］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "青［＃「青」の左に傍線］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-underline-left-True",
+    "function": "convert_aozora_underline",
+    "input": "青［＃「青」の左に傍線］",
+    "options": {
+      "approximate_left": true
+    },
+    "expected": {
+      "return": [
+        "||青||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||青||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-underline-special-波線-False",
+    "function": "convert_aozora_underline",
+    "input": "［＃波線］本文［＃波線終わり］",
+    "options": {
+      "approximate_left": true,
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||本文||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||本文||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-underline-special-波線-True",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから波線］\n本文\n［＃ここで波線終わり］",
+    "options": {
+      "approximate_left": true,
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||本文||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||本文||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-underline-special-左に二重傍線-False",
+    "function": "convert_aozora_underline",
+    "input": "［＃左に二重傍線］本文［＃左に二重傍線終わり］",
+    "options": {
+      "approximate_left": true,
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||本文||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||本文||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-underline-special-左に二重傍線-True",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから左に二重傍線］\n本文\n［＃ここで左に二重傍線終わり］",
+    "options": {
+      "approximate_left": true,
+      "approximate_other_styles": true
+    },
+    "expected": {
+      "return": [
+        "||本文||",
+        0,
+        1,
+        0
+      ],
+      "warnings": [],
+      "output": "||本文||",
+      "stats": {
+        "converted": 0,
+        "approximated": 1,
+        "unconverted": 0
+      }
+    }
+  },
+  {
+    "id": "branch-underline-html-22",
+    "function": "convert_aozora_underline",
+    "input": "［＃傍線］<u>本文</u>［＃傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "［＃傍線］<u>本文</u>［＃傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃傍線］<u>本文</u>［＃傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  },
+  {
+    "id": "branch-underline-html-31",
+    "function": "convert_aozora_underline",
+    "input": "［＃ここから傍線］\n<u>本文</u>\n［＃ここで傍線終わり］",
+    "options": {
+      "output_format": "html"
+    },
+    "expected": {
+      "return": [
+        "［＃ここから傍線］\n<u>本文</u>\n［＃ここで傍線終わり］",
+        0,
+        0,
+        1
+      ],
+      "warnings": [],
+      "output": "［＃ここから傍線］\n<u>本文</u>\n［＃ここで傍線終わり］",
+      "stats": {
+        "converted": 0,
+        "approximated": 0,
+        "unconverted": 1
+      }
+    }
+  }
+]

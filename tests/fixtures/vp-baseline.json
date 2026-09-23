@@ -1,0 +1,10 @@
+{
+  "description": "Web assets before the vertical preview (HEAD f8b593d build). The vertical preview changes only index.html, main.js and styles.css.",
+  "webAssetsBefore": {
+    "preview.worker.js": "ac47e926e5397893848650caaadc8d72c545217dd449a7de64a50d82d30d0d72",
+    "preview.worker.js.LEGAL.txt": "71fc80deb0fe19066ad28191431bceef0d1cd055aa9879b313abddbaa6b57b26",
+    "import.worker.js": "f4789fe90e9e73e3413174e6e4c5939ae3a554012ce4970a21ea3ed1a2b7f1a6",
+    "export.worker.js": "ffc90ff5b2e743d7eafa223f7d5830f35e9abce85ac60b5491514ac83ba8317e",
+    "LICENSE.txt": "1a1cd731689e59cac74d5f26658a7a19c788fb043f9c44ac084d2c87acbb5128"
+  }
+}

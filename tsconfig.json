@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ES2022", "DOM"],
+    "types": ["node", "vitest/globals"]
+  },
+  "include": ["src", "tests", "vitest.config.ts"],
+  "exclude": [
+    "src/adapters/browser/import.worker.ts",
+    "src/adapters/browser/export.worker.ts"
+  ]
+}

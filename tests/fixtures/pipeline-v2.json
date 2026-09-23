@@ -1,0 +1,3864 @@
+[
+  {
+    "caseKey": "pipeline:default-header",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n**青空**\n",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "emphasis",
+          "action": "bold",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        },
+        {
+          "stage": "frontmatter",
+          "action": "frontmatter-added-header-removed"
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n**青空**\n",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n**青空**\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Markdown太字変換: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:bouten-before-heading",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "bouten",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "headings",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        },
+        {
+          "stage": "frontmatter",
+          "action": "frontmatter-added-header-removed"
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (見出しMarkdown化: 1件, 傍点変換: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:gaiji-before-name",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n本文",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "gaiji",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        },
+        {
+          "stage": "frontmatter",
+          "action": "frontmatter-added-header-removed"
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "著者/題.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n本文",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/著者/題.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     → 著者/題.md",
+        "     [OK] unicode-fixture → UTF-8 & .md → 題.md (外字Unicode化: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:heading-consumes-indent",
+    "core": {
+      "text": "## 　　　章",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "headings",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "## 　　　章",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "## 　　　章"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (見出しMarkdown化: 1件, 注釈削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:indent-protects-align-page",
+    "core": {
+      "text": ":::indent-2\n［＃地付き］署名\n［＃改ページ］\n:::",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 2
+      },
+      "remainingNotes": [
+        {
+          "line": 2,
+          "text": "［＃地付き］"
+        },
+        {
+          "line": 3,
+          "text": "［＃改ページ］"
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "REMAINING_AOZORA_NOTES",
+          "severity": "warning",
+          "stage": "residual",
+          "details": {
+            "count": 2
+          }
+        }
+      ],
+      "processingEvents": [
+        {
+          "stage": "indent",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 1,
+      "remainingNotes": 2
+    },
+    "referenceProjection": {
+      "text": ":::indent-2\n［＃地付き］署名\n［＃改ページ］\n:::",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 2
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": ":::indent-2\n［＃地付き］署名\n［＃改ページ］\n:::"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 2
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_align_end": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_page_breaks": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Nyoze字下げ変換: 1件, 注釈削除)",
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ［＃地付き］  (行 2)",
+        "         1件  ［＃改ページ］  (行 3)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ［＃地付き］  (行 2)",
+        "         1件  ［＃改ページ］  (行 3)"
+      ]
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:preserve-mixed",
+    "core": {
+      "text": "［＃３字下げ］\n:::indent-3\n本文\n:::\n［＃改ページ］\n:::page-break\n:::\n前［＃改ページ］後",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 1,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 1,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 1
+      },
+      "remainingNotes": [
+        {
+          "line": 8,
+          "text": "［＃改ページ］"
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "REMAINING_AOZORA_NOTES",
+          "severity": "warning",
+          "stage": "residual",
+          "details": {
+            "count": 1
+          }
+        }
+      ],
+      "processingEvents": [
+        {
+          "stage": "indent",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "pageBreak",
+          "action": "pageBreaks",
+          "count": 1
+        },
+        {
+          "stage": "pageBreak",
+          "action": "unconverted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 1,
+      "remainingNotes": 1
+    },
+    "referenceProjection": {
+      "text": "［＃３字下げ］\n:::indent-3\n本文\n:::\n［＃改ページ］\n:::page-break\n:::\n前［＃改ページ］後",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 1,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 1,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 1
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "［＃３字下げ］\n:::indent-3\n本文\n:::\n［＃改ページ］\n:::page-break\n:::\n前［＃改ページ］後"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_page_breaks": {
+          "pageBreaks": 1,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 1,
+          "kaidanUnconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Nyoze字下げ変換: 1件, Nyoze改ページ変換: 1件, ページ送り未変換: 1件, 注釈削除)",
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃改ページ］  (行 8)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃改ページ］  (行 8)"
+      ]
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:preserve-deleted-no-stale-suppression",
+    "core": {
+      "text": "［＃ここから２字下げ］\n:::indent-2\n残る\n:::",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 1
+      },
+      "remainingNotes": [
+        {
+          "line": 1,
+          "text": "［＃ここから２字下げ］"
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "REMAINING_AOZORA_NOTES",
+          "severity": "warning",
+          "stage": "residual",
+          "details": {
+            "count": 1
+          }
+        }
+      ],
+      "processingEvents": [
+        {
+          "stage": "indent",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 1
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 1,
+      "remainingNotes": 1
+    },
+    "referenceProjection": {
+      "text": "［＃ここから２字下げ］\n:::indent-2\n残る\n:::",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 1
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "［＃ここから２字下げ］\n:::indent-2\n残る\n:::"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Nyoze字下げ変換: 1件, 注釈削除)",
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃ここから２字下げ］  (行 1)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃ここから２字下げ］  (行 1)"
+      ]
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:footer-before-annotation",
+    "core": {
+      "text": "本文\n末尾",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [
+        {
+          "code": "FOOTER_CANDIDATE_PRESERVED",
+          "severity": "warning",
+          "stage": "footer",
+          "range": {
+            "startUtf16": 9,
+            "endUtf16": 14
+          },
+          "sourceOccurrenceId": "source:9:14",
+          "details": {}
+        }
+      ],
+      "processingEvents": [
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 1
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "本文",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": true,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [
+      "/text",
+      "/stats/footerRemoved"
+    ],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": true
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (末尾書誌情報削除, 注釈削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:converted-count-survives-footer",
+    "core": {
+      "text": "本文\n",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": true,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "gaiji",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "footer",
+          "action": "removed"
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "本文\n",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": true,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "本文\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": true
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (外字Unicode化: 1件, 末尾書誌情報削除, 注釈削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:txt-gating",
+    "core": {
+      "text": "A\n青［＃「青」は太字］\n［＃改ページ］",
+      "isMarkdownOutput": false,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "gaiji",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work_converted.txt",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "A\n青［＃「青」は太字］\n［＃改ページ］",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.txt",
+          "text": "A\n青［＃「青」は太字］\n［＃改ページ］"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.txt (外字Unicode化: 1件, 注釈削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:md-even-rename-off",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n**青**",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "emphasis",
+          "action": "bold",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        },
+        {
+          "stage": "frontmatter",
+          "action": "frontmatter-added-header-removed"
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work_converted.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n**青**",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n**青**"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (Markdown太字変換: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:header-restore",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\nraw_header: |\n  副題\n---\n題\n副題\n著者\n\n本文",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        },
+        {
+          "stage": "frontmatter",
+          "action": "header-restored"
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work_converted.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\nraw_header: |\n  副題\n---\n題\n|\n著者\n\n本文",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [
+      "/text"
+    ],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthor: 著者\nraw_header: |\n  副題\n---\n題\n|\n著者\n\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (注釈削除, ヘッダー復元)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:header-duplicate-within-ten",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n一\n題\n本文",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work_converted.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n一\n題\n本文",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n一\n題\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (注釈削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:frontmatter-retain-original-header",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n題\n著者\n\n本文",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        },
+        {
+          "stage": "frontmatter",
+          "action": "frontmatter-added"
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n題\n著者\n\n本文",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n題\n著者\n\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (注釈削除, フロントマター追加)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:empty-author-fallback",
+    "core": {
+      "text": "---\ntitle: 題\nauthors:\n---\n本文",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "unknown_author/題.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthors:\n---\n本文",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthors:\n---\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [WARN] Could not extract metadata: list index out of range",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (注釈削除)"
+      ],
+      "warnings": [
+        "     [WARN] Could not extract metadata: list index out of range"
+      ]
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:unknown-no-error",
+    "core": {
+      "text": "※［＃未知］\n［＃不明］",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 2
+      },
+      "remainingNotes": [
+        {
+          "line": 1,
+          "text": "※［＃未知］"
+        },
+        {
+          "line": 2,
+          "text": "［＃不明］"
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "REMAINING_AOZORA_NOTES",
+          "severity": "warning",
+          "stage": "residual",
+          "details": {
+            "count": 2
+          }
+        }
+      ],
+      "processingEvents": [
+        {
+          "stage": "gaiji",
+          "action": "unconverted",
+          "count": 1
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 1,
+      "remainingNotes": 2
+    },
+    "referenceProjection": {
+      "text": "※［＃未知］\n［＃不明］",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 2
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "※［＃未知］\n［＃不明］"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 2
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (注釈削除, 外字未変換: 1件)",
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ※［＃未知］  (行 1)",
+        "         1件  ［＃不明］  (行 2)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ※［＃未知］  (行 1)",
+        "         1件  ［＃不明］  (行 2)"
+      ]
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:write-failure-stats",
+    "core": {
+      "text": "［＃不明］",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 1
+      },
+      "remainingNotes": [
+        {
+          "line": 1,
+          "text": "［＃不明］"
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "REMAINING_AOZORA_NOTES",
+          "severity": "warning",
+          "stage": "residual",
+          "details": {
+            "count": 1
+          }
+        }
+      ],
+      "processingEvents": [
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 0,
+      "errors": 1,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "［＃不明］",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 1
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "［＃不明］"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 0,
+        "files_skipped": 0,
+        "errors": 1,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [ERROR] Write failed: fixture write failure"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:skip-unknown-txt",
+    "core": {
+      "text": "※［＃未知］",
+      "isMarkdownOutput": false,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "gaiji",
+          "action": "unconverted",
+          "count": 1
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work_converted.txt",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "※［＃未知］",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 0,
+        "files_skipped": 1,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [SKIP] No change (外字未変換: 1件)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:remove-annotations-forces-write",
+    "core": {
+      "text": "本文",
+      "isMarkdownOutput": false,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      },
+      "remainingNotes": [],
+      "diagnostics": [],
+      "processingEvents": [
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 0
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {},
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work_converted.txt",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 0,
+      "remainingNotes": 0
+    },
+    "referenceProjection": {
+      "text": "本文",
+      "stats": {
+        "gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": false,
+        "remainingNotes": 0
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.txt",
+          "text": "本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] → work_converted.txt (注釈削除)"
+      ],
+      "warnings": []
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  },
+  {
+    "caseKey": "pipeline:whole-document",
+    "core": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n**強調**\n||下線||\n［＃３字下げ］\n:::indent-3\n字下げ本文\n:::\n:::align-end\n署名\n:::\n:::blank-page\n:::\n:::page-break\n:::\n［＃不明］\n",
+      "isMarkdownOutput": true,
+      "outputEncoding": "utf-8",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 1,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 1,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 1,
+          "spreadApproximated": 1,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": true,
+        "remainingNotes": 1
+      },
+      "remainingNotes": [
+        {
+          "line": 19,
+          "text": "［＃不明］"
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "REMAINING_AOZORA_NOTES",
+          "severity": "warning",
+          "stage": "residual",
+          "details": {
+            "count": 1
+          }
+        }
+      ],
+      "processingEvents": [
+        {
+          "stage": "gaiji",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "emphasis",
+          "action": "bold",
+          "count": 1
+        },
+        {
+          "stage": "underline",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "bouten",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "headings",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "indent",
+          "action": "converted",
+          "count": 1
+        },
+        {
+          "stage": "align",
+          "action": "approximated",
+          "count": 1
+        },
+        {
+          "stage": "pageBreak",
+          "action": "blankPages",
+          "count": 1
+        },
+        {
+          "stage": "pageBreak",
+          "action": "spreadApproximated",
+          "count": 1
+        },
+        {
+          "stage": "footer",
+          "action": "removed"
+        },
+        {
+          "stage": "annotationBlocks",
+          "action": "removal-pass",
+          "count": 1
+        },
+        {
+          "stage": "frontmatter",
+          "action": "frontmatter-added-header-removed"
+        }
+      ],
+      "namingMetadata": {
+        "ok": true,
+        "metadata": {
+          "title": "題",
+          "author": "著者"
+        },
+        "diagnostics": []
+      }
+    },
+    "policy": {
+      "relativePath": "work.md",
+      "filesConverted": 1,
+      "errors": 0,
+      "filesWithRemainingNotes": 1,
+      "remainingNotes": 1
+    },
+    "referenceProjection": {
+      "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n**強調**\n||下線||\n［＃３字下げ］\n:::indent-3\n字下げ本文\n:::\n:::align-end\n署名\n:::\n:::blank-page\n:::\n:::page-break\n:::\n［＃不明］\n",
+      "stats": {
+        "gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "underline": {
+          "converted": 1,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "align": {
+          "converted": 0,
+          "approximated": 1,
+          "unconverted": 0
+        },
+        "pageBreak": {
+          "pageBreaks": 0,
+          "blankPages": 1,
+          "spreadApproximated": 1,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "footerRemoved": true,
+        "remainingNotes": 1
+      }
+    },
+    "changedCorePaths": [],
+    "hostReference": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n**強調**\n||下線||\n［＃３字下げ］\n:::indent-3\n字下げ本文\n:::\n:::align-end\n署名\n:::\n:::blank-page\n:::\n:::page-break\n:::\n［＃不明］\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 1,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_align_end": {
+          "converted": 0,
+          "approximated": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_page_breaks": {
+          "pageBreaks": 0,
+          "blankPages": 1,
+          "spreadApproximated": 1,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": true
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (外字Unicode化: 1件, Markdown太字変換: 1件, 下線変換: 1件, 見出しMarkdown化: 1件, 傍点変換: 1件, Nyoze字下げ変換: 1件, 地寄せ→地付き近似: 1件, Nyoze空白ページ変換: 1件, 改丁・改見開き→改ページ近似: 1件, 末尾書誌情報削除, 注釈削除, フロントマター追加+ヘッダー削除)",
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃不明］  (行 19)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃不明］  (行 19)"
+      ]
+    },
+    "hostFieldScope": {
+      "writes[*].text": "core.text; write attempt is not commit",
+      "writes[*].path": "pure relative naming proposal; absolute host path excluded",
+      "stages": "core.stats; uncalled stages explicitly zero",
+      "stats": "pure job reducer projection; ZIP fields and legacy skip boundary excluded",
+      "logs": "legacy Qt/host presentation not in slice; new processingEvents specified",
+      "warnings": "legacy host presentation not in slice; core remainingNotes and diagnostics specified"
+    },
+    "evidence": "Unmodified Python Worker instrumented for scan/naming; explicit R08 restoration, R09 empty author, R14 footer boundary, R16 commit. No TS execution."
+  }
+]

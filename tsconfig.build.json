@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": [],
+    "lib": ["ES2022"]
+  },
+  "include": [
+    "src/index.ts",
+    "src/core",
+    "src/data",
+    "src/encoding",
+    "src/policies"
+  ]
+}

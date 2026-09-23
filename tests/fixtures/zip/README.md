@@ -1,0 +1,13 @@
+# aozora-import-v1 ZIP fixtures
+
+`scripts/generate_zip_fixtures.py` is an independent Python 3.12.8 producer. `normal.zip` uses standard-library `zipfile`; crafted header/flag/extra/CRC/offset cases use `struct` and raw DEFLATE from `zlib`. The product zip.js writer is not used. Run `python3 scripts/generate_zip_fixtures.py --check` to regenerate in memory and verify every byte plus the CP437 table. Omit `--check` only when intentionally adding a new fixture.
+
+`manifest.json` records SHA-256, archive bytes, S2/R purpose and producer-side member data. `sourceHex` records exact payload bytes for small handcrafted entries; larger repeated payloads record their length and SHA-256, with exact construction in the producer. Bad archives record the intended source payload before deliberate structural contradictions; they do not claim that payload is safely readable. `normal.zip` explicitly contains FIRST and SECOND in separate same-name entries, `a/book.TXT` with `青［＃「青」に傍点］`, `b/book.txt` with OTHER, and ignored image/nested-ZIP/directory entries. These literals are also fixed in the producer, without reading them back through zip.js.
+
+Conversion expectations are manually specified in `tests/import/runtime.test.ts` and `tests/browser/import-contract.mjs`, using accepted core/R rules. The combined integration input exercises gaiji→bouten→heading, preservation→annotation deletion→residual scan, YAML scalar delimiters and accepted F02 markup nesting. Its expected strings, counts, diagnostics and paths are shared by Node and real Browser/Worker tests, not generated from the implementation under test.
+
+`chunk.zip` expands to 256 KiB; `cancel.zip` to 8 MiB, but only small compressed archives are stored. Test quotas of 32 bytes force early writer rejection without retaining the rejected chunk. The compressed feed check also asserts that `cancel.zip` has not been read completely when that quota aborts. `many-empty.zip` uses ten empty entries with low test limits to cover exact-boundary and overflow counting. Default limits remain finite and separately tested.
+
+The prepended-data matrix fixes 0–5 byte boundaries for rebased and unadjusted offsets plus prefixed empty archives. EOCD fixtures fix per-disk counts 0/1/2, a missing-ZIP64 sentinel case, field-specific size/offset sentinels, six non-sentinel classic/ZIP64 count contradictions, and valid ZIP64 resolved counts. Global-comment fixtures distinguish ordinary and signature-containing comments from a second EOCD that reaches the actual central directory. These inputs are checked before payload reads in Node, Chrome main, and the real module Worker contract.
+
+No file here modifies or replaces the eight historical oracle JSON files or the 90 core intentional-deviation expectations.

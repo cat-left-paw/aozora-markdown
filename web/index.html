@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Aozora Markdown — 青空文庫テキストの変換</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell">
+        <span class="wordmark">Aozora Markdown</span>
+        <div class="header-actions">
+          <span class="edition">青空文庫のテキストをMarkdownへ。</span>
+          <button type="button" class="help" data-help-for="usage">
+            使い方
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="shell">
+      <div class="intro">
+        <h1>青空文庫のテキストをMarkdownに変換</h1>
+        <p>
+          TXT・MD・ZIPを読み込み、変換結果と警告を確認してからダウンロードできます。出力はMarkdown記法で、拡張子を
+          .md・.txt から選べます。
+        </p>
+        <p id="conversion-limits" class="conversion-note">
+          青空文庫の注記や組版は、標準的なMarkdownだけでは完全に再現できません。一部は近い表現やNyoze向け記法に変換します。対応しない注記が残る場合は、出力後に警告・未変換注記をご確認ください。
+        </p>
+        <p class="privacy">
+          ファイルはこのブラウザ内で処理します。外部へ送信しません。<br />再読み込みすると、選択したファイルと結果は消えます。
+        </p>
+      </div>
+      <p id="boot-error" role="alert">
+        アプリを読み込んでいます。表示が変わらない場合は、JavaScript・module
+        Workerに対応したブラウザでHTTPのURLを開き直してください。
+      </p>
+      <noscript
+        ><p class="notice">JavaScriptが無効のため利用できません。</p></noscript
+      >
+      <section aria-labelledby="input-heading">
+        <div class="section-heading">
+          <h2 id="input-heading"><span class="step">01</span>ファイルを選ぶ</h2>
+          <div class="button-with-help" data-help-host="clear">
+            <button id="clear" type="button" disabled>全クリア</button>
+            <button type="button" class="help" data-help-for="clear">
+              説明
+            </button>
+          </div>
+        </div>
+        <p class="setting-summary" id="summary-clear"></p>
+        <div class="picker-row" data-help-host="pick-files">
+          <button
+            id="pick-files"
+            type="button"
+            disabled
+            data-described-summary="picker-formats picker-replace"
+            data-setting-id="pick-files"
+          >
+            ファイルを選ぶ
+          </button>
+          <p id="file-selection-status" aria-live="polite">未選択</p>
+          <button type="button" class="help" data-help-for="pick-files">
+            説明
+          </button>
+          <input
+            id="files"
+            class="file-input-proxy"
+            type="file"
+            multiple
+            accept=".txt,.md,.zip"
+            tabindex="-1"
+            aria-hidden="true"
+            disabled
+          />
+        </div>
+        <p id="picker-formats" class="hint"></p>
+        <p id="picker-replace" class="hint"></p>
+        <p id="limits" class="hint"></p>
+        <p id="input-count">入力はまだありません。</p>
+        <div class="inline-help" data-help-host="remove-file">
+          <p class="setting-summary" id="summary-remove-file"></p>
+          <button type="button" class="help" data-help-for="remove-file">
+            説明
+          </button>
+        </div>
+        <ul id="input-issues" class="issues"></ul>
+        <ol id="inputs" class="input-list"></ol>
+        <nav
+          id="input-pages"
+          class="pagination"
+          aria-label="入力のページ"
+        ></nav>
+      </section>
+      <section aria-labelledby="settings-heading">
+        <div class="section-heading">
+          <h2 id="settings-heading">
+            <span class="step">02</span>変換方法を決める
+          </h2>
+          <div class="button-with-help" data-help-host="reset-settings">
+            <button id="reset" type="button" disabled>
+              設定を初期値に戻す
+            </button>
+            <button type="button" class="help" data-help-for="reset-settings">
+              説明
+            </button>
+          </div>
+        </div>
+        <p class="setting-summary" id="summary-reset-settings"></p>
+        <fieldset id="basic-settings" disabled>
+          <legend>基本設定</legend>
+          <div id="basic-controls" class="settings-stack">
+            <div class="setting" data-help-host="encoding">
+              <div class="setting-row">
+                <label for="encoding" data-label-for="encoding"
+                  >入力ファイルの文字コード</label
+                >
+                <select
+                  id="encoding"
+                  data-described-summary="summary-encoding"
+                  data-setting-id="encoding"
+                >
+                  <option value="auto">自動判定</option>
+                  <option value="utf-8">UTF-8</option>
+                  <option value="cp932">CP932</option>
+                  <option value="shift_jis">Shift_JIS</option>
+                </select>
+                <button type="button" class="help" data-help-for="encoding">
+                  説明
+                </button>
+              </div>
+              <p class="setting-summary" id="summary-encoding"></p>
+            </div>
+            <div class="setting" data-help-host="outputExtension">
+              <div class="setting-row">
+                <fieldset id="output-extension" class="radio-row">
+                  <legend data-label-for="outputExtension">出力拡張子</legend>
+                  <label class="check"
+                    ><input
+                      id="output-extension-md"
+                      type="radio"
+                      name="output-extension"
+                      value="md"
+                      data-described-summary="summary-outputExtension"
+                      data-setting-id="outputExtension"
+                    /><span>.md</span></label
+                  >
+                  <label class="check"
+                    ><input
+                      id="output-extension-txt"
+                      type="radio"
+                      name="output-extension"
+                      value="txt"
+                      data-described-summary="summary-outputExtension"
+                      data-setting-id="outputExtension"
+                    /><span>.txt</span></label
+                  >
+                </fieldset>
+                <button
+                  type="button"
+                  class="help"
+                  data-help-for="outputExtension"
+                >
+                  説明
+                </button>
+              </div>
+              <p class="setting-summary" id="summary-outputExtension"></p>
+            </div>
+            <div id="basic-booleans"></div>
+            <div class="setting" data-help-host="organizeByAuthor">
+              <div class="setting-row">
+                <label class="check"
+                  ><input
+                    id="organize"
+                    type="checkbox"
+                    data-described-summary="summary-organizeByAuthor"
+                    data-setting-id="organizeByAuthor"
+                  /><span data-label-for="organizeByAuthor"
+                    >著者別の出力フォルダ</span
+                  ></label
+                >
+                <button
+                  type="button"
+                  class="help"
+                  data-help-for="organizeByAuthor"
+                >
+                  説明
+                </button>
+              </div>
+              <p class="setting-summary" id="summary-organizeByAuthor"></p>
+            </div>
+          </div>
+        </fieldset>
+        <details id="advanced">
+          <summary>
+            <span class="details-mark" aria-hidden="true"></span>
+            <span class="details-copy">
+              <span class="details-title" id="details-title"
+                >詳細設定を開く</span
+              >
+              <span class="details-brief" id="details-brief"
+                >外字・末尾情報・注記説明の整理、装飾と見出し、Nyoze向けの配置を調整します。</span
+              >
+            </span>
+          </summary>
+          <fieldset id="advanced-settings" disabled>
+            <section class="settings-group" aria-labelledby="group-body-title">
+              <h3 id="group-body-title">本文の整理</h3>
+              <div id="body-controls" class="setting-grid"></div>
+            </section>
+            <section
+              class="settings-group"
+              aria-labelledby="group-decoration-title"
+            >
+              <h3 id="group-decoration-title">文字の装飾</h3>
+              <div id="decoration-controls" class="setting-grid"></div>
+              <div
+                class="setting"
+                id="setting-underline-format"
+                data-help-host="underlineOutputFormat"
+              >
+                <div class="setting-row">
+                  <label for="underline" data-label-for="underlineOutputFormat"
+                    >傍線の出力形式</label
+                  >
+                  <select
+                    id="underline"
+                    data-described-summary="summary-underlineOutputFormat"
+                    data-setting-id="underlineOutputFormat"
+                  >
+                    <option value="nyoze">Nyoze ||text||</option>
+                    <option value="html">HTML &lt;u&gt;text&lt;/u&gt;</option>
+                  </select>
+                  <button
+                    type="button"
+                    class="help"
+                    data-help-for="underlineOutputFormat"
+                  >
+                    説明
+                  </button>
+                </div>
+                <p
+                  class="setting-summary"
+                  id="summary-underlineOutputFormat"
+                ></p>
+              </div>
+              <div
+                class="setting"
+                id="setting-bouten"
+                data-help-host="boutenChar"
+              >
+                <div class="setting-row">
+                  <label for="bouten" data-label-for="boutenChar"
+                    >傍点に使う文字</label
+                  >
+                  <input
+                    id="bouten"
+                    type="text"
+                    data-described-summary="summary-boutenChar"
+                    data-setting-id="boutenChar"
+                  />
+                  <button type="button" class="help" data-help-for="boutenChar">
+                    説明
+                  </button>
+                </div>
+                <p class="setting-summary" id="summary-boutenChar"></p>
+              </div>
+              <div id="setting-heading-levels">
+                <div class="setting" data-help-host="headingLevel-large">
+                  <div class="setting-row">
+                    <label
+                      for="heading-level-large"
+                      data-label-for="headingLevel-large"
+                      >大見出しのレベル</label
+                    >
+                    <select
+                      id="heading-level-large"
+                      data-level-key="large"
+                      data-described-summary="summary-headingLevel-large"
+                      data-setting-id="headingLevel-large"
+                    ></select>
+                    <button
+                      type="button"
+                      class="help"
+                      data-help-for="headingLevel-large"
+                    >
+                      説明
+                    </button>
+                  </div>
+                  <p
+                    class="setting-summary"
+                    id="summary-headingLevel-large"
+                  ></p>
+                </div>
+                <div class="setting" data-help-host="headingLevel-medium">
+                  <div class="setting-row">
+                    <label
+                      for="heading-level-medium"
+                      data-label-for="headingLevel-medium"
+                      >中見出しのレベル</label
+                    >
+                    <select
+                      id="heading-level-medium"
+                      data-level-key="medium"
+                      data-described-summary="summary-headingLevel-medium"
+                      data-setting-id="headingLevel-medium"
+                    ></select>
+                    <button
+                      type="button"
+                      class="help"
+                      data-help-for="headingLevel-medium"
+                    >
+                      説明
+                    </button>
+                  </div>
+                  <p
+                    class="setting-summary"
+                    id="summary-headingLevel-medium"
+                  ></p>
+                </div>
+                <div class="setting" data-help-host="headingLevel-small">
+                  <div class="setting-row">
+                    <label
+                      for="heading-level-small"
+                      data-label-for="headingLevel-small"
+                      >小見出しのレベル</label
+                    >
+                    <select
+                      id="heading-level-small"
+                      data-level-key="small"
+                      data-described-summary="summary-headingLevel-small"
+                      data-setting-id="headingLevel-small"
+                    ></select>
+                    <button
+                      type="button"
+                      class="help"
+                      data-help-for="headingLevel-small"
+                    >
+                      説明
+                    </button>
+                  </div>
+                  <p
+                    class="setting-summary"
+                    id="summary-headingLevel-small"
+                  ></p>
+                </div>
+              </div>
+            </section>
+            <section class="settings-group" aria-labelledby="group-nyoze-title">
+              <h3 id="group-nyoze-title">Nyoze向けの配置</h3>
+              <div id="nyoze-controls" class="setting-grid"></div>
+            </section>
+            <p class="hint">
+              親の設定をOFFにしても、子の設定値は保持します。OFFの項目も「説明」から読めます。
+            </p>
+          </fieldset>
+        </details>
+        <p id="conversion-mode" class="notice" role="note" hidden></p>
+        <div class="actions">
+          <div data-help-host="start-import">
+            <div class="button-with-help">
+              <button id="start" type="button" class="primary" disabled>
+                変換を開始
+              </button>
+              <button type="button" class="help" data-help-for="start-import">
+                説明
+              </button>
+            </div>
+            <p class="setting-summary" id="summary-start-import"></p>
+          </div>
+          <div data-help-host="cancel-job">
+            <div class="button-with-help">
+              <button id="cancel" type="button" disabled>処理を中止</button>
+              <button type="button" class="help" data-help-for="cancel-job">
+                説明
+              </button>
+            </div>
+            <p class="setting-summary" id="summary-cancel-job"></p>
+          </div>
+        </div>
+        <p id="status" role="status" aria-live="polite" aria-atomic="true">
+          ファイルを選択して、変換を開始してください。
+        </p>
+        <div id="progress-area" hidden>
+          <progress aria-label="処理中"></progress>
+          <p id="progress" aria-live="off"></p>
+        </div>
+      </section>
+      <section id="results-section" aria-labelledby="results-heading">
+        <h2 id="results-heading">
+          <span class="step">03</span>結果と警告を確認する
+        </h2>
+        <p id="result-summary" tabindex="-1">
+          変換後の出力がここに表示されます。
+        </p>
+        <p id="outcomes" class="hint"></p>
+        <div class="actions">
+          <div data-help-host="select-all">
+            <div class="button-with-help">
+              <button id="select-all" type="button" disabled>
+                全出力を選択
+              </button>
+              <button type="button" class="help" data-help-for="select-all">
+                説明
+              </button>
+            </div>
+            <p class="setting-summary" id="summary-select-all"></p>
+          </div>
+          <div data-help-host="select-none">
+            <div class="button-with-help">
+              <button id="select-none" type="button" disabled>
+                選択を解除
+              </button>
+              <button type="button" class="help" data-help-for="select-none">
+                説明
+              </button>
+            </div>
+            <p class="setting-summary" id="summary-select-none"></p>
+          </div>
+          <span id="selection-count">選択 0件</span>
+        </div>
+        <div class="inline-help" data-help-host="inspect-output">
+          <p class="setting-summary" id="summary-inspect-output"></p>
+          <button type="button" class="help" data-help-for="inspect-output">
+            説明
+          </button>
+        </div>
+        <div class="inline-help" data-help-host="preview-output">
+          <p class="setting-summary" id="summary-preview-output"></p>
+          <button type="button" class="help" data-help-for="preview-output">
+            説明
+          </button>
+        </div>
+        <p class="hint">
+          全出力の選択・解除は、すべてのページに適用します。出力順は変換結果の順序を保ちます。
+        </p>
+        <ul id="results" class="result-list"></ul>
+        <nav
+          id="result-pages"
+          class="pagination"
+          aria-label="結果のページ"
+        ></nav>
+        <section
+          id="preview"
+          class="preview-panel"
+          hidden
+          aria-labelledby="preview-title"
+        >
+          <div class="preview-header">
+            <h3 id="preview-title" tabindex="-1">出力を閲覧</h3>
+            <button id="preview-close" type="button">閲覧を閉じる</button>
+          </div>
+          <p id="preview-target" class="preview-target"></p>
+          <p id="preview-mode-hint" class="hint">
+            横書きの参考表示です。Nyoze・Obsidianなどでの見た目と同じになるとは限りません。.txt出力にも同じMarkdown・Nyoze記法が入っているため、同じプレビューを使います。閲覧は、ダウンロードの選択を変えません。
+          </p>
+          <p class="hint">
+            HTMLタグは実行せず、文字のまま表示します（属性のない&lt;u&gt;…&lt;/u&gt;だけを下線にします）。対応していない記法も、消さずに原文のまま表示します。
+          </p>
+          <div class="preview-tabs" role="tablist" aria-label="閲覧の方法">
+            <button
+              id="preview-tab-preview"
+              type="button"
+              role="tab"
+              aria-controls="preview-panel-preview"
+              aria-selected="true"
+            >
+              プレビュー
+            </button>
+            <button
+              id="preview-tab-source"
+              type="button"
+              role="tab"
+              aria-controls="preview-panel-source"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              出力テキスト
+            </button>
+          </div>
+          <div
+            id="preview-panel-preview"
+            class="preview-tabpanel"
+            role="tabpanel"
+            aria-labelledby="preview-tab-preview"
+            tabindex="0"
+          >
+            <div class="preview-tools">
+              <div
+                class="preview-mode"
+                role="group"
+                aria-label="プレビューの向き（表示だけを切り替えます）"
+              >
+                <button
+                  id="preview-mode-horizontal"
+                  type="button"
+                  aria-pressed="true"
+                >
+                  横書き
+                </button>
+                <button
+                  id="preview-mode-vertical"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  縦書き
+                </button>
+              </div>
+              <div
+                class="preview-face"
+                role="group"
+                aria-label="プレビュー本文の書体（表示だけを切り替えます）"
+              >
+                <button
+                  id="preview-face-gothic"
+                  type="button"
+                  aria-pressed="true"
+                >
+                  ゴシック
+                </button>
+                <button
+                  id="preview-face-mincho"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  明朝
+                </button>
+              </div>
+              <button
+                id="preview-vertical-ops"
+                class="help"
+                type="button"
+                data-help-for="preview-vertical-ops"
+                hidden
+              >
+                縦書きの操作
+              </button>
+            </div>
+            <p
+              id="preview-status"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            ></p>
+            <div class="preview-actions">
+              <button id="preview-retry" type="button" hidden>
+                もう一度表示する
+              </button>
+              <button id="preview-show-source" type="button" hidden>
+                出力テキストを見る
+              </button>
+            </div>
+            <div id="preview-notes" class="preview-notes" hidden>
+              <h4>プレビューの表示について</h4>
+              <p class="hint">
+                変換時の警告とは別の、表示上の説明です。変換結果や警告・注記の件数は変えません。
+              </p>
+              <ul id="preview-note-list"></ul>
+            </div>
+            <div id="preview-surface" class="preview-surface"></div>
+          </div>
+          <div
+            id="preview-panel-source"
+            class="preview-tabpanel"
+            role="tabpanel"
+            aria-labelledby="preview-tab-source"
+            tabindex="0"
+            hidden
+          >
+            <p id="source-status" class="hint"></p>
+            <pre id="source-text" class="source-text"></pre>
+          </div>
+        </section>
+        <section
+          id="import-diagnostics"
+          aria-labelledby="import-diagnostics-heading"
+        >
+          <h3 id="import-diagnostics-heading">入力のエラー・警告</h3>
+          <p id="import-diagnostic-count"></p>
+          <ul id="import-diagnostic-list" class="diagnostic-list"></ul>
+          <nav
+            id="diagnostic-pages"
+            class="pagination"
+            aria-label="入力診断のページ"
+          ></nav>
+        </section>
+        <section id="detail" hidden aria-labelledby="detail-title">
+          <h3 id="detail-title" tabindex="-1"></h3>
+          <h4>変換時の警告</h4>
+          <p id="conversion-count"></p>
+          <ul id="conversion-list" class="diagnostic-list"></ul>
+          <nav
+            id="conversion-pages"
+            class="pagination"
+            aria-label="変換診断のページ"
+          ></nav>
+          <h4 id="notes-heading">未変換注記（OFFにした処理の注記を含む）</h4>
+          <p id="note-count"></p>
+          <p class="hint">
+            行番号は出力文書の1始まりです。変換診断のrangeは元入力のUTF-16位置であり、この行番号とは異なります。
+          </p>
+          <ol id="notes" class="note-list"></ol>
+          <nav
+            id="note-pages"
+            class="pagination"
+            aria-label="注記のページ"
+          ></nav>
+        </section>
+      </section>
+      <section aria-labelledby="export-heading">
+        <h2 id="export-heading">
+          <span class="step">04</span>ダウンロードする
+        </h2>
+        <fieldset id="delivery">
+          <legend>受け取り方法</legend>
+          <p id="delivery-guidance">出力を選ぶと、受け取り方法を選べます。</p>
+          <div
+            id="delivery-single-choice"
+            class="delivery-choice"
+            data-help-host="delivery-single"
+            hidden
+          >
+            <div class="setting-row">
+              <label class="check"
+                ><input
+                  id="delivery-single"
+                  type="radio"
+                  name="delivery"
+                  value="single"
+                  data-described-summary="summary-delivery-single"
+                  data-setting-id="delivery-single"
+                /><span data-label-for="delivery-single"
+                  >そのままのファイル</span
+                ></label
+              >
+              <button
+                type="button"
+                class="help"
+                data-help-for="delivery-single"
+              >
+                説明
+              </button>
+            </div>
+            <p class="setting-summary" id="summary-delivery-single"></p>
+          </div>
+          <div
+            id="delivery-zip-choice"
+            class="delivery-choice"
+            data-help-host="delivery-zip"
+            hidden
+          >
+            <div class="setting-row">
+              <label class="check"
+                ><input
+                  id="delivery-zip"
+                  type="radio"
+                  name="delivery"
+                  value="zip"
+                  data-described-summary="summary-delivery-zip"
+                  data-setting-id="delivery-zip"
+                /><span data-label-for="delivery-zip"
+                  >ZIPにまとめる</span
+                ></label
+              >
+              <button type="button" class="help" data-help-for="delivery-zip">
+                説明
+              </button>
+            </div>
+            <p class="setting-summary" id="summary-delivery-zip"></p>
+          </div>
+        </fieldset>
+        <p id="delivery-target"></p>
+        <div data-help-host="create-output">
+          <div class="button-with-help">
+            <button id="create-output" type="button" class="primary" disabled>
+              ダウンロード用ファイルを作成
+            </button>
+            <button type="button" class="help" data-help-for="create-output">
+              説明
+            </button>
+          </div>
+          <p class="setting-summary" id="summary-create-output"></p>
+        </div>
+        <p id="export-status" tabindex="-1">
+          出力を選ぶと、受け取り方法を選べます。
+        </p>
+        <ul id="export-errors" class="diagnostic-list"></ul>
+        <div id="ready" class="ready" hidden>
+          <div>
+            <span class="ready-label">作成できました</span>
+            <p id="ready-name"></p>
+            <p id="ready-size" class="hint"></p>
+          </div>
+          <div data-help-host="download">
+            <div class="button-with-help">
+              <button id="download" type="button" class="primary">
+                ダウンロード
+              </button>
+              <button type="button" class="help" data-help-for="download">
+                説明
+              </button>
+            </div>
+            <p class="setting-summary" id="summary-download"></p>
+          </div>
+        </div>
+        <p
+          id="download-message"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
+        <p id="download-count" class="hint"></p>
+        <p class="hint">
+          開始したダウンロードの受付は、通常約60秒で終えます。同時に受付できるのは8件までです。保存が終わったかどうかは、この画面では分かりません。
+        </p>
+      </section>
+    </main>
+    <div id="help-popover" role="tooltip" hidden></div>
+    <footer class="shell">
+      <span>Aozora Markdown · ブラウザ内で処理</span>
+      <nav aria-label="ライセンス">
+        <a href="./LICENSE.txt">MIT License</a
+        ><a href="./notices/index.html">第三者のライセンス・notice</a>
+      </nav>
+    </footer>
+  </body>
+</html>

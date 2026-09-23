@@ -1,0 +1,59 @@
+{
+  "generator": "scripts/generate_data.py",
+  "generatorSha256": "d8b8e85db3b9306e0f7e2b115159470d49ba4208f8a83e3689961b33124022b9",
+  "python": "3.12.8",
+  "unicode": "15.0.0",
+  "sourceSha256": "4c45c5e777718e88815117e49db85ccb13e1dd4e35eba858e3eae958bd2f2cc0",
+  "jis": {
+    "entries": 17672,
+    "mapped": 17300,
+    "null": 372,
+    "multiCodepoint": 25,
+    "compactSha256": "e172bc3568a79e89b69d420ab7e76c0eca233d55029902a14bc50e220ffc9340"
+  },
+  "encoding": {
+    "cp932": {
+      "singleCases": 256,
+      "pairCases": 65536,
+      "singleMapped": 196,
+      "pairMapped": 48020
+    },
+    "shift_jis": {
+      "singleCases": 256,
+      "pairCases": 65536,
+      "singleMapped": 191,
+      "pairMapped": 43360
+    }
+  },
+  "files": {
+    "src/data/jisPython312.generated.ts": {
+      "sha256": "3d3fcb0c05e6bd7eaf8c8a8b9c05db46ee90eaf153796093f4087e8150e6acd7",
+      "bytes": 105510
+    },
+    "src/encoding/cp932.generated.ts": {
+      "sha256": "8468b83303b8a568f3007371c728af14aaeb81404001004d129ec85fc1725e39",
+      "bytes": 135933
+    },
+    "tests/fixtures/cp932-exhaustive.json": {
+      "sha256": "aa94720c0dd16af4230cb0a4b6c21541fd63388c7e0f6a77e29ff0a62c36b952",
+      "bytes": 447130
+    },
+    "src/encoding/shiftJis.generated.ts": {
+      "sha256": "04216c87bbde362a6fcf00875b83fc2e0e80c55feeb598ca857bf5ec48f438cc",
+      "bytes": 97776
+    },
+    "tests/fixtures/shift_jis-exhaustive.json": {
+      "sha256": "59b84914795f34ffc6a227014874b96a4a0df3a3cb95330b78d68fd55320d6a2",
+      "bytes": 438190
+    },
+    "src/data/pythonUnicode.generated.ts": {
+      "sha256": "009a00236badc270ea42ca27caaeaefd625fee08646b2e379df7e0e10222b7be",
+      "bytes": 6768
+    }
+  },
+  "licenses": [
+    "notices/CPython-LICENSE.txt",
+    "notices/Unicode-MAPPINGS.txt",
+    "notices/JIS-X0213.txt"
+  ]
+}

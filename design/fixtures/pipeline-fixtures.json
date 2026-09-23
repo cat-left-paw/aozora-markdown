@@ -1,0 +1,1618 @@
+[
+  {
+    "id": "default-header",
+    "input": "題\n著者\n\n青空［＃「青空」は太字］\n",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n**青空**\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Markdown太字変換: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "bouten-before-heading",
+    "input": "題\n著者\n\n青空［＃「青空」に傍点］［＃「青空」は大見出し］\n",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (見出しMarkdown化: 1件, 傍点変換: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "gaiji-before-name",
+    "input": "※［＃U+984C］\n著者\n\n本文",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": true,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/著者/題.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     → 著者/題.md",
+        "     [OK] unicode-fixture → UTF-8 & .md → 題.md (外字Unicode化: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "heading-consumes-indent",
+    "input": "［＃３字下げ］章［＃「章」は大見出し］",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": true,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "## 　　　章"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (見出しMarkdown化: 1件, 注釈削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "indent-protects-align-page",
+    "input": "［＃ここから２字下げ］\n［＃地付き］署名\n［＃改ページ］\n［＃ここで字下げ終わり］",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": true,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": true,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": true,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": ":::indent-2\n［＃地付き］署名\n［＃改ページ］\n:::"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 2
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_align_end": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_page_breaks": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Nyoze字下げ変換: 1件, 注釈削除)",
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ［＃地付き］  (行 2)",
+        "         1件  ［＃改ページ］  (行 3)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ［＃地付き］  (行 2)",
+        "         1件  ［＃改ページ］  (行 3)"
+      ]
+    }
+  },
+  {
+    "id": "preserve-mixed",
+    "input": "［＃３字下げ］本文\n［＃改ページ］\n前［＃改ページ］後",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": true,
+      "preserve_aozora_indent_notes": true,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": true,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": true,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "［＃３字下げ］\n:::indent-3\n本文\n:::\n［＃改ページ］\n:::page-break\n:::\n前［＃改ページ］後"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_page_breaks": {
+          "pageBreaks": 1,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 1,
+          "kaidanUnconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Nyoze字下げ変換: 1件, Nyoze改ページ変換: 1件, ページ送り未変換: 1件, 注釈削除)",
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃改ページ］  (行 8)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃改ページ］  (行 8)"
+      ]
+    }
+  },
+  {
+    "id": "preserve-deleted-no-stale-suppression",
+    "input": "-----\n［＃ここから２字下げ］\n消える\n［＃ここで字下げ終わり］\n-----\n［＃ここから２字下げ］\n:::indent-2\n残る\n:::",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": true,
+      "preserve_aozora_indent_notes": true,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "［＃ここから２字下げ］\n:::indent-2\n残る\n:::"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (Nyoze字下げ変換: 1件, 注釈削除)",
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃ここから２字下げ］  (行 1)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃ここから２字下げ］  (行 1)"
+      ]
+    }
+  },
+  {
+    "id": "footer-before-annotation",
+    "input": "本文\n-----\n底本：資料\n入力：人\n青空文庫作成ファイル：\n-----\n末尾",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": true
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (末尾書誌情報削除, 注釈削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "converted-count-survives-footer",
+    "input": "本文\n底本：資料\n入力：人\n※［＃U+0041］\n青空文庫作成ファイル：",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "本文\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": true
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (外字Unicode化: 1件, 末尾書誌情報削除, 注釈削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "txt-gating",
+    "input": "※［＃U+0041］\n青［＃「青」は太字］\n［＃改ページ］",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": false,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": true,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.txt",
+          "text": "A\n青［＃「青」は太字］\n［＃改ページ］"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.txt (外字Unicode化: 1件, 注釈削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "md-even-rename-off",
+    "input": "題\n著者\n\n青［＃「青」は太字］",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": false,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.md",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n**青**"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (Markdown太字変換: 1件, 注釈削除, フロントマター追加+ヘッダー削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-restore",
+    "input": "---\ntitle: 題\nauthor: 著者\nraw_header: |\n  副題\n---\n本文",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": true,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.md",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthor: 著者\nraw_header: |\n  副題\n---\n題\n|\n著者\n\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (注釈削除, ヘッダー復元)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "header-duplicate-within-ten",
+    "input": "---\ntitle: 題\nauthor: 著者\n---\n一\n題\n本文",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": true,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.md",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n一\n題\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (注釈削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "frontmatter-retain-original-header",
+    "input": "題\n著者\n\n本文",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": true,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n題\n著者\n\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (注釈削除, フロントマター追加)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "empty-author-fallback",
+    "input": "---\ntitle: 題\nauthors:\n---\n本文",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": true,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.md",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.md",
+          "text": "---\ntitle: 題\nauthors:\n---\n本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.md",
+        "     [WARN] Could not extract metadata: list index out of range",
+        "     [OK] unicode-fixture → UTF-8 → work_converted.md (注釈削除)"
+      ],
+      "warnings": [
+        "     [WARN] Could not extract metadata: list index out of range"
+      ]
+    }
+  },
+  {
+    "id": "unknown-no-error",
+    "input": "※［＃未知］\n［＃不明］",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "※［＃未知］\n［＃不明］"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 2
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (注釈削除, 外字未変換: 1件)",
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ※［＃未知］  (行 1)",
+        "         1件  ［＃不明］  (行 2)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 2件 — work.md",
+        "         1件  ※［＃未知］  (行 1)",
+        "         1件  ［＃不明］  (行 2)"
+      ]
+    }
+  },
+  {
+    "id": "write-failure-stats",
+    "input": "［＃不明］",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": false,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": true,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "［＃不明］"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 0,
+        "files_skipped": 0,
+        "errors": 1,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 0,
+          "unsupported": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": false
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [ERROR] Write failed: fixture write failure"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "skip-unknown-txt",
+    "input": "※［＃未知］",
+    "options": {
+      "convert_utf8": false,
+      "rename_to_md": false,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": false,
+      "remove_aozora_footer": false,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 0,
+        "files_skipped": 1,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 1
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [SKIP] No change (外字未変換: 1件)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "remove-annotations-forces-write",
+    "input": "本文",
+    "options": {
+      "convert_utf8": false,
+      "rename_to_md": false,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": false,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": false,
+      "preserve_aozora_indent_notes": false,
+      "convert_nyoze_align_end": false,
+      "approximate_aozora_jiage_as_align_end": false,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": false,
+      "approximate_aozora_spread_breaks": false,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work_converted.txt",
+          "text": "本文"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] → work_converted.txt (注釈削除)"
+      ],
+      "warnings": []
+    }
+  },
+  {
+    "id": "whole-document",
+    "input": "※［＃U+984C］\n著者\n\n-----\n説明\n-----\n青空［＃「青空」に傍点］［＃「青空」は大見出し］\n強調［＃「強調」は太字］\n［＃傍線］下線［＃傍線終わり］\n［＃３字下げ］字下げ本文\n［＃地から３字上げ］署名\n［＃改ページ］\n\n［＃改ページ］\n［＃改丁］\n［＃不明］\n底本：資料\n入力：人\n青空文庫作成ファイル：\n",
+    "options": {
+      "convert_utf8": true,
+      "rename_to_md": true,
+      "process_loose_txt": true,
+      "add_frontmatter": true,
+      "remove_annotations": true,
+      "remove_aozora_footer": true,
+      "add_header_to_body": false,
+      "organize_by_author": false,
+      "bouten_char": "﹅",
+      "convert_nyoze_indent": true,
+      "preserve_aozora_indent_notes": true,
+      "convert_nyoze_align_end": true,
+      "approximate_aozora_jiage_as_align_end": true,
+      "preserve_aozora_align_notes": false,
+      "convert_nyoze_page_break": true,
+      "approximate_aozora_spread_breaks": true,
+      "preserve_aozora_page_break_notes": false,
+      "convert_markdown_emphasis": true,
+      "convert_aozora_underline": true,
+      "underline_output_format": "nyoze",
+      "approximate_other_underline_styles": false,
+      "approximate_left_underline": false
+    },
+    "filename": "work.txt",
+    "writeError": false,
+    "expected": {
+      "writes": [
+        {
+          "path": "/__aozora_design_oracle__/work.md",
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n**強調**\n||下線||\n［＃３字下げ］\n:::indent-3\n字下げ本文\n:::\n:::align-end\n署名\n:::\n:::blank-page\n:::\n:::page-break\n:::\n［＃不明］\n"
+        }
+      ],
+      "stats": {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 1,
+        "remaining_notes": 1
+      },
+      "stages": {
+        "convert_aozora_gaiji": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_markdown_emphasis": {
+          "bold": 1,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_underline": {
+          "converted": 1,
+          "approximated": 0,
+          "unconverted": 0
+        },
+        "convert_aozora_bouten": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_headings": {
+          "converted": 1,
+          "unsupported": 0
+        },
+        "convert_aozora_indent": {
+          "converted": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_align_end": {
+          "converted": 0,
+          "approximated": 1,
+          "unconverted": 0
+        },
+        "convert_aozora_page_breaks": {
+          "pageBreaks": 0,
+          "blankPages": 1,
+          "spreadApproximated": 1,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        },
+        "remove_aozora_footer_metadata": {
+          "removed": true
+        }
+      },
+      "logs": [
+        "   • Processing text: work.txt",
+        "     [OK] unicode-fixture → UTF-8 & .md (外字Unicode化: 1件, Markdown太字変換: 1件, 下線変換: 1件, 見出しMarkdown化: 1件, 傍点変換: 1件, Nyoze字下げ変換: 1件, 地寄せ→地付き近似: 1件, Nyoze空白ページ変換: 1件, 改丁・改見開き→改ページ近似: 1件, 末尾書誌情報削除, 注釈削除, フロントマター追加+ヘッダー削除)",
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃不明］  (行 19)"
+      ],
+      "warnings": [
+        "     [WARN] 未変換の青空文庫注記: 1件 — work.md",
+        "         1件  ［＃不明］  (行 19)"
+      ]
+    }
+  }
+]

@@ -1,0 +1,7 @@
+**/*.generated.ts
+design/fixtures/
+design/compatibility-plan.json
+design/improvement-fixtures.json
+tests/fixtures/
+dist/
+node_modules/

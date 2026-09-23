@@ -1,0 +1,23 @@
+## JIS X 0213:2004 vs Unicode mapping table
+## 
+## Date: 3 May 2009
+## License:
+## 	Copyright (C) 2001 earthian@tama.or.jp, All Rights Reserved.
+## 	Copyright (C) 2001 I'O, All Rights Reserved.
+## 	Copyright (C) 2006, 2009 Project X0213, All Rights Reserved.
+## 	You can use, modify, distribute this table freely.
+## Note:
+## 	3-XXXX	JIS X 0213:2004 plane 1 (GL encoding)
+## 	4-XXXX	JIS X 0213:2000 plane 2 (GL encoding)
+## 	[1983]	JIS codepoint defined by JIS X 0208-1983
+## 	[1990]	JIS codepoint defined by JIS X 0208-1990
+## 	[2000]	JIS codepoint defined by JIS X 0213:2000
+## 	[2004]	JIS codepoint defined by JIS X 0213:2004
+## 	[Unicode3.1]	UCS codepoint defined by Unicode 3.1
+## 	[Unicode3.2]	UCS codepoint defined by Unicode 3.2
+## 	Fullwidth	UCS fullwidth form (U+Fxxx)
+## 	Windows 	Windows (CP932) mapping
+## 	Some 0213 character can't represent by one UCS character.
+## 	In this table, such characters are described as 'U+xxxx+xxxx'.
+## 
+## JIS	Unicode	Name	Note

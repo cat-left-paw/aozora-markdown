@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Original Python evidence; never rewrite to match TypeScript",
+  "sourceSha256": "4c45c5e777718e88815117e49db85ccb13e1dd4e35eba858e3eae958bd2f2cc0",
+  "files": {
+    "encoding-fixtures.json": "5308fc54fa4f030d28f2c8a7117dfdb14869f8aa03362f242d7017e56356da7c",
+    "io-probes.json": "b57175bb413717b09819c9d36606f5830ce4d8350a5e80eb1695a70724df07f2",
+    "jis-oracle.json": "862df7a237526e249195e07249cf0b5be3fedce81705189bf92339594b1b8429",
+    "manifest.json": "489b79bc6beea5e28633d3a96a053103d2b8c458fe429f47cf0b1a471e40325d",
+    "pipeline-fixtures.json": "5e3253c631d553cdc35ec644642a8ec35ea19c81c3dc79147c9491fb3707d0c8",
+    "regex-inventory.json": "5ff157192e25c6aeef3a9b583135cd05a49e0275b720651eee6168e12116423e",
+    "unit-fixtures.json": "8f2047b4f8e6acee0dc852f883dfa4514e918a2413ae6d56bb7bab584269bbea",
+    "warning-format-fixture.json": "4f2312bdcc06760c8bd9eba629561536cb3d8a331b8339d8fc3749be08485d3e"
+  }
+}

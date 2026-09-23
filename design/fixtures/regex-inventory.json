@@ -1,0 +1,332 @@
+[
+  {
+    "name": "_CONVERTED_STEM_RE",
+    "pattern": "_converted\\d*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_GAIJI_NOTE_RE",
+    "pattern": "※［＃([^］]*)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_SUBSTITUTE_GAIJI_NOTE_RE",
+    "pattern": "［＃「(?P<quoted>[^」]+)」は(?P<inner>[^］]*)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_JIS0213_MENKUTEN_RE",
+    "pattern": "第[34]水準(?:漢字)?(?P<plane>\\d{1,3})[-－](?P<row>\\d{1,3})[-－](?P<cell>\\d{1,3})",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_JIS0213_ANY_MENKUTEN_RE",
+    "pattern": "(?<![0-9])(?P<plane>[12])[-－](?P<row>\\d{1,3})[-－](?P<cell>\\d{1,3})(?![0-9])",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_UPLUS_RE",
+    "pattern": "U\\+([0-9A-Fa-f]{1,6})(?![0-9A-Fa-f])",
+    "flags": 34,
+    "flagNames": "re.IGNORECASE|re.UNICODE"
+  },
+  {
+    "name": "_FORWARD_EMPHASIS_BOTH_RE",
+    "pattern": "［＃「(?P<q1>[^」]+)」は(?P<k1>太字|斜体字?)］［＃「(?P<q2>[^」]+)」は(?P<k2>太字|斜体字?)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_FORWARD_EMPHASIS_ONE_RE",
+    "pattern": "［＃「(?P<quoted>[^」]+)」は(?P<kind>太字|斜体字?)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INLINE_EMPHASIS_NESTED_RE",
+    "pattern": "［＃(?P<outer>太字|斜体)］［＃(?P<inner>太字|斜体)］(?P<body>(?:(?!［＃).)+?)［＃(?P=inner)終わり］［＃(?P=outer)終わり］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INLINE_BOLD_RE",
+    "pattern": "［＃太字］(.*?)［＃太字終わり］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INLINE_ITALIC_RE",
+    "pattern": "［＃斜体］(.*?)［＃斜体終わり］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_EMPHASIS_START_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここから(?P<kind>太字|斜体)］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_EMPHASIS_END_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここで(?P<kind>太字|斜体)終わり］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_LEFTOVER_INLINE_EMPHASIS_OPEN_RE",
+    "pattern": "［＃(?:太字|斜体)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_FORWARD_UNDERLINE_RE",
+    "pattern": "［＃「(?P<quoted>[^」]+)」(?P<left>の左)?に(?P<style>二重傍線|鎖線|破線|波線|傍線)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INLINE_UNDERLINE_RE",
+    "pattern": "［＃(?P<head>(?:左に)?(?:二重傍線|鎖線|破線|波線|傍線))］(?P<body>.*?)［＃(?P=head)終わり］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_UNDERLINE_START_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここから(?P<head>(?:左に)?(?:二重傍線|鎖線|破線|波線|傍線))］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_UNDERLINE_END_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここで(?P<head>(?:左に)?(?:二重傍線|鎖線|破線|波線|傍線))終わり］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_LEFTOVER_UNDERLINE_NOTE_RE",
+    "pattern": "［＃「[^」]+」(?:の左)?に(?:二重傍線|鎖線|破線|波線|傍線)］|［＃(?:左に)?(?:二重傍線|鎖線|破線|波線|傍線)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_HEADING_RE",
+    "pattern": "^[ \\t　]*(?:［＃(?P<indent>[０-９0-9]+)字下げ］)?［＃ここから(?P<level>大|中|小)見出し］(?P<body>.*?)［＃ここで(?P=level)見出し終わり］[ \\t　\\r]*$",
+    "flags": 56,
+    "flagNames": "re.UNICODE|re.MULTILINE|re.DOTALL"
+  },
+  {
+    "name": "_RANGE_HEADING_RE",
+    "pattern": "^[ \\t　]*(?:［＃(?P<indent>[０-９0-9]+)字下げ］)?［＃(?P<level>大|中|小)見出し］(?P<body>.*?)［＃(?P=level)見出し終わり］[ \\t　\\r]*$",
+    "flags": 56,
+    "flagNames": "re.UNICODE|re.MULTILINE|re.DOTALL"
+  },
+  {
+    "name": "_FORWARD_HEADING_RE",
+    "pattern": "^[ \\t　]*(?:［＃(?P<indent>[０-９0-9]+)字下げ］)?(?P<body>[^\\n［]+?)［＃「(?P<quoted>[^」]*)」は(?P<level>大|中|小)見出し］[ \\t　\\r]*$",
+    "flags": 40,
+    "flagNames": "re.UNICODE|re.MULTILINE"
+  },
+  {
+    "name": "_UNSUPPORTED_HEADING_RE",
+    "pattern": "［＃「[^」]*」は(?:同行|窓)(?:大|中|小)見出し］|［＃(?:ここから)?(?:同行|窓)(?:大|中|小)見出し］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_FORWARD_BOUTEN_RE",
+    "pattern": "［＃「(?P<quoted>[^」]*)」に(?P<kind>白ゴマ傍点|白丸傍点|黒三角傍点|白三角傍点|二重丸傍点|蛇の目傍点|ばつ傍点|丸傍点|傍点)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_RANGE_BOUTEN_RE",
+    "pattern": "［＃(?P<kind>白ゴマ傍点|白丸傍点|黒三角傍点|白三角傍点|二重丸傍点|蛇の目傍点|ばつ傍点|丸傍点|傍点)］(?P<body>.*?)［＃(?P=kind)終わり］",
+    "flags": 48,
+    "flagNames": "re.UNICODE|re.DOTALL"
+  },
+  {
+    "name": "_LEFT_BOUTEN_NOTE_RE",
+    "pattern": "［＃「[^」]*」の左に(?:白ゴマ傍点|白丸傍点|黒三角傍点|白三角傍点|二重丸傍点|蛇の目傍点|ばつ傍点|丸傍点|傍点)］|［＃左に(?:白ゴマ傍点|白丸傍点|黒三角傍点|白三角傍点|二重丸傍点|蛇の目傍点|ばつ傍点|丸傍点|傍点)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_ONE_LINE_INDENT_RE",
+    "pattern": "^(?P<lead>[ \\t\\u3000]*)［＃(?P<num>[０-９0-9]+)字下げ］(?P<body>.*)$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_INDENT_START_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここから(?P<num>[０-９0-9]+)字下げ］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_INDENT_END_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここで字下げ終わり］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_EXISTING_NYOZE_INDENT_OPEN_RE",
+    "pattern": "^:::indent-[1-6]$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INDENT_NOTE_HINT_RE",
+    "pattern": "［＃ここから[０-９0-9]+字下げ|［＃[０-９0-9]+字下げ",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_AOZORA_NOTE_RE",
+    "pattern": "※?［＃[^］\\r\\n]*］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_PRESERVED_NOTE_WRAP_RE",
+    "pattern": "(※?［＃[^］\\r\\n]*］)",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_FENCE_OPEN_RE",
+    "pattern": "^[ \\t\\u3000]*(`{3,}|~{3,})",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INLINE_CODE_RE",
+    "pattern": "`[^`\\n]+`",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INLINE_JITSUKI_RE",
+    "pattern": "^(?P<prefix>.*?)［＃地付き］(?P<body>.*)$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_INLINE_JIAGE_RE",
+    "pattern": "^(?P<prefix>.*?)［＃地から(?P<num>[０-９0-9]+)字上げ］(?P<body>.*)$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_JITSUKI_START_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここから地付き］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_JITSUKI_END_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここで地付き終わり］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_JIAGE_START_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここから地から(?P<num>[０-９0-9]+)字上げ］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_BLOCK_JIAGE_END_RE",
+    "pattern": "^[ \\t\\u3000]*［＃ここで字上げ終わり］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_EXISTING_NYOZE_DIRECTIVE_OPEN_RE",
+    "pattern": "^:::[A-Za-z][A-Za-z0-9_-]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_EXISTING_NYOZE_ALIGN_END_RE",
+    "pattern": "^:::align-end$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_ALIGN_RELATED_NOTE_RE",
+    "pattern": "［＃地付き］|［＃地から[０-９0-9]+字上げ］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_JIAGE_NOTE_HINT_RE",
+    "pattern": "［＃(?:ここから)?地から[０-９0-9]+字上げ",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_PAGE_BREAK_LINE_RE",
+    "pattern": "^[ \\t\\u3000]*［＃改ページ］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_KAICHO_LINE_RE",
+    "pattern": "^[ \\t\\u3000]*［＃改丁］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_KAIHIRAKI_LINE_RE",
+    "pattern": "^[ \\t\\u3000]*［＃改見開き］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_KAIDAN_LINE_RE",
+    "pattern": "^[ \\t\\u3000]*［＃改段］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_EXISTING_NYOZE_PAGE_BREAK_RE",
+    "pattern": "^:::page-break$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_EXISTING_NYOZE_BLANK_PAGE_RE",
+    "pattern": "^:::blank-page(?:-[0-9]+)?$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_PAGE_NOTE_HINT_RE",
+    "pattern": "［＃(?:改ページ|改丁|改見開き)］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_KAIDAN_HINT_RE",
+    "pattern": "［＃改段］",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_AOZORA_FOOTER_DATE_RE",
+    "pattern": "[0-9０-９]{4}年[0-9０-９]{1,2}月[0-9０-９]{1,2}日[ \\t\\u3000]*(?:作成|修正)",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  },
+  {
+    "name": "_HONBUN_OWARI_LINE_RE",
+    "pattern": "^[ \\t\\u3000]*［＃本文終わり］[ \\t\\u3000\\r]*$",
+    "flags": 32,
+    "flagNames": "re.UNICODE"
+  }
+]

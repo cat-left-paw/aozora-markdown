@@ -1,0 +1,4785 @@
+{
+  "schemaVersion": 1,
+  "decisionSet": "aozora-ts-v2",
+  "notice": "Design-time plan; needs-expectation is not PASS. Candidate decisions do not authorize arbitrary changed fields.",
+  "decisions": {
+    "R01": {
+      "classification": "FIX NOW",
+      "reason": "ENCODING_UTF8_FIRST_STRICT"
+    },
+    "R02": {
+      "classification": "KEEP"
+    },
+    "R03": {
+      "classification": "FIX NOW",
+      "reason": "OUTPUT_CREATE_ONLY_COLLISION_PLAN"
+    },
+    "R04": {
+      "classification": "FIX NOW",
+      "reason": "SOURCE_IDENTITY_AND_EXCLUSIVE_CREATE"
+    },
+    "R05": {
+      "classification": "FIX NOW",
+      "reason": "ZIP_ENTRY_IDENTITY_NO_SILENT_FLATTEN"
+    },
+    "R06": {
+      "classification": "FIX NOW",
+      "reason": "ZIP_PATH_VALIDATION_BEFORE_USE"
+    },
+    "R07": {
+      "classification": "DEFER"
+    },
+    "R08": {
+      "classification": "FIX NOW",
+      "reason": "YAML_SAFE_GENERATION_AND_READ"
+    },
+    "R09": {
+      "classification": "FIX NOW",
+      "reason": "HEADER_METADATA_NO_DATA_LOSS"
+    },
+    "R10": {
+      "classification": "FIX NOW",
+      "reason": "HEADING_TARGET_VALIDATED"
+    },
+    "R11": {
+      "classification": "FIX NOW",
+      "reason": "BOUTEN_RUBY_CONTEXT_PROTECTED"
+    },
+    "R12": {
+      "classification": "FIX NOW",
+      "reason": "DUPLICATE_DIAGNOSTIC_COUNT_FIXED"
+    },
+    "R13": {
+      "classification": "FIX NOW",
+      "reason": "UNIFIED_LITERAL_PROTECTION"
+    },
+    "R14": {
+      "classification": "FIX NOW",
+      "reason": "CONSERVATIVE_DELETION_BOUNDARIES"
+    },
+    "R15": {
+      "classification": "FIX NOW",
+      "reason": "PRESERVE_PROVENANCE_NO_SENTINEL"
+    },
+    "R16": {
+      "classification": "FIX NOW",
+      "reason": "JOB_STATS_COMMIT_ONLY"
+    },
+    "R17": {
+      "classification": "KEEP"
+    },
+    "R18": {
+      "classification": "FIX NOW",
+      "reason": "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+    }
+  },
+  "exhaustiveStrict": [
+    {
+      "suite": "jis-oracle.json",
+      "entries": 17672,
+      "scope": "lookup only; Markdown protection has separate context tests"
+    },
+    {
+      "suite": "warning-format-fixture.json",
+      "scope": "formatter input notes -> exact log lines"
+    }
+  ],
+  "cases": [
+    {
+      "caseKey": "unit:gaiji-uplus",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-uplus"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-plane1",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-plane1"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-plane2",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-plane2"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-bare",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-bare"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-fullwidth",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-fullwidth"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-supplementary",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-supplementary"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-unknown",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-unknown"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-invalid-preferred-fallback",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-invalid-preferred-fallback"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-invalid-specific-no-bare-retry",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-invalid-specific-no-bare-retry"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-first-uplus-only",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-first-uplus-only"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-hex-boundary",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-hex-boundary"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-date-boundary",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-date-boundary"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-substitute",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-substitute"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-substitute-mismatch",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-substitute-mismatch"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-substitute-no-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-substitute-no-code"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-substitute-segment",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-substitute-segment"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "expectedRef": "unit:gaiji-fence"
+    },
+    {
+      "caseKey": "unit:gaiji-two-codepoints",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-two-codepoints"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-jis0212-fallback",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-jis0212-fallback"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-nested-note-newline",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-nested-note-newline"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-001F",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-001F"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-0020",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-0020"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-007F",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-007F"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-0080",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-0080"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-009F",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-009F"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-00A0",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-00A0"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-D800",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-D800"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-DFFF",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-DFFF"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-FDD0",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-FDD0"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-FFFF",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-FFFF"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-10FFFF",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-10FFFF"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:gaiji-codepoint-110000",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-codepoint-110000"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-0-1-1",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-0-1-1"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-3-1-1",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-3-1-1"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-1-0-1",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-1-0-1"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-1-95-1",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-1-95-1"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-1-1-0",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-1-1-0"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-1-1-95",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-1-1-95"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-1-1-32",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-1-1-32"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:jis-bounds-1-2-18",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "jis-bounds-1-2-18"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-bold",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-bold"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-italic",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-italic"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-both",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-both"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-both-unsafe-count",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-both-unsafe-count"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R12"
+      ],
+      "reasons": [
+        "DUPLICATE_DIAGNOSTIC_COUNT_FIXED"
+      ],
+      "expectedRef": "unit:emphasis-both-unsafe-count"
+    },
+    {
+      "caseKey": "unit:emphasis-same-kind-adjacent",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-same-kind-adjacent"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-range",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-range"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-nested",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-nested"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-same-kind-nested",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-same-kind-nested"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-asterisk",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-asterisk"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-empty-range",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-empty-range"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-multiline-range",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-multiline-range"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-block",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-block"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-block-unsafe",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-block-unsafe"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-block-missing-end",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-block-missing-end"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-block-empty",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-block-empty"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:emphasis-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-backtick"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:emphasis-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "expectedRef": "unit:emphasis-tilde"
+    },
+    {
+      "caseKey": "unit:emphasis-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "expectedRef": "unit:emphasis-inline-code"
+    },
+    {
+      "caseKey": "unit:emphasis-cr-nested",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-cr-nested"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-傍線-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-傍線-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-傍線-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-傍線-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-二重傍線-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-二重傍線-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-二重傍線-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-二重傍線-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-鎖線-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-鎖線-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-鎖線-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-鎖線-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-破線-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-破線-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-破線-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-破線-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-波線-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-波線-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-波線-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-波線-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-left-special-False-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-left-special-False-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-left-special-False-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-left-special-False-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-left-special-True-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-left-special-True-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-left-special-True-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-left-special-True-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-range",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-range"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-block",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-block"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-block-unsafe",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-block-unsafe"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-existing-inner",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-existing-inner"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-existing-outer",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-existing-outer"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-existing-range",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-existing-range"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-cross-format-body",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-cross-format-body"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-mismatch",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-mismatch"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-unmatched-end",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-unmatched-end"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-multiline",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-multiline"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-unsafe-body",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-unsafe-body"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-html",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-html"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:underline-invalid-format",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "underline-invalid-format"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-白ゴマ傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-白ゴマ傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-白丸傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-白丸傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-黒三角傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-黒三角傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-白三角傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-白三角傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-二重丸傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-二重丸傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-蛇の目傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-蛇の目傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-ばつ傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-ばつ傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-丸傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-丸傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-傍点",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-傍点"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-supplementary",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-supplementary"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-combining",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-combining"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-space",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-space"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-only-space-range",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-only-space-range"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-only-space-forward",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-only-space-forward"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-ruby",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-ruby"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-ruby-context",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-ruby-context"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R11"
+      ],
+      "reasons": [
+        "BOUTEN_RUBY_CONTEXT_PROTECTED"
+      ],
+      "expectedRef": "unit:bouten-ruby-context"
+    },
+    {
+      "caseKey": "unit:bouten-left",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-left"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-multiline",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-multiline"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-unmatched",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-unmatched"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-block-unsupported",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-block-unsupported"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "expectedRef": "unit:bouten-fence"
+    },
+    {
+      "caseKey": "unit:bouten-python-whitespace",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-python-whitespace"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-mark-'•'",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-mark-'•'"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-mark-'𠀀X'",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-mark-'𠀀X'"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-mark-''",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-mark-''"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:bouten-mark-'ab'",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-mark-'ab'"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-大",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-大"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-中",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-中"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-小",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-小"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-quote-not-checked",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-quote-not-checked"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R10"
+      ],
+      "reasons": [
+        "HEADING_TARGET_VALIDATED"
+      ],
+      "expectedRef": "unit:heading-quote-not-checked"
+    },
+    {
+      "caseKey": "unit:heading-ruby",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-ruby"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-multiline",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-multiline"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-indent",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-indent"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-indent-clamp",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-indent-clamp"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-unsupported",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-unsupported"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-empty",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-empty"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-not-whole-line",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-not-whole-line"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:heading-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "expectedRef": "unit:heading-fence"
+    },
+    {
+      "caseKey": "unit:heading-unicode-splitlines",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-unicode-splitlines"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-0",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-0"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-1",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-1"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-2",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-2"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-3",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-3"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-4",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-4"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-5",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-5"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-6",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-6"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-7",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-7"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-level-40",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-level-40"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-one-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-one-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-one-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-one-True"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:indent-one-True"
+    },
+    {
+      "caseKey": "unit:indent-empty-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-empty-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-empty-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-empty-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-block-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-block-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-block-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-block-True"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:indent-block-True"
+    },
+    {
+      "caseKey": "unit:indent-switch-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-switch-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-switch-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-switch-True"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:indent-switch-True"
+    },
+    {
+      "caseKey": "unit:indent-inline-inside-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-inline-inside-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-inline-inside-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-inline-inside-True"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:indent-inline-inside-True"
+    },
+    {
+      "caseKey": "unit:indent-invalid-switch-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-invalid-switch-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-invalid-switch-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-invalid-switch-True"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:indent-invalid-switch-True"
+    },
+    {
+      "caseKey": "unit:indent-eof-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-eof-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-eof-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-eof-True"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:indent-eof-True"
+    },
+    {
+      "caseKey": "unit:indent-existing-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-existing-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-existing-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-existing-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-already-following-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-already-following-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-already-following-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-already-following-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-modified-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-modified-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-modified-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-modified-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-stray-end-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-stray-end-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-stray-end-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-stray-end-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:indent-fence-close-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-fence-close-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:indent-fence-close-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-fence-close-True"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:indent-fence-close-True"
+    },
+    {
+      "caseKey": "unit:align-one-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-one-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-one-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-one-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-mid-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-mid-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-mid-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-mid-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-empty-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-empty-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-empty-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-empty-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-block-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-block-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-block-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-block-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-eof-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-eof-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-eof-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-eof-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-jiage-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-jiage-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-jiage-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-jiage-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-jiage-zero-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-jiage-zero-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-jiage-zero-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-jiage-zero-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-jiage-huge-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-jiage-huge-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-jiage-huge-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-jiage-huge-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-passthrough-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-passthrough-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-passthrough-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-passthrough-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-multiple-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-multiple-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-multiple-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-multiple-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-existing-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-existing-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-existing-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-existing-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-mismatched-end-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-mismatched-end-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-mismatched-end-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-mismatched-end-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:align-preserve-mid",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-preserve-mid"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:align-preserve-mid"
+    },
+    {
+      "caseKey": "unit:align-preserve-block",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-preserve-block"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:align-preserve-block"
+    },
+    {
+      "caseKey": "unit:page-one-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-one-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-one-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-one-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-blank-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-blank-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-blank-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-blank-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-adjacent-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-adjacent-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-adjacent-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-adjacent-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-triple-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-triple-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-triple-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-triple-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-space-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-space-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-space-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-space-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-inline-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-inline-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-inline-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-inline-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-kaicho-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-kaicho-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-kaicho-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-kaicho-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-kaihiraki-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-kaihiraki-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-kaihiraki-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-kaihiraki-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-kaidan-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-kaidan-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-kaidan-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-kaidan-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-mixed-hint-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-mixed-hint-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-mixed-hint-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-mixed-hint-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-existing-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-existing-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-existing-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-existing-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-already-following-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-already-following-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-already-following-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-already-following-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-blank-existing-False",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-blank-existing-False"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-blank-existing-True",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-blank-existing-True"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:page-preserve-blank",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-preserve-blank"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:page-preserve-blank"
+    },
+    {
+      "caseKey": "unit:footer-safe",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-safe"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-no-creation",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-no-creation"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-no-personnel-date",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-no-personnel-date"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-parent-only",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-parent-only"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-date",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-date"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-date-not-validated",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-date-not-validated"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R14"
+      ],
+      "reasons": [
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "expectedRef": "unit:footer-date-not-validated"
+    },
+    {
+      "caseKey": "unit:footer-inline-base",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-inline-base"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-honbun",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-honbun"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-teihon-priority",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-teihon-priority"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-last-base",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-last-base"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-in-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-in-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13",
+        "R14"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION",
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "expectedRef": "unit:footer-in-code"
+    },
+    {
+      "caseKey": "unit:footer-window-in",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-window-in"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:footer-window-out",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-window-out"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:annotation-normal",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "annotation-normal"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:annotation-unclosed",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "annotation-unclosed"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R14"
+      ],
+      "reasons": [
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "expectedRef": "unit:annotation-unclosed"
+    },
+    {
+      "caseKey": "unit:annotation-suffix",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "annotation-suffix"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R14"
+      ],
+      "reasons": [
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "expectedRef": "unit:annotation-suffix"
+    },
+    {
+      "caseKey": "unit:annotation-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "annotation-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13",
+        "R14"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION",
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "expectedRef": "unit:annotation-code"
+    },
+    {
+      "caseKey": "unit:scan-basic",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-basic"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:scan-multiline",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-multiline"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:scan-fences",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-fences"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:scan-inline",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-inline"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:scan-double-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-double-backtick"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:scan-bad-close",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-bad-close"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:scan-preserved",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-preserved"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:scan-preserved"
+    },
+    {
+      "caseKey": "unit:strip-preserved",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "strip-preserved"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "expectedRef": "unit:strip-preserved"
+    },
+    {
+      "caseKey": "unit:scan-partial-marker",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-partial-marker"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:strip-partial-marker",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "strip-partial-marker"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:scan-isolated-pua",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-isolated-pua"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:strip-isolated-pua",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "strip-isolated-pua"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:header-two",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-two"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:header-no-blank",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-no-blank"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:header-blank-first",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-blank-first"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:header-three",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-three"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:header-multi-author",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-multi-author"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:header-translation",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-translation"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:header-translation-second",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-translation-second"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R09"
+      ],
+      "reasons": [
+        "HEADER_METADATA_NO_DATA_LOSS"
+      ],
+      "expectedRef": "unit:header-translation-second"
+    },
+    {
+      "caseKey": "unit:header-space-separator",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-space-separator"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:frontmatter-quoted",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "frontmatter-quoted"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:metadata-quoted",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-quoted"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R08"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ"
+      ],
+      "expectedRef": "unit:metadata-quoted"
+    },
+    {
+      "caseKey": "unit:frontmatter-raw-block",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "frontmatter-raw-block"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:metadata-raw-block",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-raw-block"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:frontmatter-array",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "frontmatter-array"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:metadata-array",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-array"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:frontmatter-empty",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "frontmatter-empty"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:metadata-empty",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-empty"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:frontmatter-empty-array",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "frontmatter-empty-array"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:metadata-empty-array",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-empty-array"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R08",
+        "R09"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS"
+      ],
+      "expectedRef": "unit:metadata-empty-array"
+    },
+    {
+      "caseKey": "unit:frontmatter-indented-key",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "frontmatter-indented-key"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:metadata-indented-key",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-indented-key"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R08"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ"
+      ]
+    },
+    {
+      "caseKey": "unit:yaml-unescaped",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "yaml-unescaped"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R08"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ"
+      ],
+      "expectedRef": "unit:yaml-unescaped"
+    },
+    {
+      "caseKey": "unit:header-reconstruct-order",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-reconstruct-order"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:filename-invalid",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-invalid"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:filename-reserved",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-reserved"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "expectedRef": "unit:filename-reserved"
+    },
+    {
+      "caseKey": "unit:filename-unicode-length",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-unicode-length"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "expectedRef": "unit:filename-unicode-length"
+    },
+    {
+      "caseKey": "unit:filename-dot-space",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-dot-space"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "expectedRef": "unit:filename-dot-space"
+    },
+    {
+      "caseKey": "unit:filename-control",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-control"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "expectedRef": "unit:filename-control"
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-backtick"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-backtick"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-backtick"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-backtick"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-backtick"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-inline-code"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-backtick"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-backtick"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-backtick",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-backtick"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": [],
+      "expectationEvidence": "Independent inspection: v2 protected content/counts or typed naming projection equal original."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-tilde",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-tilde"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-inline-code",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-inline-code"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-directive",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-directive"
+      },
+      "compatibility": "strict",
+      "status": "reference-ready",
+      "scope": "initial",
+      "decisions": [],
+      "reasons": []
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-mismatched-fence",
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-mismatched-fence"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ]
+    },
+    {
+      "caseKey": "pipeline:default-header",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "default-header"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:bouten-before-heading",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "bouten-before-heading"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R10",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "HEADING_TARGET_VALIDATED",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:gaiji-before-name",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "gaiji-before-name"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:heading-consumes-indent",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "heading-consumes-indent"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R10",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "HEADING_TARGET_VALIDATED",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:indent-protects-align-page",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "indent-protects-align-page"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:preserve-mixed",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "preserve-mixed"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R15",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "PRESERVE_PROVENANCE_NO_SENTINEL",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:preserve-deleted-no-stale-suppression",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "preserve-deleted-no-stale-suppression"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R15",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "PRESERVE_PROVENANCE_NO_SENTINEL",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:footer-before-annotation",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "footer-before-annotation"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R14",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "CONSERVATIVE_DELETION_BOUNDARIES",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:converted-count-survives-footer",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "converted-count-survives-footer"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:txt-gating",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "txt-gating"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:md-even-rename-off",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "md-even-rename-off"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:header-restore",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "header-restore"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:header-duplicate-within-ten",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "header-duplicate-within-ten"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:frontmatter-retain-original-header",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "frontmatter-retain-original-header"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:empty-author-fallback",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "empty-author-fallback"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:unknown-no-error",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "unknown-no-error"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:write-failure-stats",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "write-failure-stats"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:skip-unknown-txt",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "skip-unknown-txt"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:remove-annotations-forces-write",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "remove-annotations-forces-write"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "pipeline:whole-document",
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "whole-document"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial-core-and-policy-projection",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R10",
+        "R15",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "HEADING_TARGET_VALIDATED",
+        "PRESERVE_PROVENANCE_NO_SENTINEL",
+        "JOB_STATS_COMMIT_ONLY"
+      ]
+    },
+    {
+      "caseKey": "encoding:ascii",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "ascii"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "expectedRef": "encoding:ascii"
+    },
+    {
+      "caseKey": "encoding:cp932",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "cp932"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ]
+    },
+    {
+      "caseKey": "encoding:utf8",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "utf8"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "expectedRef": "encoding:utf8"
+    },
+    {
+      "caseKey": "encoding:utf8-ambiguous",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "utf8-ambiguous"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "expectedRef": "encoding:utf8-ambiguous"
+    },
+    {
+      "caseKey": "encoding:bom-ascii",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "bom-ascii"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "expectedRef": "encoding:bom-ascii"
+    },
+    {
+      "caseKey": "encoding:utf8-bom",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "utf8-bom"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "expectedRef": "encoding:utf8-bom"
+    },
+    {
+      "caseKey": "encoding:invalid",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "invalid"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "expectedRef": "encoding:invalid"
+    },
+    {
+      "caseKey": "encoding:ignore-newline",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "ignore-newline"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "expectedRef": "encoding:ignore-newline"
+    },
+    {
+      "caseKey": "encoding:windows-extras",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "windows-extras"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ]
+    },
+    {
+      "caseKey": "encoding:wave-dash",
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "wave-dash"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "expected-defined",
+      "scope": "initial",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ]
+    },
+    {
+      "caseKey": "io:txt-overwrites-existing-md",
+      "reference": {
+        "suite": "io-probes.json",
+        "id": "txt-overwrites-existing-md"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "not-in-slice",
+      "scope": "host-integration",
+      "decisions": [
+        "R03",
+        "R04",
+        "R18"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "SOURCE_IDENTITY_AND_EXCLUSIVE_CREATE",
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ]
+    },
+    {
+      "caseKey": "io:md-overwrites-existing-converted",
+      "reference": {
+        "suite": "io-probes.json",
+        "id": "md-overwrites-existing-converted"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "not-in-slice",
+      "scope": "host-integration",
+      "decisions": [
+        "R03",
+        "R04",
+        "R18"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "SOURCE_IDENTITY_AND_EXCLUSIVE_CREATE",
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ]
+    },
+    {
+      "caseKey": "io:hardlink-alias",
+      "reference": {
+        "suite": "io-probes.json",
+        "id": "hardlink-alias"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "not-in-slice",
+      "scope": "host-integration",
+      "decisions": [
+        "R03",
+        "R04",
+        "R18"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "SOURCE_IDENTITY_AND_EXCLUSIVE_CREATE",
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ]
+    },
+    {
+      "caseKey": "io:symlink-alias",
+      "reference": {
+        "suite": "io-probes.json",
+        "id": "symlink-alias"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "not-in-slice",
+      "scope": "host-integration",
+      "decisions": [
+        "R03",
+        "R04",
+        "R18"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "SOURCE_IDENTITY_AND_EXCLUSIVE_CREATE",
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ]
+    },
+    {
+      "caseKey": "io:zip-flatten",
+      "reference": {
+        "suite": "io-probes.json",
+        "id": "zip-flatten"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "not-in-slice",
+      "scope": "host-integration",
+      "decisions": [
+        "R05",
+        "R06",
+        "R07"
+      ],
+      "reasons": [
+        "ZIP_ENTRY_IDENTITY_NO_SILENT_FLATTEN",
+        "ZIP_PATH_VALIDATION_BEFORE_USE"
+      ]
+    },
+    {
+      "caseKey": "io:zip-duplicate",
+      "reference": {
+        "suite": "io-probes.json",
+        "id": "zip-duplicate"
+      },
+      "compatibility": "intentional-deviation",
+      "status": "not-in-slice",
+      "scope": "host-integration",
+      "decisions": [
+        "R05",
+        "R06",
+        "R07"
+      ],
+      "reasons": [
+        "ZIP_ENTRY_IDENTITY_NO_SILENT_FLATTEN",
+        "ZIP_PATH_VALIDATION_BEFORE_USE"
+      ]
+    },
+    {
+      "caseKey": "io:folder-exclusions",
+      "reference": {
+        "suite": "io-probes.json",
+        "id": "folder-exclusions"
+      },
+      "compatibility": "strict",
+      "status": "not-in-slice",
+      "scope": "host-integration",
+      "decisions": [],
+      "reasons": []
+    }
+  ]
+}

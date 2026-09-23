@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ascii",
+    "hex": "6162630d0a6465660d6768690a",
+    "expected": [
+      "abc\ndef\nghi\n",
+      "cp932"
+    ]
+  },
+  {
+    "id": "cp932",
+    "hex": "90c28bf395b68cc98740eee0",
+    "expected": [
+      "青空文庫①髙",
+      "cp932"
+    ]
+  },
+  {
+    "id": "utf8",
+    "hex": "e99d92e7a9bae69687e5baab",
+    "expected": [
+      "青空文庫",
+      "utf-8-sig"
+    ]
+  },
+  {
+    "id": "utf8-ambiguous",
+    "hex": "e38182e38184",
+    "expected": [
+      "縺ゅ＞",
+      "cp932"
+    ]
+  },
+  {
+    "id": "bom-ascii",
+    "hex": "efbbbf616263",
+    "expected": [
+      "abc",
+      "utf-8-sig"
+    ]
+  },
+  {
+    "id": "utf8-bom",
+    "hex": "efbbbfe99d92e7a9bae69687e5baab",
+    "expected": [
+      "青空文庫",
+      "utf-8-sig"
+    ]
+  },
+  {
+    "id": "invalid",
+    "hex": "813081",
+    "expected": [
+      "0",
+      "cp932(ignore)"
+    ]
+  },
+  {
+    "id": "ignore-newline",
+    "hex": "81300d0a0d",
+    "expected": [
+      "0\r\n\r",
+      "cp932(ignore)"
+    ]
+  },
+  {
+    "id": "windows-extras",
+    "hex": "80a0fdfeff",
+    "expected": [
+      "",
+      "cp932"
+    ]
+  },
+  {
+    "id": "wave-dash",
+    "hex": "8160",
+    "expected": [
+      "～",
+      "cp932"
+    ]
+  }
+]

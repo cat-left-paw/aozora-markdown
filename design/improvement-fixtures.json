@@ -1,0 +1,4699 @@
+{
+  "schemaVersion": 1,
+  "decisionSet": "aozora-ts-v2",
+  "notice": "Specified expectations, not observed TypeScript output. New structured fields must be fully specified before implementation acceptance.",
+  "cases": [
+    {
+      "caseKey": "unit:emphasis-both-unsafe-count",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R12"
+      ],
+      "reasons": [
+        "DUPLICATE_DIAGNOSTIC_COUNT_FIXED"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-both-unsafe-count"
+      },
+      "changedPaths": [
+        "/return/4",
+        "/stats/unconverted"
+      ],
+      "expected": {
+        "return": [
+          "別［＃「青空」は太字］［＃「青空」は斜体］",
+          0,
+          0,
+          0,
+          2
+        ],
+        "warnings": [],
+        "output": "別［＃「青空」は太字］［＃「青空」は斜体］",
+        "stats": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 2
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:heading-quote-not-checked",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R10"
+      ],
+      "reasons": [
+        "HEADING_TARGET_VALIDATED"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-quote-not-checked"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "本文［＃「不一致」は大見出し］",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "本文［＃「不一致」は大見出し］",
+        "stats": {
+          "converted": 0,
+          "unsupported": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "diagnosticCodes": [
+          "HEADING_TARGET_MISMATCH"
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:bouten-ruby-context",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R11"
+      ],
+      "reasons": [
+        "BOUTEN_RUBY_CONTEXT_PROTECTED"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-ruby-context"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/return/2",
+        "/output",
+        "/stats/converted",
+        "/stats/unconverted"
+      ],
+      "expected": {
+        "return": [
+          "｜青［＃「青」に傍点］《あお》",
+          0,
+          1
+        ],
+        "warnings": [],
+        "output": "｜青［＃「青」に傍点］《あお》",
+        "stats": {
+          "converted": 0,
+          "unconverted": 1
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "diagnosticCodes": [
+          "BOUTEN_RUBY_CONTEXT"
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:annotation-suffix",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R14"
+      ],
+      "reasons": [
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "annotation-suffix"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "前\n-----abc\n本文\n-----xyz\n後",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "diagnosticCodes": []
+      }
+    },
+    {
+      "caseKey": "unit:annotation-unclosed",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R14"
+      ],
+      "reasons": [
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "annotation-unclosed"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "前\n-----\n後",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "diagnosticCodes": [
+          "UNCLOSED_ANNOTATION_BLOCK"
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:annotation-code",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R13",
+        "R14"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION",
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "annotation-code"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "```\n-----\nコード\n-----\n```",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "diagnosticCodes": []
+      }
+    },
+    {
+      "caseKey": "unit:footer-date-not-validated",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R14"
+      ],
+      "reasons": [
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-date-not-validated"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/removed"
+      ],
+      "expected": {
+        "return": [
+          "本文\n底本:資料\n青空文庫作成ファイル:\n2026年99月99日作成",
+          false
+        ],
+        "warnings": [],
+        "output": "本文\n底本:資料\n青空文庫作成ファイル:\n2026年99月99日作成",
+        "stats": {
+          "removed": false
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:footer-in-code",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R13",
+        "R14"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION",
+        "CONSERVATIVE_DELETION_BOUNDARIES"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "footer-in-code"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/removed"
+      ],
+      "expected": {
+        "return": [
+          "```\n底本：資料\n入力：人\n青空文庫作成ファイル：\n末尾\n```",
+          false
+        ],
+        "warnings": [],
+        "output": "```\n底本：資料\n入力：人\n青空文庫作成ファイル：\n末尾\n```",
+        "stats": {
+          "removed": false
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:header-translation-second",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R09"
+      ],
+      "reasons": [
+        "HEADER_METADATA_NO_DATA_LOSS"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "header-translation-second"
+      },
+      "changedPaths": [
+        "/return/0"
+      ],
+      "expected": {
+        "return": [
+          {
+            "title": "題",
+            "translator": "甲訳",
+            "raw_header": "失われる行"
+          },
+          "本文"
+        ],
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:metadata-empty-array",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R08",
+        "R09"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-empty-array"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "return": {
+          "title": "題"
+        },
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "operationFailed": false
+      }
+    },
+    {
+      "caseKey": "unit:metadata-quoted",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R08"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-quoted"
+      },
+      "changedPaths": [
+        "/return/title",
+        "/return/author"
+      ],
+      "expected": {
+        "return": {
+          "title": "題",
+          "author": "人"
+        },
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:yaml-unescaped",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R08"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "yaml-unescaped"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "---\ntitle: \"a: b # c\"\nauthor: \"[人]\"\nauthors:\n  - 甲\n  - 乙\nraw_header: |-\n  副題\n  別名\n---",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:filename-reserved",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-reserved"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "_CON",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:filename-dot-space",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-dot-space"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "untitled",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:filename-control",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-control"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "ab",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:filename-unicode-length",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R18"
+      ],
+      "reasons": [
+        "PORTABLE_FILENAME_AND_COLLISION_KEYS"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "filename-unicode-length"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:scan-preserved",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "scan-preserved"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": [
+          {
+            "line": 1,
+            "text": "［＃改ページ］"
+          },
+          {
+            "line": 2,
+            "text": "［＃改ページ］"
+          }
+        ],
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegionsFromInput": []
+      }
+    },
+    {
+      "caseKey": "unit:strip-preserved",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "strip-preserved"
+      },
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": "［＃改ページ］\n［＃改ページ］",
+        "warnings": []
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "apiProjection": "finalize text unchanged; legacy strip retired"
+      }
+    },
+    {
+      "caseKey": "unit:gaiji-fence",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "gaiji-fence"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "```\n※［＃U+0041］\n```",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "```\n※［＃U+0041］\n```",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "protectedTextUnchanged": true
+      }
+    },
+    {
+      "caseKey": "unit:bouten-fence",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "bouten-fence"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "```\n青［＃「青」に傍点］\n```",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "```\n青［＃「青」に傍点］\n```",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "protectedTextUnchanged": true
+      }
+    },
+    {
+      "caseKey": "unit:heading-fence",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "heading-fence"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "```\n章［＃「章」は大見出し］\n```",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "```\n章［＃「章」は大見出し］\n```",
+        "stats": {
+          "converted": 0,
+          "unsupported": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "protectedTextUnchanged": true
+      }
+    },
+    {
+      "caseKey": "unit:emphasis-tilde",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-tilde"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/bold"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n青［＃「青」は太字］\n~~~",
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n青［＃「青」は太字］\n~~~",
+        "stats": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "protectedTextUnchanged": true
+      }
+    },
+    {
+      "caseKey": "unit:emphasis-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "emphasis-inline-code"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/bold"
+      ],
+      "expected": {
+        "return": [
+          "`青［＃「青」は太字］`",
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`青［＃「青」は太字］`",
+        "stats": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "protectedTextUnchanged": true
+      }
+    },
+    {
+      "caseKey": "unit:indent-one-True",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-one-True"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "  ［＃３字下げ］\n:::indent-3\n本文\n:::",
+          1,
+          0
+        ],
+        "warnings": [],
+        "output": "  ［＃３字下げ］\n:::indent-3\n本文\n:::",
+        "stats": {
+          "converted": 1,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 2,
+            "endUtf16": 9,
+            "text": "［＃３字下げ］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:indent-block-True",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-block-True"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃ここから２字下げ］\n:::indent-2\n本文\n:::\n［＃ここで字下げ終わり］",
+          1,
+          0
+        ],
+        "warnings": [],
+        "output": "［＃ここから２字下げ］\n:::indent-2\n本文\n:::\n［＃ここで字下げ終わり］",
+        "stats": {
+          "converted": 1,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 11,
+            "text": "［＃ここから２字下げ］",
+            "kind": "preserved-note"
+          },
+          {
+            "startUtf16": 31,
+            "endUtf16": 43,
+            "text": "［＃ここで字下げ終わり］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:indent-switch-True",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-switch-True"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから３字下げ］\n:::indent-3\n乙\n:::\n［＃ここで字下げ終わり］",
+          2,
+          0
+        ],
+        "warnings": [],
+        "output": "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから３字下げ］\n:::indent-3\n乙\n:::\n［＃ここで字下げ終わり］",
+        "stats": {
+          "converted": 2,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 11,
+            "text": "［＃ここから２字下げ］",
+            "kind": "preserved-note"
+          },
+          {
+            "startUtf16": 30,
+            "endUtf16": 41,
+            "text": "［＃ここから３字下げ］",
+            "kind": "preserved-note"
+          },
+          {
+            "startUtf16": 60,
+            "endUtf16": 72,
+            "text": "［＃ここで字下げ終わり］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:indent-inline-inside-True",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-inline-inside-True"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃ここから２字下げ］\n:::indent-2\n［＃３字下げ］甲\n:::\n［＃ここで字下げ終わり］",
+          1,
+          0
+        ],
+        "warnings": [],
+        "output": "［＃ここから２字下げ］\n:::indent-2\n［＃３字下げ］甲\n:::\n［＃ここで字下げ終わり］",
+        "stats": {
+          "converted": 1,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 11,
+            "text": "［＃ここから２字下げ］",
+            "kind": "preserved-note"
+          },
+          {
+            "startUtf16": 37,
+            "endUtf16": 49,
+            "text": "［＃ここで字下げ終わり］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:indent-invalid-switch-True",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-invalid-switch-True"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+          1,
+          1
+        ],
+        "warnings": [],
+        "output": "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n［＃ここから７字下げ］\n乙\n［＃ここで字下げ終わり］",
+        "stats": {
+          "converted": 1,
+          "unconverted": 1
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 11,
+            "text": "［＃ここから２字下げ］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:indent-eof-True",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-eof-True"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃ここから２字下げ］\n:::indent-2\n本文\n\n:::",
+          1,
+          0
+        ],
+        "warnings": [],
+        "output": "［＃ここから２字下げ］\n:::indent-2\n本文\n\n:::",
+        "stats": {
+          "converted": 1,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 11,
+            "text": "［＃ここから２字下げ］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:indent-fence-close-True",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "indent-fence-close-True"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n```\n乙\n```\n丙",
+          1,
+          0
+        ],
+        "warnings": [],
+        "output": "［＃ここから２字下げ］\n:::indent-2\n甲\n:::\n```\n乙\n```\n丙",
+        "stats": {
+          "converted": 1,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 11,
+            "text": "［＃ここから２字下げ］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:align-preserve-mid",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-preserve-mid"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "本文\n［＃地付き］\n:::align-end\n署名\n:::",
+          1,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "本文\n［＃地付き］\n:::align-end\n署名\n:::",
+        "stats": {
+          "converted": 1,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 3,
+            "endUtf16": 9,
+            "text": "［＃地付き］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:align-preserve-block",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "align-preserve-block"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃ここから地付き］\n:::align-end\n署名\n:::\n［＃ここで地付き終わり］",
+          1,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "［＃ここから地付き］\n:::align-end\n署名\n:::\n［＃ここで地付き終わり］",
+        "stats": {
+          "converted": 1,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 10,
+            "text": "［＃ここから地付き］",
+            "kind": "preserved-note"
+          },
+          {
+            "startUtf16": 31,
+            "endUtf16": 43,
+            "text": "［＃ここで地付き終わり］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "unit:page-preserve-blank",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R15"
+      ],
+      "reasons": [
+        "PRESERVE_PROVENANCE_NO_SENTINEL"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "page-preserve-blank"
+      },
+      "changedPaths": [
+        "/return/0",
+        "/output"
+      ],
+      "expected": {
+        "return": [
+          "［＃改ページ］\n\n［＃改ページ］\n:::blank-page\n:::",
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "［＃改ページ］\n\n［＃改ページ］\n:::blank-page\n:::",
+        "stats": {
+          "pageBreaks": 0,
+          "blankPages": 1,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        }
+      },
+      "regression": "Compare exact new expected; original bug value must not pass.",
+      "newContract": {
+        "preservedRegions": [
+          {
+            "startUtf16": 0,
+            "endUtf16": 7,
+            "text": "［＃改ページ］",
+            "kind": "preserved-note"
+          },
+          {
+            "startUtf16": 9,
+            "endUtf16": 16,
+            "text": "［＃改ページ］",
+            "kind": "preserved-note"
+          }
+        ]
+      }
+    },
+    {
+      "caseKey": "encoding:ascii",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "ascii"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "abc\ndef\nghi\n",
+        "encoding": "utf-8",
+        "bom": false
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "encoding:utf8",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "utf8"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "青空文庫",
+        "encoding": "utf-8",
+        "bom": false
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "encoding:utf8-ambiguous",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "utf8-ambiguous"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "あい",
+        "encoding": "utf-8",
+        "bom": false
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "encoding:bom-ascii",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "bom-ascii"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "abc",
+        "encoding": "utf-8",
+        "bom": true
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "encoding:utf8-bom",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "utf8-bom"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "青空文庫",
+        "encoding": "utf-8",
+        "bom": true
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "encoding:invalid",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "invalid"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": false,
+        "code": "DECODE_FAILED"
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "encoding:ignore-newline",
+      "compatibility": "intentional-deviation",
+      "decisionSet": "aozora-ts-v2",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "ignore-newline"
+      },
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": false,
+        "code": "DECODE_FAILED"
+      },
+      "regression": "Compare exact new expected; original bug value must not pass."
+    },
+    {
+      "caseKey": "unit:metadata-indented-key",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R08"
+      ],
+      "reasons": [
+        "YAML_SAFE_GENERATION_AND_READ"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "metadata-indented-key"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return"
+      ],
+      "expected": {
+        "return": {
+          "title": "題"
+        },
+        "warnings": []
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-backtick",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-backtick"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "```\n※［＃U+0041］\n```",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "```\n※［＃U+0041］\n```",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n※［＃U+0041］\n~~~",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n※［＃U+0041］\n~~~",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-inline-code"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "`※［＃U+0041］`",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`※［＃U+0041］`",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_gaiji-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_gaiji-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "````\n※［＃U+0041］\n```suffix\n※［＃U+0041］\n````",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n※［＃U+0041］\n```suffix\n※［＃U+0041］\n````",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/bold"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n青［＃「青」は太字］\n~~~",
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n青［＃「青」は太字］\n~~~",
+        "stats": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-inline-code"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/bold"
+      ],
+      "expected": {
+        "return": [
+          "`青［＃「青」は太字］`",
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`青［＃「青」は太字］`",
+        "stats": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_markdown_emphasis-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_markdown_emphasis-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/bold"
+      ],
+      "expected": {
+        "return": [
+          "````\n青［＃「青」は太字］\n```suffix\n青［＃「青」は太字］\n````",
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n青［＃「青」は太字］\n```suffix\n青［＃「青」は太字］\n````",
+        "stats": {
+          "bold": 0,
+          "italic": 0,
+          "both": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n青［＃「青」に傍線］\n~~~",
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n青［＃「青」に傍線］\n~~~",
+        "stats": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-inline-code"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "`青［＃「青」に傍線］`",
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`青［＃「青」に傍線］`",
+        "stats": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_underline-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_underline-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "````\n青［＃「青」に傍線］\n```suffix\n青［＃「青」に傍線］\n````",
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n青［＃「青」に傍線］\n```suffix\n青［＃「青」に傍線］\n````",
+        "stats": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-backtick",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-backtick"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "```\n青［＃「青」に傍点］\n```",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "```\n青［＃「青」に傍点］\n```",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n青［＃「青」に傍点］\n~~~",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n青［＃「青」に傍点］\n~~~",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-inline-code"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "`青［＃「青」に傍点］`",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`青［＃「青」に傍点］`",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_bouten-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_bouten-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "````\n青［＃「青」に傍点］\n```suffix\n青［＃「青」に傍点］\n````",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n青［＃「青」に傍点］\n```suffix\n青［＃「青」に傍点］\n````",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-backtick",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-backtick"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "```\n章［＃「章」は大見出し］\n```",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "```\n章［＃「章」は大見出し］\n```",
+        "stats": {
+          "converted": 0,
+          "unsupported": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n章［＃「章」は大見出し］\n~~~",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n章［＃「章」は大見出し］\n~~~",
+        "stats": {
+          "converted": 0,
+          "unsupported": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_headings-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_headings-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "````\n章［＃「章」は大見出し］\n```suffix\n章［＃「章」は大見出し］\n````",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n章［＃「章」は大見出し］\n```suffix\n章［＃「章」は大見出し］\n````",
+        "stats": {
+          "converted": 0,
+          "unsupported": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n［＃２字下げ］青\n~~~",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n［＃２字下げ］青\n~~~",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-inline-code"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/2",
+        "/stats/unconverted"
+      ],
+      "expected": {
+        "return": [
+          "`［＃２字下げ］青`",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`［＃２字下げ］青`",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_indent-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_indent-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "````\n［＃２字下げ］青\n```suffix\n［＃２字下げ］青\n````",
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n［＃２字下げ］青\n```suffix\n［＃２字下げ］青\n````",
+        "stats": {
+          "converted": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n［＃地付き］青\n~~~",
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n［＃地付き］青\n~~~",
+        "stats": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-inline-code"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "`［＃地付き］青`",
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`［＃地付き］青`",
+        "stats": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_align_end-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_align_end-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/converted"
+      ],
+      "expected": {
+        "return": [
+          "````\n［＃地付き］青\n```suffix\n［＃地付き］青\n````",
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n［＃地付き］青\n```suffix\n［＃地付き］青\n````",
+        "stats": {
+          "converted": 0,
+          "approximated": 0,
+          "unconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-tilde",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-tilde"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/pageBreaks"
+      ],
+      "expected": {
+        "return": [
+          "~~~\n［＃改ページ］\n~~~",
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "~~~\n［＃改ページ］\n~~~",
+        "stats": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-inline-code",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-inline-code"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/4",
+        "/stats/unconverted"
+      ],
+      "expected": {
+        "return": [
+          "`［＃改ページ］`",
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "`［＃改ページ］`",
+        "stats": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "unit:protection-convert_aozora_page_breaks-mismatched-fence",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R13"
+      ],
+      "reasons": [
+        "UNIFIED_LITERAL_PROTECTION"
+      ],
+      "reference": {
+        "suite": "unit-fixtures.json",
+        "id": "protection-convert_aozora_page_breaks-mismatched-fence"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        "/return/0",
+        "/return/1",
+        "/output",
+        "/stats/pageBreaks"
+      ],
+      "expected": {
+        "return": [
+          "````\n［＃改ページ］\n```suffix\n［＃改ページ］\n````",
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": [],
+        "output": "````\n［＃改ページ］\n```suffix\n［＃改ページ］\n````",
+        "stats": {
+          "pageBreaks": 0,
+          "blankPages": 0,
+          "spreadApproximated": 0,
+          "unconverted": 0,
+          "kaidanUnconverted": 0
+        }
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "encoding:cp932",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "cp932"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "青空文庫①髙",
+        "encoding": "cp932",
+        "bom": false
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "encoding:windows-extras",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "windows-extras"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "",
+        "encoding": "cp932",
+        "bom": false
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "encoding:wave-dash",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R01"
+      ],
+      "reasons": [
+        "ENCODING_UTF8_FIRST_STRICT"
+      ],
+      "reference": {
+        "suite": "encoding-fixtures.json",
+        "id": "wave-dash"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "ok": true,
+        "text": "～",
+        "encoding": "cp932",
+        "bom": false
+      },
+      "contractScope": "R13 protected input stays byte-for-byte unchanged with no converter counts; R08 YAML indented mapping key is valid; R01 codec policy result schema.",
+      "expectationEvidence": "Derived directly from R13/R08/R01, unchanged original input and CPython codec. No TypeScript execution.",
+      "regression": "Exact expected comparison plus unlisted field-difference rejection."
+    },
+    {
+      "caseKey": "pipeline:default-header",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "default-header"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n**青空**\n",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 1,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "emphasis",
+              "action": "bold",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            },
+            {
+              "stage": "frontmatter",
+              "action": "frontmatter-added-header-removed"
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:bouten-before-heading",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R10",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "HEADING_TARGET_VALIDATED",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "bouten-before-heading"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 1,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "bouten",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "headings",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            },
+            {
+              "stage": "frontmatter",
+              "action": "frontmatter-added-header-removed"
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:gaiji-before-name",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "gaiji-before-name"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n本文",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "gaiji",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            },
+            {
+              "stage": "frontmatter",
+              "action": "frontmatter-added-header-removed"
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "著者/題.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:heading-consumes-indent",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R10",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "HEADING_TARGET_VALIDATED",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "heading-consumes-indent"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "## 　　　章",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 1,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "headings",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:indent-protects-align-page",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "indent-protects-align-page"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": ":::indent-2\n［＃地付き］署名\n［＃改ページ］\n:::",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 2
+          },
+          "remainingNotes": [
+            {
+              "line": 2,
+              "text": "［＃地付き］"
+            },
+            {
+              "line": 3,
+              "text": "［＃改ページ］"
+            }
+          ],
+          "diagnostics": [
+            {
+              "code": "REMAINING_AOZORA_NOTES",
+              "severity": "warning",
+              "stage": "residual",
+              "details": {
+                "count": 2
+              }
+            }
+          ],
+          "processingEvents": [
+            {
+              "stage": "indent",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 1,
+          "remainingNotes": 2
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:preserve-mixed",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R15",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "PRESERVE_PROVENANCE_NO_SENTINEL",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "preserve-mixed"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "［＃３字下げ］\n:::indent-3\n本文\n:::\n［＃改ページ］\n:::page-break\n:::\n前［＃改ページ］後",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 1,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 1,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 1
+          },
+          "remainingNotes": [
+            {
+              "line": 8,
+              "text": "［＃改ページ］"
+            }
+          ],
+          "diagnostics": [
+            {
+              "code": "REMAINING_AOZORA_NOTES",
+              "severity": "warning",
+              "stage": "residual",
+              "details": {
+                "count": 1
+              }
+            }
+          ],
+          "processingEvents": [
+            {
+              "stage": "indent",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "pageBreak",
+              "action": "pageBreaks",
+              "count": 1
+            },
+            {
+              "stage": "pageBreak",
+              "action": "unconverted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 1,
+          "remainingNotes": 1
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:preserve-deleted-no-stale-suppression",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R15",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "PRESERVE_PROVENANCE_NO_SENTINEL",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "preserve-deleted-no-stale-suppression"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "［＃ここから２字下げ］\n:::indent-2\n残る\n:::",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 1
+          },
+          "remainingNotes": [
+            {
+              "line": 1,
+              "text": "［＃ここから２字下げ］"
+            }
+          ],
+          "diagnostics": [
+            {
+              "code": "REMAINING_AOZORA_NOTES",
+              "severity": "warning",
+              "stage": "residual",
+              "details": {
+                "count": 1
+              }
+            }
+          ],
+          "processingEvents": [
+            {
+              "stage": "indent",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 1
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 1,
+          "remainingNotes": 1
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:footer-before-annotation",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R14",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "CONSERVATIVE_DELETION_BOUNDARIES",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "footer-before-annotation"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "本文\n末尾",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [
+            {
+              "code": "FOOTER_CANDIDATE_PRESERVED",
+              "severity": "warning",
+              "stage": "footer",
+              "range": {
+                "startUtf16": 9,
+                "endUtf16": 14
+              },
+              "sourceOccurrenceId": "source:9:14",
+              "details": {}
+            }
+          ],
+          "processingEvents": [
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 1
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:converted-count-survives-footer",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "converted-count-survives-footer"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "本文\n",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": true,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "gaiji",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "footer",
+              "action": "removed"
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:txt-gating",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "txt-gating"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "A\n青［＃「青」は太字］\n［＃改ページ］",
+          "isMarkdownOutput": false,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "gaiji",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work_converted.txt",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:md-even-rename-off",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "md-even-rename-off"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n**青**",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 1,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "emphasis",
+              "action": "bold",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            },
+            {
+              "stage": "frontmatter",
+              "action": "frontmatter-added-header-removed"
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work_converted.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:header-restore",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "header-restore"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\nraw_header: |\n  副題\n---\n題\n副題\n著者\n\n本文",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            },
+            {
+              "stage": "frontmatter",
+              "action": "header-restored"
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work_converted.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:header-duplicate-within-ten",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "header-duplicate-within-ten"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n一\n題\n本文",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work_converted.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:frontmatter-retain-original-header",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "frontmatter-retain-original-header"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n題\n著者\n\n本文",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            },
+            {
+              "stage": "frontmatter",
+              "action": "frontmatter-added"
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:empty-author-fallback",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "empty-author-fallback"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthors:\n---\n本文",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "unknown_author/題.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:unknown-no-error",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "unknown-no-error"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "※［＃未知］\n［＃不明］",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 1
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 2
+          },
+          "remainingNotes": [
+            {
+              "line": 1,
+              "text": "※［＃未知］"
+            },
+            {
+              "line": 2,
+              "text": "［＃不明］"
+            }
+          ],
+          "diagnostics": [
+            {
+              "code": "REMAINING_AOZORA_NOTES",
+              "severity": "warning",
+              "stage": "residual",
+              "details": {
+                "count": 2
+              }
+            }
+          ],
+          "processingEvents": [
+            {
+              "stage": "gaiji",
+              "action": "unconverted",
+              "count": 1
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 1,
+          "remainingNotes": 2
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:write-failure-stats",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "write-failure-stats"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "［＃不明］",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 1
+          },
+          "remainingNotes": [
+            {
+              "line": 1,
+              "text": "［＃不明］"
+            }
+          ],
+          "diagnostics": [
+            {
+              "code": "REMAINING_AOZORA_NOTES",
+              "severity": "warning",
+              "stage": "residual",
+              "details": {
+                "count": 1
+              }
+            }
+          ],
+          "processingEvents": [
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 0,
+          "errors": 1,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:skip-unknown-txt",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "skip-unknown-txt"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "※［＃未知］",
+          "isMarkdownOutput": false,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 1
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "gaiji",
+              "action": "unconverted",
+              "count": 1
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work_converted.txt",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:remove-annotations-forces-write",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "remove-annotations-forces-write"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "本文",
+          "isMarkdownOutput": false,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 0,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 0,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 0,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 0,
+              "spreadApproximated": 0,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": false,
+            "remainingNotes": 0
+          },
+          "remainingNotes": [],
+          "diagnostics": [],
+          "processingEvents": [
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 0
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {},
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work_converted.txt",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 0,
+          "remainingNotes": 0
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    },
+    {
+      "caseKey": "pipeline:whole-document",
+      "compatibility": "intentional-deviation",
+      "decisions": [
+        "R03",
+        "R08",
+        "R09",
+        "R10",
+        "R15",
+        "R16"
+      ],
+      "reasons": [
+        "OUTPUT_CREATE_ONLY_COLLISION_PLAN",
+        "YAML_SAFE_GENERATION_AND_READ",
+        "HEADER_METADATA_NO_DATA_LOSS",
+        "HEADING_TARGET_VALIDATED",
+        "PRESERVE_PROVENANCE_NO_SENTINEL",
+        "JOB_STATS_COMMIT_ONLY"
+      ],
+      "reference": {
+        "suite": "pipeline-fixtures.json",
+        "id": "whole-document"
+      },
+      "decisionSet": "aozora-ts-v2",
+      "changedPaths": [
+        ""
+      ],
+      "expected": {
+        "core": {
+          "text": "---\ntitle: 題\nauthor: 著者\n---\n## ｜青《﹅》｜空《﹅》\n**強調**\n||下線||\n［＃３字下げ］\n:::indent-3\n字下げ本文\n:::\n:::align-end\n署名\n:::\n:::blank-page\n:::\n:::page-break\n:::\n［＃不明］\n",
+          "isMarkdownOutput": true,
+          "outputEncoding": "utf-8",
+          "stats": {
+            "gaiji": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "emphasis": {
+              "bold": 1,
+              "italic": 0,
+              "both": 0,
+              "unconverted": 0
+            },
+            "underline": {
+              "converted": 1,
+              "approximated": 0,
+              "unconverted": 0
+            },
+            "bouten": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "headings": {
+              "converted": 1,
+              "unsupported": 0
+            },
+            "indent": {
+              "converted": 1,
+              "unconverted": 0
+            },
+            "align": {
+              "converted": 0,
+              "approximated": 1,
+              "unconverted": 0
+            },
+            "pageBreak": {
+              "pageBreaks": 0,
+              "blankPages": 1,
+              "spreadApproximated": 1,
+              "unconverted": 0,
+              "kaidanUnconverted": 0
+            },
+            "footerRemoved": true,
+            "remainingNotes": 1
+          },
+          "remainingNotes": [
+            {
+              "line": 19,
+              "text": "［＃不明］"
+            }
+          ],
+          "diagnostics": [
+            {
+              "code": "REMAINING_AOZORA_NOTES",
+              "severity": "warning",
+              "stage": "residual",
+              "details": {
+                "count": 1
+              }
+            }
+          ],
+          "processingEvents": [
+            {
+              "stage": "gaiji",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "emphasis",
+              "action": "bold",
+              "count": 1
+            },
+            {
+              "stage": "underline",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "bouten",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "headings",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "indent",
+              "action": "converted",
+              "count": 1
+            },
+            {
+              "stage": "align",
+              "action": "approximated",
+              "count": 1
+            },
+            {
+              "stage": "pageBreak",
+              "action": "blankPages",
+              "count": 1
+            },
+            {
+              "stage": "pageBreak",
+              "action": "spreadApproximated",
+              "count": 1
+            },
+            {
+              "stage": "footer",
+              "action": "removed"
+            },
+            {
+              "stage": "annotationBlocks",
+              "action": "removal-pass",
+              "count": 1
+            },
+            {
+              "stage": "frontmatter",
+              "action": "frontmatter-added-header-removed"
+            }
+          ],
+          "namingMetadata": {
+            "ok": true,
+            "metadata": {
+              "title": "題",
+              "author": "著者"
+            },
+            "diagnostics": []
+          }
+        },
+        "policy": {
+          "relativePath": "work.md",
+          "filesConverted": 1,
+          "errors": 0,
+          "filesWithRemainingNotes": 1,
+          "remainingNotes": 1
+        }
+      },
+      "contractScope": "Pure API and fake commit projection, all original fields accounted in tests/fixtures/pipeline-v2.json hostFieldScope.",
+      "regression": "Exact new core/policy objects; compare unchanged core fields with original projection and enumerate changedCorePaths."
+    }
+  ]
+}

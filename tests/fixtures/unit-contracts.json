@@ -1,0 +1,1872 @@
+[
+  {
+    "caseKey": "unit:gaiji-uplus",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-plane1",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-plane2",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-bare",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-fullwidth",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-supplementary",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-unknown",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-invalid-preferred-fallback",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-invalid-specific-no-bare-retry",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-first-uplus-only",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-hex-boundary",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-date-boundary",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-substitute",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-substitute-mismatch",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-substitute-no-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-substitute-segment",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-two-codepoints",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-jis0212-fallback",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-nested-note-newline",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-001F",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-0020",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-007F",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-0080",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-009F",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-00A0",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-D800",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-DFFF",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-FDD0",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-FFFF",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-10FFFF",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:gaiji-codepoint-110000",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-0-1-1",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-3-1-1",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-1-0-1",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-1-95-1",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-1-1-0",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-1-1-95",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-1-1-32",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:jis-bounds-1-2-18",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-bold",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-italic",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-both",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-both-unsafe-count",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 1,
+          "endUtf16": 11
+        },
+        "sourceOccurrenceId": "source:1:11",
+        "details": {
+          "reason": "target-mismatch"
+        }
+      },
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 11,
+          "endUtf16": 21
+        },
+        "sourceOccurrenceId": "source:11:21",
+        "details": {
+          "reason": "target-mismatch"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-same-kind-adjacent",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 12,
+          "endUtf16": 22
+        },
+        "sourceOccurrenceId": "source:12:22",
+        "details": {
+          "reason": "target-mismatch"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-range",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-nested",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-same-kind-nested",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 0,
+          "endUtf16": 5
+        },
+        "sourceOccurrenceId": "source:0:5",
+        "details": {
+          "reason": "unsupported-range"
+        }
+      },
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 5,
+          "endUtf16": 10
+        },
+        "sourceOccurrenceId": "source:5:10",
+        "details": {
+          "reason": "unsupported-range"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-asterisk",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 3,
+          "endUtf16": 14
+        },
+        "sourceOccurrenceId": "source:3:14",
+        "details": {
+          "reason": "asterisk"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-empty-range",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 0,
+          "endUtf16": 5
+        },
+        "sourceOccurrenceId": "source:0:5",
+        "details": {
+          "reason": "unsupported-range"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-multiline-range",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 0,
+          "endUtf16": 5
+        },
+        "sourceOccurrenceId": "source:0:5",
+        "details": {
+          "reason": "unsupported-range"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-block",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-block-unsafe",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 0,
+          "endUtf16": 9
+        },
+        "sourceOccurrenceId": "source:0:9",
+        "details": {
+          "reason": "unsupported-block"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-block-missing-end",
+    "diagnostics": [
+      {
+        "code": "EMPHASIS_NOT_CONVERTED",
+        "severity": "warning",
+        "stage": "emphasis",
+        "range": {
+          "startUtf16": 0,
+          "endUtf16": 9
+        },
+        "sourceOccurrenceId": "source:0:9",
+        "details": {
+          "reason": "unsupported-block"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-block-empty",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:emphasis-cr-nested",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-傍線-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-傍線-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-二重傍線-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-二重傍線-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-鎖線-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-鎖線-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-破線-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-破線-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-波線-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-波線-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-left-special-False-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-left-special-False-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-left-special-True-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-left-special-True-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-range",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-block",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-block-unsafe",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-existing-inner",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-existing-outer",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-existing-range",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-cross-format-body",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-mismatch",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-unmatched-end",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-multiline",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-unsafe-body",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-html",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:underline-invalid-format",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-白ゴマ傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-白丸傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-黒三角傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-白三角傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-二重丸傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-蛇の目傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-ばつ傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-丸傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-傍点",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-supplementary",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-combining",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-space",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-only-space-range",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-only-space-forward",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-ruby",
+    "diagnostics": [
+      {
+        "code": "BOUTEN_RUBY_CONTEXT",
+        "severity": "warning",
+        "stage": "bouten",
+        "range": {
+          "startUtf16": 6,
+          "endUtf16": 20
+        },
+        "sourceOccurrenceId": "source:6:20",
+        "details": {}
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-ruby-context",
+    "diagnostics": [
+      {
+        "code": "BOUTEN_RUBY_CONTEXT",
+        "severity": "warning",
+        "stage": "bouten",
+        "range": {
+          "startUtf16": 2,
+          "endUtf16": 11
+        },
+        "sourceOccurrenceId": "source:2:11",
+        "details": {}
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-left",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-multiline",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-unmatched",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-block-unsupported",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-python-whitespace",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-mark-'•'",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-mark-'𠀀X'",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-mark-''",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:bouten-mark-'ab'",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-大",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-中",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-小",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-quote-not-checked",
+    "diagnostics": [
+      {
+        "code": "HEADING_TARGET_MISMATCH",
+        "severity": "warning",
+        "stage": "headings",
+        "range": {
+          "startUtf16": 2,
+          "endUtf16": 15
+        },
+        "sourceOccurrenceId": "source:2:15",
+        "details": {
+          "quoted": "不一致",
+          "baseText": "本文"
+        }
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-ruby",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-multiline",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-indent",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-indent-clamp",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-unsupported",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-empty",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-not-whole-line",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:heading-unicode-splitlines",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-0",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-1",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-2",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-3",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-4",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-5",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-6",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-7",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-level-40",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-one-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-one-True",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 2,
+        "endUtf16": 9,
+        "text": "［＃３字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:2:9"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:indent-empty-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-empty-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-block-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-block-True",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 11,
+        "text": "［＃ここから２字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:11"
+      },
+      {
+        "startUtf16": 31,
+        "endUtf16": 43,
+        "text": "［＃ここで字下げ終わり］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:15:27"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:indent-switch-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-switch-True",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 11,
+        "text": "［＃ここから２字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:11"
+      },
+      {
+        "startUtf16": 30,
+        "endUtf16": 41,
+        "text": "［＃ここから３字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:14:25"
+      },
+      {
+        "startUtf16": 60,
+        "endUtf16": 72,
+        "text": "［＃ここで字下げ終わり］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:28:40"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:indent-inline-inside-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-inline-inside-True",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 11,
+        "text": "［＃ここから２字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:11"
+      },
+      {
+        "startUtf16": 37,
+        "endUtf16": 49,
+        "text": "［＃ここで字下げ終わり］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:21:33"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:indent-invalid-switch-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-invalid-switch-True",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 11,
+        "text": "［＃ここから２字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:11"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:indent-eof-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-eof-True",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 11,
+        "text": "［＃ここから２字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:11"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:indent-existing-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-existing-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-already-following-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-already-following-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-modified-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-modified-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-stray-end-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-stray-end-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-fence-close-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:indent-fence-close-True",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 11,
+        "text": "［＃ここから２字下げ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:11"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:align-one-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-one-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-mid-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-mid-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-empty-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-empty-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-block-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-block-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-eof-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-eof-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-jiage-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-jiage-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-jiage-zero-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-jiage-zero-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-jiage-huge-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-jiage-huge-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-passthrough-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-passthrough-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-multiple-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-multiple-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-existing-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-existing-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-mismatched-end-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-mismatched-end-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:align-preserve-mid",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 3,
+        "endUtf16": 9,
+        "text": "［＃地付き］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:4:10"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:align-preserve-block",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 10,
+        "text": "［＃ここから地付き］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:10"
+      },
+      {
+        "startUtf16": 31,
+        "endUtf16": 43,
+        "text": "［＃ここで地付き終わり］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:14:26"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:page-one-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-one-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-blank-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-blank-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-adjacent-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-adjacent-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-triple-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-triple-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-space-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-space-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-inline-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-inline-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-kaicho-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-kaicho-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-kaihiraki-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-kaihiraki-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-kaidan-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-kaidan-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-mixed-hint-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-mixed-hint-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-existing-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-existing-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-already-following-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-already-following-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-blank-existing-False",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-blank-existing-True",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:page-preserve-blank",
+    "diagnostics": [],
+    "preservedRegions": [
+      {
+        "startUtf16": 0,
+        "endUtf16": 7,
+        "text": "［＃改ページ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:0:7"
+      },
+      {
+        "startUtf16": 9,
+        "endUtf16": 16,
+        "text": "［＃改ページ］",
+        "kind": "preserved-note",
+        "sourceOccurrenceId": "source:9:16"
+      }
+    ]
+  },
+  {
+    "caseKey": "unit:footer-safe",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-no-creation",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-no-personnel-date",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-parent-only",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-date",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-date-not-validated",
+    "diagnostics": [
+      {
+        "code": "FOOTER_CANDIDATE_PRESERVED",
+        "severity": "warning",
+        "stage": "footer",
+        "range": {
+          "startUtf16": 3,
+          "endUtf16": 8
+        },
+        "sourceOccurrenceId": "source:3:8",
+        "details": {}
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-inline-base",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-honbun",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-teihon-priority",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-last-base",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-in-code",
+    "diagnostics": [
+      {
+        "code": "FOOTER_CANDIDATE_PRESERVED",
+        "severity": "warning",
+        "stage": "footer",
+        "range": {
+          "startUtf16": 4,
+          "endUtf16": 9
+        },
+        "sourceOccurrenceId": "source:4:9",
+        "details": {}
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-window-in",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:footer-window-out",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:annotation-normal",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:annotation-unclosed",
+    "diagnostics": [
+      {
+        "code": "UNCLOSED_ANNOTATION_BLOCK",
+        "severity": "warning",
+        "stage": "annotationBlocks",
+        "range": {
+          "startUtf16": 2,
+          "endUtf16": 7
+        },
+        "sourceOccurrenceId": "source:2:7",
+        "details": {}
+      }
+    ],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:annotation-suffix",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:annotation-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-basic",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-multiline",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-fences",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-inline",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-double-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-bad-close",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-preserved",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:strip-preserved",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-partial-marker",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:strip-partial-marker",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:scan-isolated-pua",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:strip-isolated-pua",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-two",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-no-blank",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-blank-first",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-three",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-multi-author",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-translation",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-translation-second",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-space-separator",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:frontmatter-quoted",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:metadata-quoted",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:frontmatter-raw-block",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:metadata-raw-block",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:frontmatter-array",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:metadata-array",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:frontmatter-empty",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:metadata-empty",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:frontmatter-empty-array",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:metadata-empty-array",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:frontmatter-indented-key",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:metadata-indented-key",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:yaml-unescaped",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:header-reconstruct-order",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:filename-invalid",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:filename-reserved",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:filename-unicode-length",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:filename-dot-space",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:filename-control",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_gaiji-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_gaiji-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_gaiji-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_gaiji-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_gaiji-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_markdown_emphasis-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_markdown_emphasis-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_markdown_emphasis-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_markdown_emphasis-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_markdown_emphasis-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_underline-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_underline-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_underline-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_underline-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_underline-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_bouten-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_bouten-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_bouten-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_bouten-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_bouten-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_headings-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_headings-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_headings-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_headings-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_headings-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_indent-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_indent-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_indent-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_indent-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_indent-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_align_end-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_align_end-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_align_end-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_align_end-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_align_end-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_page_breaks-backtick",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_page_breaks-tilde",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_page_breaks-inline-code",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_page_breaks-directive",
+    "diagnostics": [],
+    "preservedRegions": []
+  },
+  {
+    "caseKey": "unit:protection-convert_aozora_page_breaks-mismatched-fence",
+    "diagnostics": [],
+    "preservedRegions": []
+  }
+]

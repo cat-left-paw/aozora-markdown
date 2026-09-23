@@ -1,0 +1,283 @@
+[
+  {
+    "id": "txt-overwrites-existing-md",
+    "before": {
+      "work.md": "4558495354494e4720494e505554",
+      "work.txt": "534f555243450d0a"
+    },
+    "after": {
+      "work.md": "534f555243450a",
+      "work.txt": "534f555243450d0a"
+    },
+    "stats": [
+      {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      }
+    ],
+    "progress": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "logs": [
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md"
+    ]
+  },
+  {
+    "id": "md-overwrites-existing-converted",
+    "before": {
+      "work.md": "534f55524345204d44",
+      "work.txt": "534f555243450d0a",
+      "work_converted.md": "4f4c4420524553554c54"
+    },
+    "after": {
+      "work.md": "534f55524345204d44",
+      "work.txt": "534f555243450d0a",
+      "work_converted.md": "534f55524345204d44"
+    },
+    "stats": [
+      {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      }
+    ],
+    "progress": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "logs": [
+      "   • Processing text: work.md",
+      "     [OK] cp932 → UTF-8 → work_converted.md"
+    ]
+  },
+  {
+    "id": "hardlink-alias",
+    "before": {
+      "work.md": "534f555243450d0a",
+      "work.txt": "534f555243450d0a"
+    },
+    "after": {
+      "work.md": "534f555243450a",
+      "work.txt": "534f555243450a"
+    },
+    "stats": [
+      {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      }
+    ],
+    "progress": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "logs": [
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md"
+    ]
+  },
+  {
+    "id": "symlink-alias",
+    "before": {
+      "work.md": "534f555243450d0a",
+      "work.txt": "534f555243450d0a"
+    },
+    "after": {
+      "work.md": "534f555243450d0a",
+      "work.txt": "534f555243450d0a",
+      "work_converted.txt": "534f555243450a"
+    },
+    "stats": [
+      {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 1,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      }
+    ],
+    "progress": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "logs": [
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md → work_converted.txt"
+    ]
+  },
+  {
+    "id": "zip-flatten",
+    "before": {
+      "archive.zip": "<ZIP fixture>",
+      "work.txt": "534f555243450d0a"
+    },
+    "after": {
+      "archive.zip": "<ZIP fixture>",
+      "extra.md": "4d41524b444f574e",
+      "work.md": "5345434f4e44",
+      "work.txt": "534f555243450d0a"
+    },
+    "stats": [
+      {
+        "zips_found": 1,
+        "zips_processed": 1,
+        "files_converted": 3,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      }
+    ],
+    "progress": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "logs": [
+      "→ Extracting: <TEMP>/archive.zip",
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md → <TEMP>/work.md",
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md → <TEMP>/work.md",
+      "   • Processing text: extra.md",
+      "     [OK] cp932 → UTF-8 → <TEMP>/extra.md"
+    ]
+  },
+  {
+    "id": "zip-duplicate",
+    "before": {
+      "archive.zip": "<ZIP fixture>",
+      "work.txt": "534f555243450d0a"
+    },
+    "after": {
+      "archive.zip": "<ZIP fixture>",
+      "work.md": "5345434f4e44",
+      "work.txt": "534f555243450d0a"
+    },
+    "stats": [
+      {
+        "zips_found": 1,
+        "zips_processed": 1,
+        "files_converted": 2,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      }
+    ],
+    "progress": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "logs": [
+      "→ Extracting: <TEMP>/archive.zip",
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md → <TEMP>/work.md",
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md → <TEMP>/work.md"
+    ]
+  },
+  {
+    "id": "folder-exclusions",
+    "before": {
+      "CAPITAL.TXT": "555050455243415345",
+      "nested/other.txt": "4f54484552",
+      "work.txt": "534f555243450d0a",
+      "work_converted.txt": "49474e4f52454420545854",
+      "work_converted2.md": "49474e4f524544204d44"
+    },
+    "after": {
+      "CAPITAL.TXT": "555050455243415345",
+      "nested/other.md": "4f54484552",
+      "nested/other.txt": "4f54484552",
+      "work.md": "534f555243450a",
+      "work.txt": "534f555243450d0a",
+      "work_converted.txt": "49474e4f52454420545854",
+      "work_converted2.md": "49474e4f524544204d44"
+    },
+    "stats": [
+      {
+        "zips_found": 0,
+        "zips_processed": 0,
+        "files_converted": 2,
+        "files_skipped": 0,
+        "errors": 0,
+        "files_with_remaining_notes": 0,
+        "remaining_notes": 0
+      }
+    ],
+    "progress": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "logs": [
+      "[INFO] 前回の変換結果 (_converted) を 2 件スキップ",
+      "   • Processing text: work.txt",
+      "     [OK] cp932 → UTF-8 & .md",
+      "   • Processing text: other.txt",
+      "     [OK] cp932 → UTF-8 & .md"
+    ]
+  }
+]

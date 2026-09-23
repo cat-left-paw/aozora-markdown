@@ -1,0 +1,1158 @@
+{
+  "producer": "Python zipfile + struct/zlib; scripts/generate_zip_fixtures.py",
+  "contract": "aozora-import-v1",
+  "files": {
+    "absolute.zip": {
+      "sha256": "f0fa321d8340ad19ddcbf00b27590fc15694c3a818a3399653807e75ab8b7674",
+      "bytes": 208,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "2f612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "appended.zip": {
+      "sha256": "e7e058b3c72c7c7dba9d4760c567464568e50aa596b14b579ca6b7380e676524",
+      "bytes": 750,
+      "purpose": "S2-02: ambiguity",
+      "producerEntries": []
+    },
+    "atomic-crc.zip": {
+      "sha256": "f5995e24f93a7a26d99c51ee7e186d8c1070663d6a9ef07e1c93e259ed3b9653",
+      "bytes": 213,
+      "purpose": "S2-02: discard earlier stage",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 5,
+          "sourceSha256": "267d3b81a9dcd937f3b46a17a57fc0ca2133373389336861142673a73fc17bc6",
+          "sourceHex": "4649525354"
+        },
+        {
+          "rawNameHex": "6261642e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "atomic-decode.zip": {
+      "sha256": "5c55a60ec2b6a9e393d2b651df6f0a83c494afcb25d2245c847225f780004de8",
+      "bytes": 212,
+      "purpose": "S2-02: strict decode failure",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 5,
+          "sourceSha256": "267d3b81a9dcd937f3b46a17a57fc0ca2133373389336861142673a73fc17bc6",
+          "sourceHex": "4649525354"
+        },
+        {
+          "rawNameHex": "6261642e747874",
+          "sourceBytes": 1,
+          "sourceSha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+          "sourceHex": "ff"
+        }
+      ]
+    },
+    "backdot.zip": {
+      "sha256": "4389ff79ebbbe5e6202d7a13901041ec8379b73dcd6e031e011c2a0177602ace",
+      "bytes": 216,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "615c2e2e5c622e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "bad-crc.zip": {
+      "sha256": "75bfbf196cefee5ba743e587ccd58c7067f80188742198a9a680e694c44ef942",
+      "bytes": 110,
+      "purpose": "S2-02: CRC mismatch",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "bad-deflate.zip": {
+      "sha256": "f8f64cea592637832c879375570d44639bd7018c33dcdd2f2c5cc7539f0d139e",
+      "bytes": 111,
+      "purpose": "S2-02: invalid deflate",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "c0.zip": {
+      "sha256": "971ac39989b121c6f1fd02d91d3f8d273880848d28ab92f6c63826c10d95cbb0",
+      "bytes": 208,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "611f2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "cancel.zip": {
+      "sha256": "0305197ad3fbfbadd79ba951ac4a7c0e6bc1e2a79e990c5a920d7b615dd58593",
+      "bytes": 8266,
+      "purpose": "S2-06: bounded real-worker expansion cancel",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 8388608,
+          "sourceSha256": "b16bd32b101132fd0102461bc75ea65442c37293ac881ae953486c8ac26a7388"
+        }
+      ]
+    },
+    "chunk.zip": {
+      "sha256": "edbc1e51e982ead6b2b3b2a25660573309447d9b70255f46dd0fdd543ff511b5",
+      "bytes": 380,
+      "purpose": "S2-04: small compressed streaming quota fixture",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 262144,
+          "sourceSha256": "97a2fc5541dcc9c06b99b2a84c34961fa0c3af20dba3968df2f96a56c6bc00c9"
+        }
+      ]
+    },
+    "collision.zip": {
+      "sha256": "cbe468661130db6ba3f42a0691774799b879722bd28c93f8ea18901b09d18470",
+      "bytes": 672,
+      "purpose": "R03/05/18: sanitize NFC case grouping",
+      "producerEntries": [
+        {
+          "rawNameHex": "434f4e2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "613f2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "612a2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "c3892e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "45cc812e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "412f626f6f6b2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "612f626f6f6b2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "comment-plain.zip": {
+      "sha256": "df1999a2720ab2be3473454725c9c99959f2d6764d69bc790005a7ad5ebaf429",
+      "bytes": 125,
+      "purpose": "S2-02: ordinary global ZIP comment",
+      "producerEntries": []
+    },
+    "comment-real-ambiguity.zip": {
+      "sha256": "a77495e02068c7a380ec347c898d1d333dfddabb086d8ac85a34a727499de4bf",
+      "bytes": 132,
+      "purpose": "S2-02: two EOCD records reaching the actual central directory",
+      "producerEntries": []
+    },
+    "comment-signature-only.zip": {
+      "sha256": "5729e2222562c28b1dcd3449246adcd21fe018484304d1692d0b3f25bafbcb47",
+      "bytes": 114,
+      "purpose": "S2-02: EOCD signature bytes in global comment",
+      "producerEntries": []
+    },
+    "comment-unreachable-0-0.zip": {
+      "sha256": "4413b1e95db20e3cdf0dfcf947d769cd6f6c433d288a76776c26fa61d4e0f806",
+      "bytes": 132,
+      "purpose": "S2-02: unreachable EOCD-like bytes in global comment",
+      "producerEntries": []
+    },
+    "comment-unreachable-0-7.zip": {
+      "sha256": "e51b48ebfcaf00878ae607a1baa79c8cc257453851f50230aa49ffbce9281d14",
+      "bytes": 139,
+      "purpose": "S2-02: unreachable EOCD-like bytes in global comment",
+      "producerEntries": []
+    },
+    "comment-unreachable-3-0.zip": {
+      "sha256": "452e71b143eafb36e2b4f96d38f4fcf3b999a62187fed7d95a24133d4b4eb104",
+      "bytes": 135,
+      "purpose": "S2-02: unreachable EOCD-like bytes in global comment",
+      "producerEntries": []
+    },
+    "cp437.zip": {
+      "sha256": "a3cbbbfa4c620a997d4d266326308f9ed30af1ddf5a0d940fb4cd97aea7704c9",
+      "bytes": 116,
+      "purpose": "S2-03: CP437 e acute",
+      "producerEntries": [
+        {
+          "rawNameHex": "636166822e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "descriptor-bad.zip": {
+      "sha256": "96dfb48cef2d96ae76e349ba8d05eac16a65e0824cb968854c6667d41c1e4708",
+      "bytes": 126,
+      "purpose": "S2-02: contradictory descriptor",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "descriptor.zip": {
+      "sha256": "d5be777637d176f3d522093c2aa29b695cc867d159f5a79eed9a91ddb187967d",
+      "bytes": 126,
+      "purpose": "S2-02: data descriptor",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "dotdot.zip": {
+      "sha256": "6efae7572f77bb3d9c5c30b77bab3e69fa5de9de76d25e05d45cb940be4975e6",
+      "bytes": 212,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "2e2e2f612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "drive.zip": {
+      "sha256": "70cfb2262230b19e65c002214b61f55360b8cb6574ab03bbb91249b93fe33f38",
+      "bytes": 210,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "433a612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "empty-prefix-1.zip": {
+      "sha256": "fe64b827af0154f4f5b90683d1fc3111477e36f005276c239e0c9bb6321c0daa",
+      "bytes": 23,
+      "purpose": "S2-02: empty archive prepended-data boundary",
+      "producerEntries": []
+    },
+    "empty-prefix-2.zip": {
+      "sha256": "e54629cab3bfda586851fd9f1d366574b2c57a67feb16cea10353bd2a63d5d0d",
+      "bytes": 24,
+      "purpose": "S2-02: empty archive prepended-data boundary",
+      "producerEntries": []
+    },
+    "empty-prefix-3.zip": {
+      "sha256": "5c37de1f6f926915d1e9c1faf0e377ccd79b20e23b7d0ffe83e11033c2033285",
+      "bytes": 25,
+      "purpose": "S2-02: empty archive prepended-data boundary",
+      "producerEntries": []
+    },
+    "empty-prefix-4.zip": {
+      "sha256": "95a21427a292617bb0968569bb1792a242ec17d5af49a1d29ad66421b06f0177",
+      "bytes": 26,
+      "purpose": "S2-02: empty archive prepended-data boundary",
+      "producerEntries": []
+    },
+    "empty-prefix-5.zip": {
+      "sha256": "41a5654843bdbfacbb635b5eecb4875f3dd33f4baffac687aab4e3d6a1e53630",
+      "bytes": 27,
+      "purpose": "S2-02: empty archive prepended-data boundary",
+      "producerEntries": []
+    },
+    "empty.zip": {
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+      "bytes": 22,
+      "purpose": "S2-01: empty archive",
+      "producerEntries": []
+    },
+    "encrypted.zip": {
+      "sha256": "8e972bd347d46fc84208af54715f139fa84492e0234427250310d7e4e9706bb1",
+      "bytes": 110,
+      "purpose": "S2-02: encrypted",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "eocd-disk-entries-0.zip": {
+      "sha256": "bea9ae91da50008c7e7953821a5867a16a2a446b61c3e27d58b551e3601a75d0",
+      "bytes": 110,
+      "purpose": "S2-02: EOCD single-disk entry count consistency",
+      "producerEntries": []
+    },
+    "eocd-disk-entries-1.zip": {
+      "sha256": "742c9d9c44ddbdd426c83921c98d4cdda210726ccee5dfa6abff9000cc7f8966",
+      "bytes": 110,
+      "purpose": "S2-02: EOCD single-disk entry count consistency",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "eocd-disk-entries-2.zip": {
+      "sha256": "2035fa9e0116b5f9bd19bc37d2c5a47d0f80e9213838f58f0ec9a0080dbf22f2",
+      "bytes": 110,
+      "purpose": "S2-02: EOCD single-disk entry count consistency",
+      "producerEntries": []
+    },
+    "eocd-disk-entries-sentinel.zip": {
+      "sha256": "e770a83b4d54d7609c66e9795f54d939f98689960eab5957623a30b735bcc2c2",
+      "bytes": 110,
+      "purpose": "S2-02: EOCD ZIP64 sentinel without locator",
+      "producerEntries": []
+    },
+    "forged-large.zip": {
+      "sha256": "8c2e1948eb33291311c0be38849f2c63aa08f7d8da8e120db1609211134a49d3",
+      "bytes": 113,
+      "purpose": "S2-04: wrong large size",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 3,
+          "sourceSha256": "b5d4045c3f466fa91fe2cc6abe79232a1a57cdf104f7a26e716e0a1e2789df78",
+          "sourceHex": "414243"
+        }
+      ]
+    },
+    "forged-small.zip": {
+      "sha256": "53cd0ca7e95c85311f626bdcf9b5b9b9aa73eb62ae9cf7436ad4323da8e4d587",
+      "bytes": 380,
+      "purpose": "S2-04: forged declared small size",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 262144,
+          "sourceSha256": "97a2fc5541dcc9c06b99b2a84c34961fa0c3af20dba3968df2f96a56c6bc00c9"
+        }
+      ]
+    },
+    "header-flag.zip": {
+      "sha256": "33905b8bdb684464ab0fb3c2b1875f3b492b80a9c09dfdab6c3f7d8ea7527415",
+      "bytes": 110,
+      "purpose": "S2-02: local flag mismatch",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "header-method.zip": {
+      "sha256": "dfd67fa7892d0e7998cb02535bfe68a4486660352fe2a4589bdcb6b6c7be141c",
+      "bytes": 110,
+      "purpose": "S2-02: local method mismatch",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "header-name.zip": {
+      "sha256": "82a055e5913e6c7ba5a15dc1d91e9dba263b8174024602b2e6c48e983cc05770",
+      "bytes": 110,
+      "purpose": "S2-02: local filename mismatch",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "header-zero.zip": {
+      "sha256": "be0354a8907981f5a013b1ce099e61158a2afc7cf03ba280ca421f0dc27b9c9a",
+      "bytes": 110,
+      "purpose": "S2-02: zero local values without descriptor",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "ignored.zip": {
+      "sha256": "c4780708fa83c90ea28dc6b47a6ab051cf36f2e2a812ead09d3d2d94c3395deb",
+      "bytes": 118,
+      "purpose": "S2-01: no supported entry",
+      "producerEntries": [
+        {
+          "rawNameHex": "696d6167652e706e67",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "integration.zip": {
+      "sha256": "d583818f1bd17f34916142a43f7e7ceb09c60eba0e1d350dc8db39af3fec684e",
+      "bytes": 571,
+      "purpose": "S2-01/05: composed batch independent input and expected outputs in import-contract.mjs",
+      "producerEntries": [
+        {
+          "rawNameHex": "68656164696e672e747874",
+          "sourceBytes": 78,
+          "sourceSha256": "f5048141f76867b6c1e74709df888a27ef9bc9c9aa46c73face0d898712a388e",
+          "sourceHex": "e280bbefbcbbefbc83552b39373532efbcbdefbcbbefbc83e3808ce99d92e3808de381abe5828de782b9efbcbdefbcbbefbc83e3808ce99d92e3808de381afe5a4a7e8a68be587bae38197efbcbd"
+        },
+        {
+          "rawNameHex": "70726573657276652e747874",
+          "sourceBytes": 74,
+          "sourceSha256": "b18d6865a910e41ebfa98d20955ff2913db521c010fdb01219345c47c2034dea",
+          "sourceHex": "efbcbbefbc83efbc92e5ad97e4b88be38192efbcbde99d920a2d2d2d2d2d0aefbcbbefbc83e69caae5afbee5bf9cefbcbd0a2d2d2d2d2d0aefbcbbefbc83e69caae5afbee5bf9cefbcbd"
+        },
+        {
+          "rawNameHex": "666d2e6d64",
+          "sourceBytes": 177,
+          "sourceSha256": "df6d27e71dd8583826c4cf72df3e4087d063bd29e3afb52877e74051cd3450c0",
+          "sourceHex": "2d2d2d0a7469746c653a20e9a18c0a617574686f723a20e89197e880850a7261775f6865616465723a207c0a2020e9a18c0a20202d2d2d0a2020efbcbbefbc83e58685efbcbd0a2d2d2d0aefbcbbefbc83e5828de7b79aefbcbde99d92efbcbbefbc83e3808ce99d92e3808de381afe5a4aae5ad97efbcbdefbcbbefbc83e5828de7b79ae7b582e3828fe3828aefbcbdefbcbbefbc83e3808ce99d92e3808de381afe5a4a7e8a68be587bae38197efbcbd"
+        }
+      ]
+    },
+    "long-name.zip": {
+      "sha256": "273abbd4f553cf2b0a99a1ddf9f02518b69609ddbcdb16e9ff6552646f6f72c4",
+      "bytes": 8294,
+      "purpose": "S2-04: raw name default limit",
+      "producerEntries": [
+        {
+          "rawNameHex": "616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "many-empty.zip": {
+      "sha256": "059a96401327eab294eec8ea8ae577364e42eeb097f07b9f4a86e0c750537c70",
+      "bytes": 882,
+      "purpose": "S2-04: zero payload entries still counted",
+      "producerEntries": [
+        {
+          "rawNameHex": "302e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "312e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "322e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "332e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "342e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "352e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "362e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "372e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "382e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        },
+        {
+          "rawNameHex": "392e747874",
+          "sourceBytes": 0,
+          "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sourceHex": ""
+        }
+      ]
+    },
+    "mixed-separators.zip": {
+      "sha256": "3797097d71e1169baa94180c9043a199b5803a53d7bb461cac531afa89d119e2",
+      "bytes": 118,
+      "purpose": "R06: normalized separators",
+      "producerEntries": [
+        {
+          "rawNameHex": "615c622f632e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "normal.zip": {
+      "sha256": "a41c8b283f130153414b85cd40599e5eda2a36cd039ed9e41ded9c6bce1afc12",
+      "bytes": 745,
+      "purpose": "S2-01/02: Python zipfile STORE/DEFLATE, duplicates, hierarchy, ignored",
+      "producerEntries": []
+    },
+    "nul.zip": {
+      "sha256": "9b75896a5101947ee90252c1b797c2ddc496a8d6e5786ab60c2cb7be6d345084",
+      "bytes": 208,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "61002e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "offset.zip": {
+      "sha256": "3009832b87f2fc83099b98c7c4a46cca540bc279525a01d5cd23463853967415",
+      "bytes": 110,
+      "purpose": "S2-02: out of bounds",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "overlap.zip": {
+      "sha256": "20590577a92e4efbd9a1a88646202dc6c1138d7b54be1cabb819a52edcdb6b21",
+      "bytes": 198,
+      "purpose": "S2-02: same payload duplicate reference",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "payload-central.zip": {
+      "sha256": "b079a48963b991b542ecb93be8ff8139f303c38b9fe34118f9c79e2aaf177752",
+      "bytes": 109,
+      "purpose": "S2-02: payload overlaps central directory",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 1,
+          "sourceSha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd",
+          "sourceHex": "41"
+        }
+      ]
+    },
+    "percent.zip": {
+      "sha256": "295bde8e4fa091f0cbe465582a4ef73a77cf6bbb993b902966cd477a703d7920",
+      "bytes": 130,
+      "purpose": "R06: no percent decoding",
+      "producerEntries": [
+        {
+          "rawNameHex": "2532652532652f626f6f6b2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "prefix-rebased-0.zip": {
+      "sha256": "742c9d9c44ddbdd426c83921c98d4cdda210726ccee5dfa6abff9000cc7f8966",
+      "bytes": 110,
+      "purpose": "S2-02: rebased prepended-data boundary",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "prefix-rebased-1.zip": {
+      "sha256": "c1b90507d4294432132cdef46f4452d681b839d64f0e25f335ad2e1afd2d04b6",
+      "bytes": 111,
+      "purpose": "S2-02: rebased prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-rebased-2.zip": {
+      "sha256": "279f8fd285f0f7d33cfcb6150b6478515d64067a91c650744eed9657eea58de8",
+      "bytes": 112,
+      "purpose": "S2-02: rebased prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-rebased-3.zip": {
+      "sha256": "305a80c889839f9da3c262d48069c44d2f4ffd1c424bd720a3490fe17f5d920e",
+      "bytes": 113,
+      "purpose": "S2-02: rebased prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-rebased-4.zip": {
+      "sha256": "cc8bc2495d8494254ae68713600bed8021c7de565b6034b2e7cdc924ebc3f1bc",
+      "bytes": 114,
+      "purpose": "S2-02: rebased prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-rebased-5.zip": {
+      "sha256": "618d3a9862feaeb7473ac04f7861ddf91467715dcac6baa219ca02b910a59b26",
+      "bytes": 115,
+      "purpose": "S2-02: rebased prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-unadjusted-1.zip": {
+      "sha256": "7782533ccd5178792f56ccc5c3b0bef7fa4c63b6469d19a6545ef8fdfcce6a1f",
+      "bytes": 111,
+      "purpose": "S2-02: unadjusted prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-unadjusted-2.zip": {
+      "sha256": "3491611a427d2c84b1c163947ef67131115d946aeebbbcffdf4f20afc091fc39",
+      "bytes": 112,
+      "purpose": "S2-02: unadjusted prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-unadjusted-3.zip": {
+      "sha256": "ef8e4e65e362ed17ef33f6590968abe992d9b2ecb0d324b59f895c2e092a4afa",
+      "bytes": 113,
+      "purpose": "S2-02: unadjusted prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-unadjusted-4.zip": {
+      "sha256": "c682233104fa7ad600590a9d54aeb017fcb577f2f1c27b671528b6f473f442c7",
+      "bytes": 114,
+      "purpose": "S2-02: unadjusted prepended-data boundary",
+      "producerEntries": []
+    },
+    "prefix-unadjusted-5.zip": {
+      "sha256": "ccd0a71a35c5093fd4832387b3402e503f6a7bd477800305c684512a01ff6866",
+      "bytes": 115,
+      "purpose": "S2-02: unadjusted prepended-data boundary",
+      "producerEntries": []
+    },
+    "prepended.zip": {
+      "sha256": "752553aa05718ca2d18343713d0b2befdac6466760819c4083d06c4b5d9ca44f",
+      "bytes": 750,
+      "purpose": "S2-02: ambiguity",
+      "producerEntries": []
+    },
+    "split.zip": {
+      "sha256": "b85a8201b22588e1ceb5f04ef3dcf7d80ad64195161e48e95b31f24ce07fbe47",
+      "bytes": 110,
+      "purpose": "S2-02: split",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "symlink.zip": {
+      "sha256": "677bafa363f07fc4f1474c98d81190f7aa9b3a88c6122355f701daf1debbcb69",
+      "bytes": 116,
+      "purpose": "R06: Unix symlink",
+      "producerEntries": [
+        {
+          "rawNameHex": "6c696e6b2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "truncated.zip": {
+      "sha256": "61dbade53c6117ab3b78313b4228eb948e66a36ec10df10a2bde373966d86f1a",
+      "bytes": 737,
+      "purpose": "S2-02: truncation",
+      "producerEntries": []
+    },
+    "unc.zip": {
+      "sha256": "6a9833675ee1bc837402ff6df04e969dd46f30036ed29cda3a396bd2c7b9af7d",
+      "bytes": 220,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "5c5c686f73745c612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-bad-crc.zip": {
+      "sha256": "4d230dde3b6e5f63f8e70ba8fe07c59a7220e32b512f6eeb1d94f087a3e91be9",
+      "bytes": 148,
+      "purpose": "S2-03/R06: Unicode Path validation",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-bad-directory.zip": {
+      "sha256": "2e8f56862b327cd0cdac03f63ca9fa3dfe21505c09e81f9f961ac3b253ce102f",
+      "bytes": 138,
+      "purpose": "S2-03/R06: Unicode Path validation",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-bad-utf8.zip": {
+      "sha256": "a08869e433c7e774cbbb990c177c9688d05dfb53d044bdc49b4d89db563c0eef",
+      "bytes": 144,
+      "purpose": "S2-03/R06: Unicode Path validation",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-bad-version.zip": {
+      "sha256": "7f81e5148d50a0a666cb21d52efa2780cc9c3446b13d5be3de4660ec46f2cb87",
+      "bytes": 148,
+      "purpose": "S2-03/R06: Unicode Path validation",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-central-only.zip": {
+      "sha256": "f8e58103bbfba3b1f905897aab76e95fcf87f64bfc65c245f77146489b89cbd6",
+      "bytes": 132,
+      "purpose": "S2-03: optional local Unicode Path is absent",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-decoded-unsafe.zip": {
+      "sha256": "3ba25d8bbbb6cf874426522ce0897071fd0de052ba39d63830381d0708553b9e",
+      "bytes": 154,
+      "purpose": "S2-03/R06: Unicode Path validation",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-local-mismatch.zip": {
+      "sha256": "4fe206f0d40892ff8c190c499a013026c20d1f24cc6c779ba772d65b3bc744a8",
+      "bytes": 148,
+      "purpose": "S2-02: contradictory local Unicode Path",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-local-unsafe.zip": {
+      "sha256": "e0c8239319ecc8fa7bc3246672243bbb1cec6c52f5c5ed83db84c2db4e9d56c5",
+      "bytes": 135,
+      "purpose": "S2-02/R06: unsafe local Unicode Path",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-raw-unsafe.zip": {
+      "sha256": "ec185100c190386afeb4a0e2b5341f693da3d2db16759609774fb4836e484502",
+      "bytes": 154,
+      "purpose": "S2-03/R06: Unicode Path validation",
+      "producerEntries": [
+        {
+          "rawNameHex": "2e2e2f6261642e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unicode-valid.zip": {
+      "sha256": "bca2b407da1c30c74d7a2da4eed9893d64e84c47975fc582bf01dbc620e12e11",
+      "bytes": 148,
+      "purpose": "S2-03/R06: Unicode Path validation",
+      "producerEntries": [
+        {
+          "rawNameHex": "626173652e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unknown-flag.zip": {
+      "sha256": "5be5ce680362ca19cf9ab770988be1889af0f0042e76adc2fb84b4096d2994dd",
+      "bytes": 110,
+      "purpose": "S2-03: no flag guessing",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unsafe-directory.zip": {
+      "sha256": "42161f7557587979384af4319eb0a32151a28e49ddb8283821608dbad823cdb1",
+      "bytes": 206,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "2e2e2f782f",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unsafe-ignored.zip": {
+      "sha256": "67dc82a136c560cf55bf0e3833c1f0b4757f701d4afa79007248ffe49729d8ae",
+      "bytes": 212,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "2e2e2f782e706e67",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unsafe-nested.zip": {
+      "sha256": "9ee7acdf12a92716dc350cf2108365c0f7090e0235b475785c04be8b5ce5d251",
+      "bytes": 212,
+      "purpose": "R06: all metadata before payload",
+      "producerEntries": [
+        {
+          "rawNameHex": "66697273742e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        },
+        {
+          "rawNameHex": "2e2e2f782e7a6970",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "unsupported.zip": {
+      "sha256": "e968027a00ba15ec65ccd245142478b668bb4517ddbbde7cad83ba1f6c442db6",
+      "bytes": 110,
+      "purpose": "S2-02: unsupported compression",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "utf8-invalid.zip": {
+      "sha256": "d4416beaa85737145244f36df769d38123246a0260bfe6241a0ad7b2724779de",
+      "bytes": 110,
+      "purpose": "S2-03: strict UTF8",
+      "producerEntries": [
+        {
+          "rawNameHex": "ff2e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "utf8-unflagged.zip": {
+      "sha256": "8578cb3f202c5636f3dcf87b3ec11a6885c297740d37b15b681e4f28bad3b8b2",
+      "bytes": 112,
+      "purpose": "S2-03: never guess UTF8",
+      "producerEntries": [
+        {
+          "rawNameHex": "c3a92e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "utf8.zip": {
+      "sha256": "5cb9f46c7151c304325974928fb5e613b100517d405486d9760858f66f3c6f15",
+      "bytes": 114,
+      "purpose": "S2-03: UTF8 flag",
+      "producerEntries": [
+        {
+          "rawNameHex": "e9a18c2e545854",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "zip64-both-sentinel.zip": {
+      "sha256": "e31e1f489ca3ca5e5797e4647d3fe63f3e9a43eabee7ace96b7f6115e0f52220",
+      "bytes": 186,
+      "purpose": "S2-02: valid field-specific ZIP64 sentinel",
+      "producerEntries": []
+    },
+    "zip64-disk-0-both.zip": {
+      "sha256": "521ef498d372b63bcb7d0dc1e8babea0fa6fc728fae7e9bfe2b71a89889cdfe6",
+      "bytes": 186,
+      "purpose": "S2-02: non-sentinel classic/ZIP64 entry count mismatch",
+      "producerEntries": []
+    },
+    "zip64-disk-0-offset.zip": {
+      "sha256": "7a6c154154682877a9c2a8f44f6d056033446828790b655364fed57f1976caf4",
+      "bytes": 186,
+      "purpose": "S2-02: non-sentinel classic/ZIP64 entry count mismatch",
+      "producerEntries": []
+    },
+    "zip64-disk-0-size.zip": {
+      "sha256": "a344d0f4c0532245edd0e26e18a6605d08e4a35024c39a9f41afd60e80b9d238",
+      "bytes": 186,
+      "purpose": "S2-02: non-sentinel classic/ZIP64 entry count mismatch",
+      "producerEntries": []
+    },
+    "zip64-disk-2-both.zip": {
+      "sha256": "b482f3a9390504a4fd84cd792a1efc2250cbdfbbef1f3e748f0c6013e90b9e29",
+      "bytes": 186,
+      "purpose": "S2-02: non-sentinel classic/ZIP64 entry count mismatch",
+      "producerEntries": []
+    },
+    "zip64-disk-2-offset.zip": {
+      "sha256": "be9e14275f9bdb62fcfae452c934ee9ee625eb705f0e40a6f19977bd9b22243b",
+      "bytes": 186,
+      "purpose": "S2-02: non-sentinel classic/ZIP64 entry count mismatch",
+      "producerEntries": []
+    },
+    "zip64-disk-2-size.zip": {
+      "sha256": "c92a19940fea072cc4a0bb9be07fae10b8767caad8e8aca8ffa2b4f445ee4b18",
+      "bytes": 186,
+      "purpose": "S2-02: non-sentinel classic/ZIP64 entry count mismatch",
+      "producerEntries": []
+    },
+    "zip64-end-record.zip": {
+      "sha256": "d4b647048dc118c43e7f391f2c52b557fdf568136aff7d17a2295751e2da3898",
+      "bytes": 186,
+      "purpose": "S2-02: valid ZIP64 resolved entry count",
+      "producerEntries": []
+    },
+    "zip64-offset-sentinel.zip": {
+      "sha256": "7d6e08ca9b99615adcfbaa095f76607e2eaa28194e626306a4e0d623b6b1ce5a",
+      "bytes": 186,
+      "purpose": "S2-02: valid field-specific ZIP64 sentinel",
+      "producerEntries": []
+    },
+    "zip64-size-sentinel.zip": {
+      "sha256": "a9f5d274133710edfa1d07410571ff508246cda58038edba3b391007e5d96223",
+      "bytes": 186,
+      "purpose": "S2-02: valid field-specific ZIP64 sentinel",
+      "producerEntries": []
+    },
+    "zip64-unsafe.zip": {
+      "sha256": "6f7fc133a00953bcdc372ee9a6eb45f500f2c814cffecf80c23011e9b4645b74",
+      "bytes": 150,
+      "purpose": "S2-02: unsafe ZIP64 size",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    },
+    "zip64.zip": {
+      "sha256": "a125aa8e9dae8c3c06340a25aae48504b66d105113c19c360d7d4a537b08c5cd",
+      "bytes": 150,
+      "purpose": "S2-02: safe ZIP64 numbers",
+      "producerEntries": [
+        {
+          "rawNameHex": "612e747874",
+          "sourceBytes": 2,
+          "sourceSha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+          "sourceHex": "4f4b"
+        }
+      ]
+    }
+  }
+}

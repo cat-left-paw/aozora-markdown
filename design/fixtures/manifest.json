@@ -1,0 +1,453 @@
+{
+  "source": "aozora_zip_batch_gui.py",
+  "sha256": "4c45c5e777718e88815117e49db85ccb13e1dd4e35eba858e3eae958bd2f2cc0",
+  "python": "3.12.8",
+  "unitCases": 307,
+  "pipelineCases": 20,
+  "jisMetrics": {
+    "total": 17672,
+    "mapped": 17300,
+    "unmapped": 372,
+    "multiCodepoint": 25,
+    "supplementaryEntries": 303,
+    "compactUtf8Bytes": 105349,
+    "gzip9Bytes": 44308,
+    "compactSha256": "e172bc3568a79e89b69d420ab7e76c0eca233d55029902a14bc50e220ffc9340"
+  },
+  "inventory": [
+    {
+      "name": "validate_input_path",
+      "start": 55,
+      "end": 68
+    },
+    {
+      "name": "detect_and_read_text",
+      "start": 70,
+      "end": 87
+    },
+    {
+      "name": "write_utf8_text",
+      "start": 89,
+      "end": 91
+    },
+    {
+      "name": "is_same_file",
+      "start": 93,
+      "end": 98
+    },
+    {
+      "name": "unique_output_path",
+      "start": 100,
+      "end": 115
+    },
+    {
+      "name": "is_tool_generated_output",
+      "start": 120,
+      "end": 122
+    },
+    {
+      "name": "jis0213_to_unicode",
+      "start": 155,
+      "end": 175
+    },
+    {
+      "name": "_codepoint_hex_to_char",
+      "start": 178,
+      "end": 194
+    },
+    {
+      "name": "_menkuten_match_to_unicode",
+      "start": 197,
+      "end": 202
+    },
+    {
+      "name": "_gaiji_inner_to_unicode",
+      "start": 205,
+      "end": 228
+    },
+    {
+      "name": "_inner_has_gaiji_code",
+      "start": 231,
+      "end": 240
+    },
+    {
+      "name": "_convert_substitute_gaiji_notes",
+      "start": 243,
+      "end": 273
+    },
+    {
+      "name": "convert_aozora_gaiji",
+      "start": 276,
+      "end": 307
+    },
+    {
+      "name": "_emphasis_kind_flags",
+      "start": 338,
+      "end": 339
+    },
+    {
+      "name": "_wrap_markdown_emphasis",
+      "start": 342,
+      "end": 351
+    },
+    {
+      "name": "_convert_forward_emphasis_both",
+      "start": 354,
+      "end": 385
+    },
+    {
+      "name": "_convert_forward_emphasis_one",
+      "start": 388,
+      "end": 416
+    },
+    {
+      "name": "_convert_inline_range_emphasis",
+      "start": 419,
+      "end": 458
+    },
+    {
+      "name": "_convert_emphasis_plain_text",
+      "start": 461,
+      "end": 466
+    },
+    {
+      "name": "convert_aozora_markdown_emphasis",
+      "start": 469,
+      "end": 565
+    },
+    {
+      "name": "_parse_underline_head",
+      "start": 605,
+      "end": 608
+    },
+    {
+      "name": "_underline_conversion_kind",
+      "start": 611,
+      "end": 626
+    },
+    {
+      "name": "_wrap_underline",
+      "start": 629,
+      "end": 641
+    },
+    {
+      "name": "_already_inside_underline",
+      "start": 644,
+      "end": 650
+    },
+    {
+      "name": "_convert_forward_underline",
+      "start": 653,
+      "end": 689
+    },
+    {
+      "name": "_convert_inline_underline",
+      "start": 692,
+      "end": 727
+    },
+    {
+      "name": "_convert_underline_plain_text",
+      "start": 730,
+      "end": 743
+    },
+    {
+      "name": "convert_aozora_underline",
+      "start": 746,
+      "end": 852
+    },
+    {
+      "name": "_heading_indent_spaces",
+      "start": 902,
+      "end": 911
+    },
+    {
+      "name": "_join_heading_lines",
+      "start": 914,
+      "end": 917
+    },
+    {
+      "name": "_markdown_heading",
+      "start": 920,
+      "end": 927
+    },
+    {
+      "name": "convert_aozora_headings",
+      "start": 930,
+      "end": 965
+    },
+    {
+      "name": "_normalize_bouten_char",
+      "start": 1012,
+      "end": 1016
+    },
+    {
+      "name": "_contains_aozora_ruby",
+      "start": 1019,
+      "end": 1021
+    },
+    {
+      "name": "_apply_bouten_to_text",
+      "start": 1024,
+      "end": 1036
+    },
+    {
+      "name": "convert_aozora_bouten",
+      "start": 1039,
+      "end": 1109
+    },
+    {
+      "name": "_parse_indent_number",
+      "start": 1132,
+      "end": 1136
+    },
+    {
+      "name": "_is_nyoze_indent_level",
+      "start": 1139,
+      "end": 1140
+    },
+    {
+      "name": "_next_nonempty_line",
+      "start": 1143,
+      "end": 1147
+    },
+    {
+      "name": "_mark_preserved_aozora_notes",
+      "start": 1167,
+      "end": 1174
+    },
+    {
+      "name": "_is_marked_preserved_note",
+      "start": 1177,
+      "end": 1184
+    },
+    {
+      "name": "strip_preserved_aozora_note_markers",
+      "start": 1187,
+      "end": 1191
+    },
+    {
+      "name": "convert_aozora_indent",
+      "start": 1194,
+      "end": 1316
+    },
+    {
+      "name": "_is_valid_jiage_level",
+      "start": 1349,
+      "end": 1350
+    },
+    {
+      "name": "_count_align_related_notes",
+      "start": 1353,
+      "end": 1354
+    },
+    {
+      "name": "convert_aozora_align_end",
+      "start": 1357,
+      "end": 1546
+    },
+    {
+      "name": "_is_ws_only_line",
+      "start": 1564,
+      "end": 1565
+    },
+    {
+      "name": "convert_aozora_page_breaks",
+      "start": 1568,
+      "end": 1712
+    },
+    {
+      "name": "parse_aozora_header",
+      "start": 1714,
+      "end": 1783
+    },
+    {
+      "name": "remove_aozora_annotations",
+      "start": 1785,
+      "end": 1811
+    },
+    {
+      "name": "_lstrip_aozora_line",
+      "start": 1824,
+      "end": 1825
+    },
+    {
+      "name": "_line_starts_with_label",
+      "start": 1828,
+      "end": 1830
+    },
+    {
+      "name": "_is_teihon_start_line",
+      "start": 1833,
+      "end": 1836
+    },
+    {
+      "name": "_is_honbun_owari_line",
+      "start": 1839,
+      "end": 1841
+    },
+    {
+      "name": "_footer_candidate_is_safe",
+      "start": 1844,
+      "end": 1848
+    },
+    {
+      "name": "_last_safe_footer_start",
+      "start": 1851,
+      "end": 1863
+    },
+    {
+      "name": "_footer_rest_has_creation_file_marker",
+      "start": 1866,
+      "end": 1870
+    },
+    {
+      "name": "_footer_rest_has_personnel_or_date",
+      "start": 1873,
+      "end": 1879
+    },
+    {
+      "name": "find_aozora_footer_start",
+      "start": 1882,
+      "end": 1894
+    },
+    {
+      "name": "remove_aozora_footer_metadata",
+      "start": 1897,
+      "end": 1922
+    },
+    {
+      "name": "RemainingAozoraNote",
+      "start": 1926,
+      "end": 1928
+    },
+    {
+      "name": "_is_close_fence",
+      "start": 1931,
+      "end": 1936
+    },
+    {
+      "name": "scan_remaining_aozora_notes",
+      "start": 1939,
+      "end": 1969
+    },
+    {
+      "name": "format_remaining_aozora_note_log_lines",
+      "start": 1972,
+      "end": 1997
+    },
+    {
+      "name": "create_frontmatter",
+      "start": 1999,
+      "end": 2039
+    },
+    {
+      "name": "extract_frontmatter_metadata",
+      "start": 2041,
+      "end": 2090
+    },
+    {
+      "name": "sanitize_filename",
+      "start": 2092,
+      "end": 2114
+    },
+    {
+      "name": "reconstruct_header_from_metadata",
+      "start": 2116,
+      "end": 2145
+    },
+    {
+      "name": "get_metadata_from_text",
+      "start": 2147,
+      "end": 2185
+    },
+    {
+      "name": "Options",
+      "start": 2188,
+      "end": 2210
+    },
+    {
+      "name": "JobStats",
+      "start": 2213,
+      "end": 2220
+    },
+    {
+      "name": "Worker",
+      "start": 2224,
+      "end": 2639
+    },
+    {
+      "name": "MainWindow",
+      "start": 2643,
+      "end": 2948
+    },
+    {
+      "name": "main",
+      "start": 2950,
+      "end": 2954
+    }
+  ],
+  "optionsDefaults": {
+    "convert_utf8": true,
+    "rename_to_md": true,
+    "process_loose_txt": true,
+    "add_frontmatter": true,
+    "remove_annotations": true,
+    "remove_aozora_footer": true,
+    "add_header_to_body": false,
+    "organize_by_author": false,
+    "bouten_char": "﹅",
+    "convert_nyoze_indent": false,
+    "preserve_aozora_indent_notes": false,
+    "convert_nyoze_align_end": false,
+    "approximate_aozora_jiage_as_align_end": false,
+    "preserve_aozora_align_notes": false,
+    "convert_nyoze_page_break": false,
+    "approximate_aozora_spread_breaks": false,
+    "preserve_aozora_page_break_notes": false,
+    "convert_markdown_emphasis": true,
+    "convert_aozora_underline": true,
+    "underline_output_format": "nyoze",
+    "approximate_other_underline_styles": false,
+    "approximate_left_underline": false
+  },
+  "jobStatsDefaults": {
+    "zips_found": 0,
+    "zips_processed": 0,
+    "files_converted": 0,
+    "files_skipped": 0,
+    "errors": 0,
+    "files_with_remaining_notes": 0,
+    "remaining_notes": 0
+  },
+  "pythonWhitespaceCodepoints": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    28,
+    29,
+    30,
+    31,
+    32,
+    133,
+    160,
+    5760,
+    8192,
+    8193,
+    8194,
+    8195,
+    8196,
+    8197,
+    8198,
+    8199,
+    8200,
+    8201,
+    8202,
+    8232,
+    8233,
+    8239,
+    8287,
+    12288
+  ]
+}

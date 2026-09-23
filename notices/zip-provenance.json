@@ -1,0 +1,23 @@
+{
+  "package": "@zip.js/zip.js",
+  "version": "2.17.0",
+  "entry": "lib/zip-core-native.js",
+  "license": "BSD-3-Clause",
+  "bundledCodec": "lib/core/streams/zlib-js/zlib-streams.min.js",
+  "codecSha256": "61d834e474adcadf5c535092b39b8bffe87f97959d90f9c3da17992f5d89ab41",
+  "codecLicenseSource": "https://raw.githubusercontent.com/gildas-lormeau/zlib-streams-ts/688fdc5541a7f696de1fe90253b5b3efc452bae8/LICENSE.md",
+  "codecLicenseSha256": "d7f45ed344dbb4e33229d39a0231be3077b4d75345d8a56af50fe43c098e12a5",
+  "note": "Upstream README calls the codec BSD/zlib; the linked LICENSE.md contains MIT text and the original zlib attribution. Both zip.js BSD and the verbatim codec license are retained.",
+  "sourceNoticesSha256": "897149e090a989e277a4b1ac3438a6731a8c9f3277486a898cbb83bdc2ef4c73",
+  "exportProfile": {
+    "contract": "aozora-export-v1",
+    "method": "STORE (0)",
+    "writerSource": "lib/core/zip-writer.js",
+    "writerSourceSha256": "862566bb2f8da5b6f33c60d5180126f332bdb166fefa91faaa7b5d4bab5e5b87",
+    "entry": "lib/zip-core-native.js",
+    "rawLastModDate": 2162688,
+    "externalFileAttributes": 2175008768,
+    "globalConfigureCalls": 0,
+    "notes": "The export esbuild ZIP source graph is a subset of the already-noticed import graph. No new license texts or dependencies. See scripts/export-library-probe.mjs and scripts/check_export_zip.py."
+  }
+}

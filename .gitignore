@@ -1,0 +1,15 @@
+# Reproducible source, generated lookup tables, fixtures, and design evidence are tracked.
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Verification output is regenerated locally. Two executable regression probes
+# remain as source files because `npm run verify` invokes them.
+reports/*
+!reports/review-reproduce.mjs
+!reports/review-recheck.mjs
+
+# Static Web application build only.
+web-dist/
