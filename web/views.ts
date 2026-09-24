@@ -1077,9 +1077,6 @@ export function mount(
       ? `${exported.manifest.length}件 · ${bytes(exported.blob.size)}`
       : "";
     byId("download-message").textContent = s.downloadMessage;
-    byId("download-count").textContent = controller.downloads.count
-      ? `受け付けたダウンロード ${controller.downloads.count} / 8件。通常は約60秒で受付を終えます。`
-      : "";
     lastDelivered = s.delivered;
     renderPreviewPanel();
     renderHelp();

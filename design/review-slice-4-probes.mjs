@@ -290,9 +290,9 @@ try {
     0,
   );
   check(
-    "UI tracker released references",
-    await page.locator("#download-count").textContent(),
-    "",
+    "UI does not show a download quota counter",
+    await page.locator("#download-count").count(),
+    0,
   );
   check(
     "download after expiry",

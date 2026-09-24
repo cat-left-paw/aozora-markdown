@@ -1409,6 +1409,27 @@ try {
   await button("ダウンロード用ファイルを作成").click();
   await idle();
   await acquire("single MD", "安全.md", "**青**\n［＃未対応］");
+  const downloadGuidance = await page.locator("#download-guidance").innerText();
+  check(
+    "download guidance explains one ZIP",
+    downloadGuidance.includes("ZIP 1個"),
+    true,
+  );
+  check(
+    "download guidance explains repeat download",
+    downloadGuidance.includes("もう一度ダウンロード"),
+    true,
+  );
+  check(
+    "no download quota counter",
+    await page.locator("#download-count").count(),
+    0,
+  );
+  check(
+    "no URL lifetime in guidance",
+    downloadGuidance.includes("60秒"),
+    false,
+  );
   await acquire("repeat MD", "安全.md", "**青**\n［＃未対応］");
   check(
     "download leaves stats",

@@ -16,7 +16,11 @@ import {
   type DownloadHost,
 } from "../../src/adapters/browser/export.js";
 import { Controller, type Services } from "../../web/controller.js";
-import { Downloads, MAX_DOWNLOAD_HANDLES } from "../../web/downloads.js";
+import {
+  DOWNLOAD_CAP_MESSAGE,
+  Downloads,
+  MAX_DOWNLOAD_HANDLES,
+} from "../../web/downloads.js";
 import {
   initialSettings,
   importOptions,
@@ -596,6 +600,43 @@ it("S4-05 real handles + fake clock: 8 cap, 60s retention, one tracking timer, f
   manager.dispose();
   expect(revoked).toBe(9);
   expect(vi.getTimerCount()).toBe(0);
+});
+it("download capacity warning clears when an issued URL expires", async () => {
+  vi.useFakeTimers();
+  let now = 0;
+  const host: DownloadHost = {
+    createObjectURL: () => "blob:test",
+    revokeObjectURL() {},
+    createAnchor: () => ({ href: "", download: "", click() {}, remove() {} }),
+    appendAnchor() {},
+    setTimer: (cb, ms) => setTimeout(cb, ms),
+    clearTimer: (t) => clearTimeout(t as ReturnType<typeof setTimeout>),
+  };
+  const c = new Controller(
+    urls,
+    { importFiles: async () => delivered(), prepareExport: async () => ready },
+    true,
+    {
+      createHandle: (blob, filename) =>
+        createDownloadHandle(blob, filename, host),
+      now: () => now,
+      setTimer: (cb, ms) => setTimeout(cb, ms),
+      clearTimer: (t) => clearTimeout(t),
+    },
+  );
+  c.selectFiles([file()]);
+  await c.startImport();
+  await c.prepare("single");
+  for (let i = 0; i < MAX_DOWNLOAD_HANDLES; i++) c.requestDownload();
+  c.requestDownload();
+  expect(c.state.downloadMessage).toBe(DOWNLOAD_CAP_MESSAGE);
+  now = 60002;
+  vi.advanceTimersByTime(60002);
+  expect(c.downloads.count).toBe(0);
+  expect(c.state.downloadMessage).toBe("");
+  c.requestDownload();
+  expect(c.state.downloadMessage).toContain("ダウンロードを開始しました");
+  c.dispose();
 });
 it("issued handles survive selection/result/clear but page disposal releases them", async () => {
   vi.useFakeTimers();

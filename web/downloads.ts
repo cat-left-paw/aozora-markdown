@@ -4,6 +4,8 @@ import {
   type DownloadHandle,
 } from "../src/adapters/browser/export.js";
 export const MAX_DOWNLOAD_HANDLES = 8;
+export const DOWNLOAD_CAP_MESSAGE =
+  "ダウンロード操作が続いています。少し待ってから再試行してください。";
 export interface DownloadServices {
   createHandle: typeof createDownloadHandle;
   now(): number;
@@ -55,8 +57,7 @@ export class Downloads {
     if (this.disposed || this.requesting)
       return "ダウンロードを要求できません。";
     this.prune();
-    if (this.handles.size >= MAX_DOWNLOAD_HANDLES)
-      return "ダウンロード操作が続いています。少し待ってから再試行してください。";
+    if (this.handles.size >= MAX_DOWNLOAD_HANDLES) return DOWNLOAD_CAP_MESSAGE;
     this.requesting = true;
     try {
       const handle = this.services.createHandle(blob, filename);

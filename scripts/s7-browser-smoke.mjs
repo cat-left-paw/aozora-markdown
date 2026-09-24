@@ -619,9 +619,9 @@ try {
     () => document.querySelector("#boot-error").hidden,
   );
   check(
-    "pageshow starts from an empty download count",
-    await page.locator("#download-count").textContent(),
-    "",
+    "pageshow does not show a download quota counter",
+    await page.locator("#download-count").count(),
+    0,
   );
   check(
     "pageshow restores the TCY default",

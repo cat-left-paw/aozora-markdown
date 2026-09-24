@@ -24,7 +24,12 @@ import {
   selectionIssues,
   type Settings,
 } from "./options.js";
-import { Downloads, type DownloadServices } from "./downloads.js";
+import {
+  DOWNLOAD_CAP_MESSAGE,
+  Downloads,
+  MAX_DOWNLOAD_HANDLES,
+  type DownloadServices,
+} from "./downloads.js";
 import { runPreview, type PreviewRunner } from "./preview/client.js";
 import {
   PreviewSession,
@@ -70,7 +75,14 @@ export class Controller {
     downloads?: DownloadServices,
   ) {
     this.state = initialState(available);
-    this.downloads = new Downloads(() => this.emit("state"), downloads);
+    this.downloads = new Downloads(() => {
+      if (
+        this.downloads.count < MAX_DOWNLOAD_HANDLES &&
+        this.state.downloadMessage === DOWNLOAD_CAP_MESSAGE
+      )
+        this.state.downloadMessage = "";
+      this.emit("state");
+    }, downloads);
     this.preview = new PreviewSession(
       services.preview ?? runPreview,
       urls.preview,
